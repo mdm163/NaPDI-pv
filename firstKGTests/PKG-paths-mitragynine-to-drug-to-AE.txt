@@ -1,0 +1,764 @@
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_6956 and http://purl.obolibrary.org/obo/CHEBI_8707:
+
+
+INFO: PATH 0:
+Mitragynine	molecularly interacts with	response to drug	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042493
+response to drug	molecularly interacts with	quetiapine fumarate	http://purl.obolibrary.org/obo/GO_0042493	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_8708
+quetiapine fumarate	has part	quetiapine	http://purl.obolibrary.org/obo/CHEBI_8708	http://purl.obolibrary.org/obo/BFO_0000051	http://purl.obolibrary.org/obo/CHEBI_8707
+
+
+
+
+INFO: PATH 1:
+Mitragynine	molecularly interacts with	刺激反应	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0050896
+刺激反应	molecularly interacts with	quetiapine fumarate	http://purl.obolibrary.org/obo/GO_0050896	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_8708
+quetiapine fumarate	has part	quetiapine	http://purl.obolibrary.org/obo/CHEBI_8708	http://purl.obolibrary.org/obo/BFO_0000051	http://purl.obolibrary.org/obo/CHEBI_8707
+
+
+
+
+INFO: PATH 2:
+Mitragynine	molecularly interacts with	response to toxic substance	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0009636
+response to toxic substance	molecularly interacts with	quetiapine fumarate	http://purl.obolibrary.org/obo/GO_0009636	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_8708
+quetiapine fumarate	has part	quetiapine	http://purl.obolibrary.org/obo/CHEBI_8708	http://purl.obolibrary.org/obo/BFO_0000051	http://purl.obolibrary.org/obo/CHEBI_8707
+
+
+
+
+INFO: PATH 3:
+Mitragynine	interacts with	potassium voltage-gated channel subfamily H member 2 (human)	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002434	http://purl.obolibrary.org/obo/PR_Q12809
+potassium voltage-gated channel subfamily H member 2 (human)	interacts with	quetiapine fumarate	http://purl.obolibrary.org/obo/PR_Q12809	http://purl.obolibrary.org/obo/RO_0002434	http://purl.obolibrary.org/obo/CHEBI_8708
+quetiapine fumarate	has part	quetiapine	http://purl.obolibrary.org/obo/CHEBI_8708	http://purl.obolibrary.org/obo/BFO_0000051	http://purl.obolibrary.org/obo/CHEBI_8707
+
+
+
+
+INFO: PATH 4:
+Mitragynine	molecularly interacts with	biological regulation	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0065007
+biological regulation	molecularly interacts with	quetiapine fumarate	http://purl.obolibrary.org/obo/GO_0065007	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_8708
+quetiapine fumarate	has part	quetiapine	http://purl.obolibrary.org/obo/CHEBI_8708	http://purl.obolibrary.org/obo/BFO_0000051	http://purl.obolibrary.org/obo/CHEBI_8707
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_8707 and http://purl.obolibrary.org/obo/HP_0001250:
+
+
+INFO: PATH 0:
+quetiapine	subClassOf	N-arylpiperazine	http://purl.obolibrary.org/obo/CHEBI_8707	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_46848
+N-arylpiperazine	subClassOf	piperazines	http://purl.obolibrary.org/obo/CHEBI_46848	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_26144
+piperazines	molecularly interacts with	monocarboxylic acid transport	http://purl.obolibrary.org/obo/CHEBI_26144	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0015718
+monocarboxylic acid transport	molecularly interacts with	azathioprine	http://purl.obolibrary.org/obo/GO_0015718	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_2948
+azathioprine	interacts with	ABCB1	http://purl.obolibrary.org/obo/CHEBI_2948	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/5243
+ABCB1	causes or contributes to condition	Seizures	https://www.ncbi.nlm.nih.gov/gene/5243	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0001250
+
+
+
+
+INFO: PATH 1:
+quetiapine	subClassOf	N-alkylpiperazine	http://purl.obolibrary.org/obo/CHEBI_8707	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_46845
+N-alkylpiperazine	subClassOf	piperazines	http://purl.obolibrary.org/obo/CHEBI_46845	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_26144
+piperazines	molecularly interacts with	monocarboxylic acid transport	http://purl.obolibrary.org/obo/CHEBI_26144	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0015718
+monocarboxylic acid transport	molecularly interacts with	azathioprine	http://purl.obolibrary.org/obo/GO_0015718	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_2948
+azathioprine	interacts with	ABCB1	http://purl.obolibrary.org/obo/CHEBI_2948	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/5243
+ABCB1	causes or contributes to condition	Seizures	https://www.ncbi.nlm.nih.gov/gene/5243	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0001250
+
+
+
+
+INFO: PATH 2:
+quetiapine	subClassOf	N-arylpiperazine	http://purl.obolibrary.org/obo/CHEBI_8707	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_46848
+N-arylpiperazine	subClassOf	piperazines	http://purl.obolibrary.org/obo/CHEBI_46848	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_26144
+piperazines	molecularly interacts with	binding	http://purl.obolibrary.org/obo/CHEBI_26144	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0005488
+binding	molecularly interacts with	azathioprine	http://purl.obolibrary.org/obo/GO_0005488	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_2948
+azathioprine	interacts with	ABCB1	http://purl.obolibrary.org/obo/CHEBI_2948	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/5243
+ABCB1	causes or contributes to condition	Seizures	https://www.ncbi.nlm.nih.gov/gene/5243	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0001250
+
+
+
+
+INFO: PATH 3:
+quetiapine	subClassOf	N-alkylpiperazine	http://purl.obolibrary.org/obo/CHEBI_8707	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_46845
+N-alkylpiperazine	subClassOf	piperazines	http://purl.obolibrary.org/obo/CHEBI_46845	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_26144
+piperazines	molecularly interacts with	binding	http://purl.obolibrary.org/obo/CHEBI_26144	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0005488
+binding	molecularly interacts with	azathioprine	http://purl.obolibrary.org/obo/GO_0005488	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_2948
+azathioprine	interacts with	ABCB1	http://purl.obolibrary.org/obo/CHEBI_2948	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/5243
+ABCB1	causes or contributes to condition	Seizures	https://www.ncbi.nlm.nih.gov/gene/5243	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0001250
+
+
+
+
+INFO: PATH 4:
+quetiapine	subClassOf	N-arylpiperazine	http://purl.obolibrary.org/obo/CHEBI_8707	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_46848
+N-arylpiperazine	subClassOf	piperazines	http://purl.obolibrary.org/obo/CHEBI_46848	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_26144
+piperazines	molecularly interacts with	positive regulation of T cell activation	http://purl.obolibrary.org/obo/CHEBI_26144	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0050870
+positive regulation of T cell activation	molecularly interacts with	azathioprine	http://purl.obolibrary.org/obo/GO_0050870	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_2948
+azathioprine	interacts with	ABCB1	http://purl.obolibrary.org/obo/CHEBI_2948	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/5243
+ABCB1	causes or contributes to condition	Seizures	https://www.ncbi.nlm.nih.gov/gene/5243	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0001250
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_6956 and http://purl.obolibrary.org/obo/CHEBI_4636:
+
+
+INFO: PATH 0:
+Mitragynine	molecularly interacts with	response to drug	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042493
+response to drug	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0042493	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+
+
+INFO: PATH 1:
+Mitragynine	molecularly interacts with	刺激反应	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0050896
+刺激反应	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0050896	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+
+
+INFO: PATH 2:
+Mitragynine	molecularly interacts with	biological regulation	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0065007
+biological regulation	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0065007	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+
+
+INFO: PATH 3:
+Mitragynine	molecularly interacts with	response to chemical	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042221
+response to chemical	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0042221	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+
+
+INFO: PATH 4:
+Mitragynine	molecularly interacts with	cell part	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0044464
+cell part	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0044464	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_4636 and http://purl.obolibrary.org/obo/HP_0100598:
+
+
+INFO: PATH 0:
+diphenhydramine	molecularly interacts with	positive regulation of biological process	http://purl.obolibrary.org/obo/CHEBI_4636	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0048518
+positive regulation of biological process	molecularly interacts with	aflatoxin B1	http://purl.obolibrary.org/obo/GO_0048518	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_2504
+aflatoxin B1	interacts with	GHRH	http://purl.obolibrary.org/obo/CHEBI_2504	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/2691
+GHRH	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/2691	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+
+
+INFO: PATH 1:
+diphenhydramine	molecularly interacts with	lymphocyte mediated immunity	http://purl.obolibrary.org/obo/CHEBI_4636	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0002449
+lymphocyte mediated immunity	molecularly interacts with	aflatoxin B1	http://purl.obolibrary.org/obo/GO_0002449	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_2504
+aflatoxin B1	interacts with	GHRH	http://purl.obolibrary.org/obo/CHEBI_2504	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/2691
+GHRH	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/2691	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+
+
+INFO: PATH 2:
+diphenhydramine	molecularly interacts with	protein activation cascade	http://purl.obolibrary.org/obo/CHEBI_4636	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0072376
+protein activation cascade	molecularly interacts with	aflatoxin B1	http://purl.obolibrary.org/obo/GO_0072376	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_2504
+aflatoxin B1	interacts with	GHRH	http://purl.obolibrary.org/obo/CHEBI_2504	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/2691
+GHRH	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/2691	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+
+
+INFO: PATH 3:
+diphenhydramine	molecularly interacts with	response to chemical	http://purl.obolibrary.org/obo/CHEBI_4636	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042221
+response to chemical	molecularly interacts with	aflatoxin B1	http://purl.obolibrary.org/obo/GO_0042221	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_2504
+aflatoxin B1	interacts with	GHRH	http://purl.obolibrary.org/obo/CHEBI_2504	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/2691
+GHRH	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/2691	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+
+
+INFO: PATH 4:
+diphenhydramine	interacts with	<no label found>	http://purl.obolibrary.org/obo/CHEBI_4636	http://purl.obolibrary.org/obo/RO_0002434	https://uswest.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000307407
+<no label found>	interacts with	aflatoxin B1	https://uswest.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000307407	http://purl.obolibrary.org/obo/RO_0002434	http://purl.obolibrary.org/obo/CHEBI_2504
+aflatoxin B1	interacts with	GHRH	http://purl.obolibrary.org/obo/CHEBI_2504	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/2691
+GHRH	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/2691	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_6956 and http://purl.obolibrary.org/obo/CHEBI_60654:
+
+
+INFO: PATH 0:
+Mitragynine	molecularly interacts with	long-chain fatty acid metabolic process	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0001676
+long-chain fatty acid metabolic process	molecularly interacts with	valproic acid	http://purl.obolibrary.org/obo/GO_0001676	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	valproate	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	http://purl.obolibrary.org/obo/CHEBI_60654
+
+
+
+
+INFO: PATH 1:
+Mitragynine	molecularly interacts with	heme binding	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0020037
+heme binding	molecularly interacts with	valproic acid	http://purl.obolibrary.org/obo/GO_0020037	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	valproate	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	http://purl.obolibrary.org/obo/CHEBI_60654
+
+
+
+
+INFO: PATH 2:
+Mitragynine	interacts with	<no label found>	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002434	https://uswest.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000415003
+<no label found>	interacts with	valproic acid	https://uswest.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000415003	http://purl.obolibrary.org/obo/RO_0002434	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	valproate	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	http://purl.obolibrary.org/obo/CHEBI_60654
+
+
+
+
+INFO: PATH 3:
+Mitragynine	molecularly interacts with	response to drug	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042493
+response to drug	molecularly interacts with	valproic acid	http://purl.obolibrary.org/obo/GO_0042493	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	valproate	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	http://purl.obolibrary.org/obo/CHEBI_60654
+
+
+
+
+INFO: PATH 4:
+Mitragynine	molecularly interacts with	刺激反应	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0050896
+刺激反应	molecularly interacts with	valproic acid	http://purl.obolibrary.org/obo/GO_0050896	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	valproate	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	http://purl.obolibrary.org/obo/CHEBI_60654
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_60654 and http://purl.obolibrary.org/obo/HP_0001250:
+
+
+INFO: PATH 0:
+valproate	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	valproic acid	http://purl.obolibrary.org/obo/CHEBI_60654	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	interacts with	TSC2	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/7249
+TSC2	causes or contributes to condition	Seizures	https://www.ncbi.nlm.nih.gov/gene/7249	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0001250
+
+
+
+
+INFO: PATH 1:
+valproate	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	valproic acid	http://purl.obolibrary.org/obo/CHEBI_60654	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	interacts with	PTGS2	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/5743
+PTGS2	causes or contributes to condition	Seizures	https://www.ncbi.nlm.nih.gov/gene/5743	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0001250
+
+
+
+
+INFO: PATH 2:
+valproate	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	valproic acid	http://purl.obolibrary.org/obo/CHEBI_60654	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	interacts with	TCF4	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/6925
+TCF4	causes or contributes to condition	Seizures	https://www.ncbi.nlm.nih.gov/gene/6925	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0001250
+
+
+
+
+INFO: PATH 3:
+valproate	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	valproic acid	http://purl.obolibrary.org/obo/CHEBI_60654	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	interacts with	FGFR3	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/2261
+FGFR3	causes or contributes to condition	Seizures	https://www.ncbi.nlm.nih.gov/gene/2261	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0001250
+
+
+
+
+INFO: PATH 4:
+valproate	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	valproic acid	http://purl.obolibrary.org/obo/CHEBI_60654	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	interacts with	ADPRS	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/54936
+ADPRS	causes or contributes to condition	Seizures	https://www.ncbi.nlm.nih.gov/gene/54936	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0001250
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_6956 and http://purl.obolibrary.org/obo/CHEBI_60654:
+
+
+INFO: PATH 0:
+Mitragynine	molecularly interacts with	long-chain fatty acid metabolic process	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0001676
+long-chain fatty acid metabolic process	molecularly interacts with	valproic acid	http://purl.obolibrary.org/obo/GO_0001676	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	valproate	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	http://purl.obolibrary.org/obo/CHEBI_60654
+
+
+
+
+INFO: PATH 1:
+Mitragynine	molecularly interacts with	heme binding	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0020037
+heme binding	molecularly interacts with	valproic acid	http://purl.obolibrary.org/obo/GO_0020037	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	valproate	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	http://purl.obolibrary.org/obo/CHEBI_60654
+
+
+
+
+INFO: PATH 2:
+Mitragynine	interacts with	<no label found>	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002434	https://uswest.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000415003
+<no label found>	interacts with	valproic acid	https://uswest.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000415003	http://purl.obolibrary.org/obo/RO_0002434	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	valproate	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	http://purl.obolibrary.org/obo/CHEBI_60654
+
+
+
+
+INFO: PATH 3:
+Mitragynine	molecularly interacts with	response to drug	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042493
+response to drug	molecularly interacts with	valproic acid	http://purl.obolibrary.org/obo/GO_0042493	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	valproate	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	http://purl.obolibrary.org/obo/CHEBI_60654
+
+
+
+
+INFO: PATH 4:
+Mitragynine	molecularly interacts with	刺激反应	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0050896
+刺激反应	molecularly interacts with	valproic acid	http://purl.obolibrary.org/obo/GO_0050896	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	valproate	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of	http://purl.obolibrary.org/obo/CHEBI_60654
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_60654 and http://purl.obolibrary.org/obo/HP_0002045:
+
+
+INFO: PATH 0:
+valproate	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	valproic acid	http://purl.obolibrary.org/obo/CHEBI_60654	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	interacts with	LHB	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/3972
+LHB	causes or contributes to condition	Hypothermia	https://www.ncbi.nlm.nih.gov/gene/3972	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0002045
+
+
+
+
+INFO: PATH 1:
+valproate	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	valproic acid	http://purl.obolibrary.org/obo/CHEBI_60654	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	interacts with	TSHB	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/7252
+TSHB	causes or contributes to condition	Hypothermia	https://www.ncbi.nlm.nih.gov/gene/7252	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0002045
+
+
+
+
+INFO: PATH 2:
+valproate	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	valproic acid	http://purl.obolibrary.org/obo/CHEBI_60654	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	interacts with	NCF1	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/653361
+NCF1	causes or contributes to condition	Hypothermia	https://www.ncbi.nlm.nih.gov/gene/653361	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0002045
+
+
+
+
+INFO: PATH 3:
+valproate	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	valproic acid	http://purl.obolibrary.org/obo/CHEBI_60654	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	interacts with	GCG	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/2641
+GCG	causes or contributes to condition	Hypothermia	https://www.ncbi.nlm.nih.gov/gene/2641	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0002045
+
+
+
+
+INFO: PATH 4:
+valproate	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	valproic acid	http://purl.obolibrary.org/obo/CHEBI_60654	http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of	http://purl.obolibrary.org/obo/CHEBI_39867
+valproic acid	interacts with	CHRNB2	http://purl.obolibrary.org/obo/CHEBI_39867	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/1141
+CHRNB2	causes or contributes to condition	Hypothermia	https://www.ncbi.nlm.nih.gov/gene/1141	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0002045
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_6956 and http://purl.obolibrary.org/obo/CHEBI_8707:
+
+
+INFO: PATH 0:
+Mitragynine	molecularly interacts with	response to drug	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042493
+response to drug	molecularly interacts with	quetiapine fumarate	http://purl.obolibrary.org/obo/GO_0042493	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_8708
+quetiapine fumarate	has part	quetiapine	http://purl.obolibrary.org/obo/CHEBI_8708	http://purl.obolibrary.org/obo/BFO_0000051	http://purl.obolibrary.org/obo/CHEBI_8707
+
+
+
+
+INFO: PATH 1:
+Mitragynine	molecularly interacts with	刺激反应	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0050896
+刺激反应	molecularly interacts with	quetiapine fumarate	http://purl.obolibrary.org/obo/GO_0050896	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_8708
+quetiapine fumarate	has part	quetiapine	http://purl.obolibrary.org/obo/CHEBI_8708	http://purl.obolibrary.org/obo/BFO_0000051	http://purl.obolibrary.org/obo/CHEBI_8707
+
+
+
+
+INFO: PATH 2:
+Mitragynine	molecularly interacts with	response to toxic substance	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0009636
+response to toxic substance	molecularly interacts with	quetiapine fumarate	http://purl.obolibrary.org/obo/GO_0009636	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_8708
+quetiapine fumarate	has part	quetiapine	http://purl.obolibrary.org/obo/CHEBI_8708	http://purl.obolibrary.org/obo/BFO_0000051	http://purl.obolibrary.org/obo/CHEBI_8707
+
+
+
+
+INFO: PATH 3:
+Mitragynine	interacts with	potassium voltage-gated channel subfamily H member 2 (human)	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002434	http://purl.obolibrary.org/obo/PR_Q12809
+potassium voltage-gated channel subfamily H member 2 (human)	interacts with	quetiapine fumarate	http://purl.obolibrary.org/obo/PR_Q12809	http://purl.obolibrary.org/obo/RO_0002434	http://purl.obolibrary.org/obo/CHEBI_8708
+quetiapine fumarate	has part	quetiapine	http://purl.obolibrary.org/obo/CHEBI_8708	http://purl.obolibrary.org/obo/BFO_0000051	http://purl.obolibrary.org/obo/CHEBI_8707
+
+
+
+
+INFO: PATH 4:
+Mitragynine	molecularly interacts with	biological regulation	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0065007
+biological regulation	molecularly interacts with	quetiapine fumarate	http://purl.obolibrary.org/obo/GO_0065007	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_8708
+quetiapine fumarate	has part	quetiapine	http://purl.obolibrary.org/obo/CHEBI_8708	http://purl.obolibrary.org/obo/BFO_0000051	http://purl.obolibrary.org/obo/CHEBI_8707
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_8707 and http://purl.obolibrary.org/obo/HP_0002045:
+
+
+INFO: PATH 0:
+quetiapine	subClassOf	N-arylpiperazine	http://purl.obolibrary.org/obo/CHEBI_8707	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_46848
+N-arylpiperazine	subClassOf	piperazines	http://purl.obolibrary.org/obo/CHEBI_46848	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_26144
+piperazines	molecularly interacts with	monocarboxylic acid transport	http://purl.obolibrary.org/obo/CHEBI_26144	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0015718
+monocarboxylic acid transport	molecularly interacts with	Cocaine	http://purl.obolibrary.org/obo/GO_0015718	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_27958
+Cocaine	interacts with	CNR1	http://purl.obolibrary.org/obo/CHEBI_27958	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/1268
+CNR1	causes or contributes to condition	Hypothermia	https://www.ncbi.nlm.nih.gov/gene/1268	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0002045
+
+
+
+
+INFO: PATH 1:
+quetiapine	subClassOf	N-alkylpiperazine	http://purl.obolibrary.org/obo/CHEBI_8707	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_46845
+N-alkylpiperazine	subClassOf	piperazines	http://purl.obolibrary.org/obo/CHEBI_46845	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_26144
+piperazines	molecularly interacts with	monocarboxylic acid transport	http://purl.obolibrary.org/obo/CHEBI_26144	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0015718
+monocarboxylic acid transport	molecularly interacts with	Cocaine	http://purl.obolibrary.org/obo/GO_0015718	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_27958
+Cocaine	interacts with	CNR1	http://purl.obolibrary.org/obo/CHEBI_27958	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/1268
+CNR1	causes or contributes to condition	Hypothermia	https://www.ncbi.nlm.nih.gov/gene/1268	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0002045
+
+
+
+
+INFO: PATH 2:
+quetiapine	subClassOf	N-arylpiperazine	http://purl.obolibrary.org/obo/CHEBI_8707	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_46848
+N-arylpiperazine	subClassOf	piperazines	http://purl.obolibrary.org/obo/CHEBI_46848	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_26144
+piperazines	molecularly interacts with	binding	http://purl.obolibrary.org/obo/CHEBI_26144	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0005488
+binding	molecularly interacts with	Cocaine	http://purl.obolibrary.org/obo/GO_0005488	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_27958
+Cocaine	interacts with	CNR1	http://purl.obolibrary.org/obo/CHEBI_27958	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/1268
+CNR1	causes or contributes to condition	Hypothermia	https://www.ncbi.nlm.nih.gov/gene/1268	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0002045
+
+
+
+
+INFO: PATH 3:
+quetiapine	subClassOf	N-alkylpiperazine	http://purl.obolibrary.org/obo/CHEBI_8707	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_46845
+N-alkylpiperazine	subClassOf	piperazines	http://purl.obolibrary.org/obo/CHEBI_46845	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_26144
+piperazines	molecularly interacts with	binding	http://purl.obolibrary.org/obo/CHEBI_26144	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0005488
+binding	molecularly interacts with	Cocaine	http://purl.obolibrary.org/obo/GO_0005488	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_27958
+Cocaine	interacts with	CNR1	http://purl.obolibrary.org/obo/CHEBI_27958	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/1268
+CNR1	causes or contributes to condition	Hypothermia	https://www.ncbi.nlm.nih.gov/gene/1268	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0002045
+
+
+
+
+INFO: PATH 4:
+quetiapine	subClassOf	N-arylpiperazine	http://purl.obolibrary.org/obo/CHEBI_8707	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_46848
+N-arylpiperazine	subClassOf	piperazines	http://purl.obolibrary.org/obo/CHEBI_46848	http://www.w3.org/2000/01/rdf-schema#subClassOf	http://purl.obolibrary.org/obo/CHEBI_26144
+piperazines	molecularly interacts with	positive regulation of T cell activation	http://purl.obolibrary.org/obo/CHEBI_26144	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0050870
+positive regulation of T cell activation	molecularly interacts with	Cocaine	http://purl.obolibrary.org/obo/GO_0050870	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_27958
+Cocaine	interacts with	CNR1	http://purl.obolibrary.org/obo/CHEBI_27958	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/1268
+CNR1	causes or contributes to condition	Hypothermia	https://www.ncbi.nlm.nih.gov/gene/1268	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0002045
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_6956 and http://purl.obolibrary.org/obo/CHEBI_6950:
+
+
+INFO: PATH 0:
+Mitragynine	molecularly interacts with	response to drug	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042493
+response to drug	molecularly interacts with	Mirtazapine	http://purl.obolibrary.org/obo/GO_0042493	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_6950
+
+
+
+
+INFO: PATH 1:
+Mitragynine	molecularly interacts with	刺激反应	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0050896
+刺激反应	molecularly interacts with	Mirtazapine	http://purl.obolibrary.org/obo/GO_0050896	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_6950
+
+
+
+
+INFO: PATH 2:
+Mitragynine	molecularly interacts with	biological regulation	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0065007
+biological regulation	molecularly interacts with	Mirtazapine	http://purl.obolibrary.org/obo/GO_0065007	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_6950
+
+
+
+
+INFO: PATH 3:
+Mitragynine	molecularly interacts with	regulation of ion transport	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0043269
+regulation of ion transport	molecularly interacts with	Mirtazapine	http://purl.obolibrary.org/obo/GO_0043269	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_6950
+
+
+
+
+INFO: PATH 4:
+Mitragynine	molecularly interacts with	circulatory system process	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0003013
+circulatory system process	molecularly interacts with	Mirtazapine	http://purl.obolibrary.org/obo/GO_0003013	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_6950
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_6950 and http://purl.obolibrary.org/obo/HP_0100598:
+
+
+INFO: PATH 0:
+Mirtazapine	molecularly interacts with	regulation of ion transport	http://purl.obolibrary.org/obo/CHEBI_6950	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0043269
+regulation of ion transport	molecularly interacts with	toluene	http://purl.obolibrary.org/obo/GO_0043269	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_17578
+toluene	interacts with	ADIPOQ	http://purl.obolibrary.org/obo/CHEBI_17578	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/9370
+ADIPOQ	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/9370	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+
+
+INFO: PATH 1:
+Mirtazapine	molecularly interacts with	intrinsic component of synaptic membrane	http://purl.obolibrary.org/obo/CHEBI_6950	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0099240
+intrinsic component of synaptic membrane	molecularly interacts with	toluene	http://purl.obolibrary.org/obo/GO_0099240	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_17578
+toluene	interacts with	ADIPOQ	http://purl.obolibrary.org/obo/CHEBI_17578	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/9370
+ADIPOQ	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/9370	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+
+
+INFO: PATH 2:
+Mirtazapine	molecularly interacts with	regulation of localization	http://purl.obolibrary.org/obo/CHEBI_6950	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0032879
+regulation of localization	molecularly interacts with	toluene	http://purl.obolibrary.org/obo/GO_0032879	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_17578
+toluene	interacts with	ADIPOQ	http://purl.obolibrary.org/obo/CHEBI_17578	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/9370
+ADIPOQ	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/9370	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+
+
+INFO: PATH 3:
+Mirtazapine	molecularly interacts with	protein binding	http://purl.obolibrary.org/obo/CHEBI_6950	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0005515
+protein binding	molecularly interacts with	toluene	http://purl.obolibrary.org/obo/GO_0005515	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_17578
+toluene	interacts with	ADIPOQ	http://purl.obolibrary.org/obo/CHEBI_17578	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/9370
+ADIPOQ	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/9370	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+
+
+INFO: PATH 4:
+Mirtazapine	molecularly interacts with	ammonium transport	http://purl.obolibrary.org/obo/CHEBI_6950	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0015696
+ammonium transport	molecularly interacts with	toluene	http://purl.obolibrary.org/obo/GO_0015696	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_17578
+toluene	interacts with	ADIPOQ	http://purl.obolibrary.org/obo/CHEBI_17578	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/9370
+ADIPOQ	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/9370	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_6956 and http://purl.obolibrary.org/obo/CHEBI_16236:
+
+
+INFO: PATH 0:
+Mitragynine	molecularly interacts with	long-chain fatty acid metabolic process	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0001676
+long-chain fatty acid metabolic process	molecularly interacts with	Ethanol	http://purl.obolibrary.org/obo/GO_0001676	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_16236
+
+
+
+
+INFO: PATH 1:
+Mitragynine	molecularly interacts with	heme binding	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0020037
+heme binding	molecularly interacts with	Ethanol	http://purl.obolibrary.org/obo/GO_0020037	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_16236
+
+
+
+
+INFO: PATH 2:
+Mitragynine	interacts with	<no label found>	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002434	https://uswest.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000415003
+<no label found>	interacts with	Ethanol	https://uswest.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000415003	http://purl.obolibrary.org/obo/RO_0002434	http://purl.obolibrary.org/obo/CHEBI_16236
+
+
+
+
+INFO: PATH 3:
+Mitragynine	molecularly interacts with	response to drug	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042493
+response to drug	molecularly interacts with	Ethanol	http://purl.obolibrary.org/obo/GO_0042493	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_16236
+
+
+
+
+INFO: PATH 4:
+Mitragynine	molecularly interacts with	刺激反应	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0050896
+刺激反应	molecularly interacts with	Ethanol	http://purl.obolibrary.org/obo/GO_0050896	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_16236
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_16236 and http://purl.obolibrary.org/obo/HP_0100598:
+
+
+INFO: PATH 0:
+Ethanol	interacts with	adiponectin	http://purl.obolibrary.org/obo/CHEBI_16236	http://purl.obolibrary.org/obo/RO_0002434	http://purl.obolibrary.org/obo/PR_000003777
+adiponectin	gene product of	ADIPOQ	http://purl.obolibrary.org/obo/PR_000003777	http://purl.obolibrary.org/obo/RO_0002204	https://www.ncbi.nlm.nih.gov/gene/9370
+ADIPOQ	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/9370	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+
+
+INFO: PATH 1:
+Ethanol	interacts with	adiponectin (human)	http://purl.obolibrary.org/obo/CHEBI_16236	http://purl.obolibrary.org/obo/RO_0002434	http://purl.obolibrary.org/obo/PR_Q15848
+adiponectin (human)	gene product of	ADIPOQ	http://purl.obolibrary.org/obo/PR_Q15848	http://purl.obolibrary.org/obo/RO_0002204	https://www.ncbi.nlm.nih.gov/gene/9370
+ADIPOQ	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/9370	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+
+
+INFO: PATH 2:
+Ethanol	interacts with	ADH1B	http://purl.obolibrary.org/obo/CHEBI_16236	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/125
+ADH1B	genetically interacts with	ADIPOQ	https://www.ncbi.nlm.nih.gov/gene/125	http://purl.obolibrary.org/obo/RO_0002435	https://www.ncbi.nlm.nih.gov/gene/9370
+ADIPOQ	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/9370	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+
+
+INFO: PATH 3:
+Ethanol	interacts with	OPRM1	http://purl.obolibrary.org/obo/CHEBI_16236	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/4988
+OPRM1	genetically interacts with	ADIPOQ	https://www.ncbi.nlm.nih.gov/gene/4988	http://purl.obolibrary.org/obo/RO_0002435	https://www.ncbi.nlm.nih.gov/gene/9370
+ADIPOQ	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/9370	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+
+
+INFO: PATH 4:
+Ethanol	participates in	Metabolism	http://purl.obolibrary.org/obo/CHEBI_16236	http://purl.obolibrary.org/obo/RO_0000056	https://reactome.org/content/detail/R-HSA-1430728
+Metabolism	has participant	ADIPOQ	https://reactome.org/content/detail/R-HSA-1430728	http://purl.obolibrary.org/obo/RO_0000057	https://www.ncbi.nlm.nih.gov/gene/9370
+ADIPOQ	causes or contributes to condition	Pulmonary edema	https://www.ncbi.nlm.nih.gov/gene/9370	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0100598
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_6956 and http://purl.obolibrary.org/obo/CHEBI_16236:
+
+
+INFO: PATH 0:
+Mitragynine	molecularly interacts with	long-chain fatty acid metabolic process	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0001676
+long-chain fatty acid metabolic process	molecularly interacts with	Ethanol	http://purl.obolibrary.org/obo/GO_0001676	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_16236
+
+
+
+
+INFO: PATH 1:
+Mitragynine	molecularly interacts with	heme binding	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0020037
+heme binding	molecularly interacts with	Ethanol	http://purl.obolibrary.org/obo/GO_0020037	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_16236
+
+
+
+
+INFO: PATH 2:
+Mitragynine	interacts with	<no label found>	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002434	https://uswest.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000415003
+<no label found>	interacts with	Ethanol	https://uswest.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000415003	http://purl.obolibrary.org/obo/RO_0002434	http://purl.obolibrary.org/obo/CHEBI_16236
+
+
+
+
+INFO: PATH 3:
+Mitragynine	molecularly interacts with	response to drug	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042493
+response to drug	molecularly interacts with	Ethanol	http://purl.obolibrary.org/obo/GO_0042493	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_16236
+
+
+
+
+INFO: PATH 4:
+Mitragynine	molecularly interacts with	刺激反应	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0050896
+刺激反应	molecularly interacts with	Ethanol	http://purl.obolibrary.org/obo/GO_0050896	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_16236
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_16236 and http://purl.obolibrary.org/obo/HP_0000016:
+
+
+INFO: PATH 0:
+Ethanol	interacts with	CTNNB1	http://purl.obolibrary.org/obo/CHEBI_16236	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/1499
+CTNNB1	genetically interacts with	EDN1	https://www.ncbi.nlm.nih.gov/gene/1499	http://purl.obolibrary.org/obo/RO_0002435	https://www.ncbi.nlm.nih.gov/gene/1906
+EDN1	causes or contributes to condition	Urinary retention	https://www.ncbi.nlm.nih.gov/gene/1906	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0000016
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_6956 and http://purl.obolibrary.org/obo/CHEBI_4636:
+
+
+INFO: PATH 0:
+Mitragynine	molecularly interacts with	response to drug	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042493
+response to drug	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0042493	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+
+
+INFO: PATH 1:
+Mitragynine	molecularly interacts with	刺激反应	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0050896
+刺激反应	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0050896	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+
+
+INFO: PATH 2:
+Mitragynine	molecularly interacts with	biological regulation	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0065007
+biological regulation	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0065007	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+
+
+INFO: PATH 3:
+Mitragynine	molecularly interacts with	response to chemical	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042221
+response to chemical	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0042221	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+
+
+INFO: PATH 4:
+Mitragynine	molecularly interacts with	cell part	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0044464
+cell part	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0044464	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_4636 and http://purl.obolibrary.org/obo/HP_0000016:
+
+
+INFO: PATH 0:
+diphenhydramine	molecularly interacts with	positive regulation of biological process	http://purl.obolibrary.org/obo/CHEBI_4636	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0048518
+positive regulation of biological process	molecularly interacts with	aflatoxin B1	http://purl.obolibrary.org/obo/GO_0048518	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_2504
+aflatoxin B1	interacts with	EDN1	http://purl.obolibrary.org/obo/CHEBI_2504	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/1906
+EDN1	causes or contributes to condition	Urinary retention	https://www.ncbi.nlm.nih.gov/gene/1906	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0000016
+
+
+
+
+INFO: PATH 1:
+diphenhydramine	molecularly interacts with	lymphocyte mediated immunity	http://purl.obolibrary.org/obo/CHEBI_4636	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0002449
+lymphocyte mediated immunity	molecularly interacts with	aflatoxin B1	http://purl.obolibrary.org/obo/GO_0002449	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_2504
+aflatoxin B1	interacts with	EDN1	http://purl.obolibrary.org/obo/CHEBI_2504	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/1906
+EDN1	causes or contributes to condition	Urinary retention	https://www.ncbi.nlm.nih.gov/gene/1906	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0000016
+
+
+
+
+INFO: PATH 2:
+diphenhydramine	molecularly interacts with	protein activation cascade	http://purl.obolibrary.org/obo/CHEBI_4636	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0072376
+protein activation cascade	molecularly interacts with	aflatoxin B1	http://purl.obolibrary.org/obo/GO_0072376	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_2504
+aflatoxin B1	interacts with	EDN1	http://purl.obolibrary.org/obo/CHEBI_2504	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/1906
+EDN1	causes or contributes to condition	Urinary retention	https://www.ncbi.nlm.nih.gov/gene/1906	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0000016
+
+
+
+
+INFO: PATH 3:
+diphenhydramine	molecularly interacts with	response to chemical	http://purl.obolibrary.org/obo/CHEBI_4636	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042221
+response to chemical	molecularly interacts with	aflatoxin B1	http://purl.obolibrary.org/obo/GO_0042221	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_2504
+aflatoxin B1	interacts with	EDN1	http://purl.obolibrary.org/obo/CHEBI_2504	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/1906
+EDN1	causes or contributes to condition	Urinary retention	https://www.ncbi.nlm.nih.gov/gene/1906	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0000016
+
+
+
+
+INFO: PATH 4:
+diphenhydramine	interacts with	<no label found>	http://purl.obolibrary.org/obo/CHEBI_4636	http://purl.obolibrary.org/obo/RO_0002434	https://uswest.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000307407
+<no label found>	interacts with	aflatoxin B1	https://uswest.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000307407	http://purl.obolibrary.org/obo/RO_0002434	http://purl.obolibrary.org/obo/CHEBI_2504
+aflatoxin B1	interacts with	EDN1	http://purl.obolibrary.org/obo/CHEBI_2504	http://purl.obolibrary.org/obo/RO_0002434	https://www.ncbi.nlm.nih.gov/gene/1906
+EDN1	causes or contributes to condition	Urinary retention	https://www.ncbi.nlm.nih.gov/gene/1906	http://purl.obolibrary.org/obo/RO_0003302	http://purl.obolibrary.org/obo/HP_0000016
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_6956 and http://purl.obolibrary.org/obo/CHEBI_4636:
+
+
+INFO: PATH 0:
+Mitragynine	molecularly interacts with	response to drug	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042493
+response to drug	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0042493	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+
+
+INFO: PATH 1:
+Mitragynine	molecularly interacts with	刺激反应	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0050896
+刺激反应	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0050896	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+
+
+INFO: PATH 2:
+Mitragynine	molecularly interacts with	biological regulation	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0065007
+biological regulation	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0065007	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+
+
+INFO: PATH 3:
+Mitragynine	molecularly interacts with	response to chemical	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0042221
+response to chemical	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0042221	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+
+
+INFO: PATH 4:
+Mitragynine	molecularly interacts with	cell part	http://purl.obolibrary.org/obo/CHEBI_6956	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/GO_0044464
+cell part	molecularly interacts with	diphenhydramine	http://purl.obolibrary.org/obo/GO_0044464	http://purl.obolibrary.org/obo/RO_0002436	http://purl.obolibrary.org/obo/CHEBI_4636
+
+
+INFO: Processing http://purl.obolibrary.org/obo/CHEBI_4636 and http://purl.obolibrary.org/obo/MP_0010018:
+INFO: No results in the path search.
