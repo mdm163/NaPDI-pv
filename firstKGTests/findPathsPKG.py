@@ -100,7 +100,7 @@ s_o_tpl_L = [
     ('http://purl.obolibrary.org/obo/CHEBI_4636','http://purl.obolibrary.org/obo/HP_0100598'), # diphenhydramine - Pulmonary oedema
     ('http://purl.obolibrary.org/obo/CHEBI_60654','http://purl.obolibrary.org/obo/HP_0001250'), # valproate - seizure
     ('http://purl.obolibrary.org/obo/CHEBI_60654','http://purl.obolibrary.org/obo/HP_0002045'), #  valproate - hypothermia
-    ('http://purl.obolibrary.org/obo/CHEBI_8707','http://purl.obolibrary.org/obo/HP_0002045'), #  valproate - hypothermia
+    ('http://purl.obolibrary.org/obo/CHEBI_8707','http://purl.obolibrary.org/obo/HP_0002045'), #  qeutiapine - hypothermia
     ('http://purl.obolibrary.org/obo/CHEBI_6950','http://purl.obolibrary.org/obo/HP_0100598'), # mirtazapine - Pulmonary oedema
     ('http://purl.obolibrary.org/obo/CHEBI_16236','http://purl.obolibrary.org/obo/HP_0100598'), # ethanol - Pulmonary oedema
     ('http://purl.obolibrary.org/obo/CHEBI_16236','http://purl.obolibrary.org/obo/HP_0000016'), # ethanol - Urinary retention
