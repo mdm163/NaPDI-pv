@@ -2,7 +2,7 @@ import requests
 import json, os
 
 #dir_out = '/home/sanya/npdi-workspace/LNHPD/LNHPD_output/'
-#dir_out = "/Users/sanya/npdi-workspace/LNHPD/LNHPD_output"
+dir_out = "/Users/sanya/NaPDI-pv/LNHPD/LNHPD_output"
 
 def call_API(link):
 	response = requests.get(link)
@@ -17,7 +17,7 @@ def extract_data_from_api(page_start, page_end):
 	lnhpd = []
 	count = 0
 	total_count = 0
-	file_p = open(dir_out+'lnhpd_page.txt', 'a')
+	file_p = open(dir_out+'lnhpd_page_completed.txt', 'a')
 
 	#Total pages = 6292 (as of 2020-01-07)
 	for page_no in range(page_start, page_end+1):
@@ -29,7 +29,7 @@ def extract_data_from_api(page_start, page_end):
 		lnhpd.extend(result['data'])
 		count = len(lnhpd)
 		#save every 100000 results and reinitialize the dictionary
-		if count % 80 == 0:
+		if count % 100000 == 0:
 			total_count += count
 			outfile = dir_out + 'lnhpd_' + str(total_count) + '.json'
 			toJSON(outfile, lnhpd)
@@ -70,7 +70,7 @@ def remove_duplicates_and_save(total_count):
 	return new_count
 
 if __name__ == '__main__':
-	total_count = extract_data_from_api(1, 10)
+	total_count = extract_data_from_api(1, 7000)
 	print('Total objects saved: ', total_count)
 	total_count_new = remove_duplicates_and_save(total_count)
 	print('Total object after de-duplication: ', total_count_new)

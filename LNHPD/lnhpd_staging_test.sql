@@ -16,9 +16,9 @@
 --'extract_type_desc': '', 
 --'source_material': 'Vitamin A'}
 
-DROP TABLE IF EXISTS lnhpd_staging;
+DROP TABLE IF EXISTS ${LNHPD_schema}.lnhpd_staging;
 
-CREATE TABLE lnhpd_staging (
+CREATE TABLE ${LNHPD_schema}.lnhpd_staging (
 	lnhpd_id INTEGER NOT NULL PRIMARY KEY,
 	ingredient_name VARCHAR(255),
 	ingredient_Text VARCHAR(255),
@@ -37,12 +37,12 @@ CREATE TABLE lnhpd_staging (
 	source_material VARCHAR(255)
 )
 
-create unlogged table lnhpd_json (doc json);
+create unlogged table ${LNHPD_schema}.lnhpd_json (doc json);
 --psql: \copy lnhpd_json from '/Users/sanya/npdi-workspace/LNHPD/LNHPD_output/lnhpd_all_unique.json'
-insert into lnhpd_staging (lnhpd_id, ingredient_name, ingredient_Text, potency_amount, potency_constituent, potency_unit_of_measure,
+insert into ${LNHPD_schema}.lnhpd_staging (lnhpd_id, ingredient_name, ingredient_Text, potency_amount, potency_constituent, potency_unit_of_measure,
 quantity, quantity_minimum, quantity_maximum, quantity_unit_of_measure, ratio_numerator, ratio_denominator, 
 dried_herb_equivalent, dhe_unit_of_measure, extract_type_desc, source_material)
 select p.*
-from lnhpd_json l
-  cross join lateral json_populate_recordset(null::lnhpd_staging, doc) as p
+from ${LNHPD_schema}.lnhpd_json l
+  cross join lateral json_populate_recordset(null::${LNHPD_schema},lnhpd_staging, doc) as p
 on conflict (lnhpd_id) do nothing;
