@@ -302,7 +302,7 @@
       <add_date>N</add_date>
       <add_time>N</add_time>
       <insertScript>Y</insertScript>
-      <script>python /home/sanya/NaPDI-pv/get_data_lnhpd.py</script>
+      <script>python get_data_lnhpd.py ${DIR_OUT}</script>
       <loglevel>Basic</loglevel>
       <parallel>N</parallel>
       <draw>Y</draw>
@@ -363,7 +363,7 @@ CREATE TABLE ${LNHPD_schema}.lnhpd_staging (
 create unlogged table ${LNHPD_schema}.lnhpd_json (doc json);</sql>
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
-      <sqlfilename>/home/sanya/NaPDI-pv/LNHPD/lnhpd_staging_test.sql</sqlfilename>
+      <sqlfilename />
       <sendOneStatement>F</sendOneStatement>
       <connection />
       <parallel>N</parallel>
@@ -379,7 +379,7 @@ create unlogged table ${LNHPD_schema}.lnhpd_json (doc json);</sql>
       <type>SHELL</type>
       <attributes />
       <filename />
-      <work_directory>/home/sanya/NaPDI-pv/LNHPD/</work_directory>
+      <work_directory />
       <arg_from_previous>N</arg_from_previous>
       <exec_per_row>N</exec_per_row>
       <set_logfile>N</set_logfile>
@@ -389,7 +389,7 @@ create unlogged table ${LNHPD_schema}.lnhpd_json (doc json);</sql>
       <add_date>N</add_date>
       <add_time>N</add_time>
       <insertScript>Y</insertScript>
-      <script>psql \copy lnhpd_json from '/home/sanya/NaPDI-pv/LNHPD/LNHPD_output/lnhpd_all_unique.json'
+      <script>psql \copy lnhpd_json from ${JSON_OUTFILE}
 </script>
       <loglevel>Basic</loglevel>
       <parallel>N</parallel>
@@ -463,6 +463,38 @@ on conflict (lnhpd_id) do nothing;</sql>
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>Job steps with arguments and environment variables:
+
+1. python-api-get_data: shell script to execute Python script 'get_data_lnhpd.py'
+Argument: ${DIR_OUT} - output directory ('LNHPD_output/')
+
+2. create_lnhpd_table: SQL job to create table 'lnhpd_staging' in given schema
+Variable: ${LNHPD_schema}
+
+3. json_file_in_postgres: shell script to run psql command to load JSON output file from (1) into postgres schema
+Variable/argument: ${JSON_OUTFILE} - 'LNHPD_output/lnhpd_all_unique.json'
+4. json to postgres: SQL job to insert data into table 
+Variable: ${LNHPD_schema}</note>
+      <xloc>0</xloc>
+      <yloc>400</yloc>
+      <width>741</width>
+      <heigth>214</heigth>
+      <fontname>Sans</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <attributes />
 </job>
