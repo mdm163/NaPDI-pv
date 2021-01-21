@@ -27,7 +27,15 @@ def extract_data_from_api(page_start, page_end):
 	for page_no in range(page_start, page_end+1):
 		#returns paginated response with 100 objects per page
 		uri = "https://health-products.canada.ca/api/natural-licences/medicinalingredient/?page="+str(page_no)+"&lang=en&type=json"
-		response = call_API(uri)
+	
+		try:
+			response = call_API(uri)
+		except Exception as e:
+			print(e)
+			print("Pages completed: ", page)
+			print("Records extracted: ", total_count)
+			sys.exit(1)
+			
 		result = response.json()
 		lnhpd.extend(result['data'])
 		count = len(lnhpd)
