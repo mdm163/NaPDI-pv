@@ -11,6 +11,57 @@
   <modified_date>2020/12/09 17:26:21.611</modified_date>
   <parameters>
     </parameters>
+  <connection>
+    <name>localhost/cem</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>cem</database>
+    <port>5432</port>
+    <username>rw_grp</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79bc67e195bdca</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
   <slaveservers>
     </slaveservers>
   <job-log-table>
@@ -307,7 +358,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>304</xloc>
+      <xloc>448</xloc>
       <yloc>48</yloc>
       <attributes_kjc />
     </entry>
@@ -365,12 +416,12 @@ create unlogged table ${LNHPD_schema}.lnhpd_json (doc json);</sql>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename />
       <sendOneStatement>F</sendOneStatement>
-      <connection />
+      <connection>localhost/cem</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>512</xloc>
-      <yloc>48</yloc>
+      <xloc>736</xloc>
+      <yloc>176</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -395,7 +446,7 @@ create unlogged table ${LNHPD_schema}.lnhpd_json (doc json);</sql>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>512</xloc>
+      <xloc>400</xloc>
       <yloc>176</yloc>
       <attributes_kjc />
     </entry>
@@ -419,8 +470,36 @@ on conflict (lnhpd_id) do nothing;</sql>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>512</xloc>
-      <yloc>288</yloc>
+      <xloc>160</xloc>
+      <yloc>176</yloc>
+      <attributes_kjc />
+    </entry>
+    <entry>
+      <name>File exists</name>
+      <description />
+      <type>FILE_EXISTS</type>
+      <attributes />
+      <filename>${DIR_OUT}/lnhpd_all_unique.json</filename>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>736</xloc>
+      <yloc>48</yloc>
+      <attributes_kjc />
+    </entry>
+    <entry>
+      <name>Table exists</name>
+      <description />
+      <type>TABLE_EXISTS</type>
+      <attributes />
+      <tablename>lnhpd_staging</tablename>
+      <schemaname>{LNHPD_schema}</schemaname>
+      <connection>localhost/cem</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>560</xloc>
+      <yloc>176</yloc>
       <attributes_kjc />
     </entry>
   </entries>
@@ -435,7 +514,16 @@ on conflict (lnhpd_id) do nothing;</sql>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>python-api-get_data</from>
+      <from>json file in postgres</from>
+      <to>json to postgres</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>File exists</from>
       <to>create_lnhpd_table</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -444,8 +532,8 @@ on conflict (lnhpd_id) do nothing;</sql>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>create_lnhpd_table</from>
-      <to>json file in postgres</to>
+      <from>python-api-get_data</from>
+      <to>File exists</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -453,8 +541,17 @@ on conflict (lnhpd_id) do nothing;</sql>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>json file in postgres</from>
-      <to>json to postgres</to>
+      <from>create_lnhpd_table</from>
+      <to>Table exists</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table exists</from>
+      <to>json file in postgres</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
