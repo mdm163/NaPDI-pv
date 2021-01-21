@@ -82,7 +82,7 @@ def remove_duplicates_and_save(total_count):
 	return new_count
 
 if __name__ == '__main__':
-	total_count = extract_data_from_api(1, 100000)
+	total_count = extract_data_from_api(1, 4)
 	print('Total objects saved: ', total_count)
 	total_count_new = remove_duplicates_and_save(total_count)
 	print('Total object after de-duplication: ', total_count_new)

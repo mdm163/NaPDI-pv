@@ -353,7 +353,7 @@
       <add_date>N</add_date>
       <add_time>N</add_time>
       <insertScript>Y</insertScript>
-      <script>python get_data_lnhpd.py ${DIR_OUT}</script>
+      <script>python ${DIR_OUT}/get_data_lnhpd.py ${DIR_OUT}</script>
       <loglevel>Basic</loglevel>
       <parallel>N</parallel>
       <draw>Y</draw>
@@ -409,9 +409,9 @@ CREATE TABLE ${LNHPD_schema}.lnhpd_staging (
 	dhe_unit_of_measure VARCHAR(20),
 	extract_type_desc VARCHAR(20),
 	source_material VARCHAR(255)
-)
-
-create unlogged table ${LNHPD_schema}.lnhpd_json (doc json);</sql>
+);
+DROP TABLE IF EXISTS ${LNHPD_schema}.lnhpd_json;
+CREATE UNLOGGED TABLE ${LNHPD_schema}.lnhpd_json (doc json);</sql>
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename />
@@ -440,7 +440,7 @@ create unlogged table ${LNHPD_schema}.lnhpd_json (doc json);</sql>
       <add_date>N</add_date>
       <add_time>N</add_time>
       <insertScript>Y</insertScript>
-      <script>psql \copy lnhpd_json from ${JSON_OUTFILE}
+      <script>PGPASSWORD="${PGPASS}" psql -h "localhost" -U '${PGUSER}' -d "cem" -c "\copy ${LNHPD_schema}.lnhpd_json from ${JSON_OUTFILE}"
 </script>
       <loglevel>Basic</loglevel>
       <parallel>N</parallel>
@@ -493,7 +493,7 @@ on conflict (lnhpd_id) do nothing;</sql>
       <type>TABLE_EXISTS</type>
       <attributes />
       <tablename>lnhpd_staging</tablename>
-      <schemaname>{LNHPD_schema}</schemaname>
+      <schemaname>scratch_sanya</schemaname>
       <connection>localhost/cem</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
