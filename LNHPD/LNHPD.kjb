@@ -440,7 +440,7 @@ CREATE UNLOGGED TABLE ${LNHPD_schema}.lnhpd_json (doc json);</sql>
       <add_date>N</add_date>
       <add_time>N</add_time>
       <insertScript>Y</insertScript>
-      <script>PGPASSWORD="${PGPASS}" psql -h "localhost" -U '${PGUSER}' -d "cem" -c "\copy ${LNHPD_schema}.lnhpd_json from ${JSON_OUTFILE}"
+      <script>PGPASSWORD="${PGPASS}" psql -h "localhost" -U '${PGUSER}' -d "${DB_NAME}" -c "\copy ${LNHPD_schema}.lnhpd_json from ${JSON_OUTFILE}"
 </script>
       <loglevel>Basic</loglevel>
       <parallel>N</parallel>
@@ -460,13 +460,13 @@ quantity, quantity_minimum, quantity_maximum, quantity_unit_of_measure, ratio_nu
 dried_herb_equivalent, dhe_unit_of_measure, extract_type_desc, source_material)
 select p.*
 from ${LNHPD_schema}.lnhpd_json l
-  cross join lateral json_populate_recordset(null::${LNHPD_schema},lnhpd_staging, doc) as p
+  cross join lateral json_populate_recordset(null::${LNHPD_schema}.lnhpd_staging, doc) as p
 on conflict (lnhpd_id) do nothing;</sql>
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename />
       <sendOneStatement>F</sendOneStatement>
-      <connection />
+      <connection>localhost/cem</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -571,12 +571,15 @@ Variable: ${LNHPD_schema}
 
 3. json_file_in_postgres: shell script to run psql command to load JSON output file from (1) into postgres schema
 Variable/argument: ${JSON_OUTFILE} - 'LNHPD_output/lnhpd_all_unique.json'
+${PGPASS} - db password
+${PGUSER} - db user
+${DB_NAME} - db name
 4. json to postgres: SQL job to insert data into table 
 Variable: ${LNHPD_schema}</note>
       <xloc>0</xloc>
       <yloc>400</yloc>
       <width>741</width>
-      <heigth>214</heigth>
+      <heigth>265</heigth>
       <fontname>Sans</fontname>
       <fontsize>10</fontsize>
       <fontbold>N</fontbold>

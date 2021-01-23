@@ -53,7 +53,7 @@ def extract_data_from_api(page_start, page_end):
 	
 		if last_page is None or page_no == page_end:
 			#save remaining objects
-			
+			print("Last page = ", page_no)
 			total_count += count
 			outfile_last = dir_out + 'lnhpd_' + str(total_count) + '.json'
 			toJSON(outfile_last, lnhpd)
@@ -82,7 +82,7 @@ def remove_duplicates_and_save(total_count):
 	return new_count
 
 if __name__ == '__main__':
-	total_count = extract_data_from_api(1, 4)
+	total_count = extract_data_from_api(1, 100000)
 	print('Total objects saved: ', total_count)
 	total_count_new = remove_duplicates_and_save(total_count)
 	print('Total object after de-duplication: ', total_count_new)
