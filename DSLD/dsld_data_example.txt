@@ -1,0 +1,60 @@
+DSLD_ID
+Outer_Packaging
+Statement_of_Identity
+LanguaL_Dietary_Claim_or_Use
+count
+Product_Name
+LanguaL_Product_Type
+statements
+Brand
+Date_Entered_into_DSLD
+Serving_Size
+NHANES_ID
+success
+Suggested_Use
+Database
+ingredients
+Net_Contents_Quantity
+LanguaL_Supplement_Form
+Product_Trademark_Copyright_Symbol
+SKU
+DB_Source
+LanguaL_Intended_Target_Groups
+contacts
+Tracking_History
+
+Total products:  95463
+Total ingredients:  120405
+Total statements:  1599790
+Total contacts:  123918
+
+
+>>> data
+{'Outer_Packaging': 'Not Present', 
+'Statement_of_Identity': 'Dietary Supplement', 
+'LanguaL_Dietary_Claim_or_Use': 'Other Ingredient- Or Constituent-Related Claim Or Use [P0115]; Structure function claims [P0265]', 
+'count': 1, 
+'Product_Name': "Nature's Sunshine Sweet FX", 
+'DSLD_ID': '29422', 
+'LanguaL_Product_Type': 'Dietary Supplements, Combination, Other [A1325]', 
+
+'statements': [{'Statement': 'LOT:\nFull Potency Through:', 'Statement_Type': 'Other', 'DSLD_ID': '29422'}, {'Statement': "This bottle was sealed for your protection. Do not use if inner seal is missing or damaged. Nature's Sunshine uses natural source materials in its products that are subject to color variation.", 'Statement_Type': 'Precautions', 'DSLD_ID': '29422'}, {'Statement': "NATURE'S SUNSHINE(R)\nQUALITY, SERVICE, INTEGRITY", 'Statement_Type': 'Seals/Symbols', 'DSLD_ID': '29422'}, {'Statement': 'GUARANTEED PURE', 'Statement_Type': 'Other', 'DSLD_ID': '29422'}, {'Statement': "(C)2013 Nature's Sunshine Products, Inc.", 'Statement_Type': 'Brand Intellectual Property (IP) Statement Information', 'DSLD_ID': '29422'}, {'Statement': "Neutralize sugar and stress with Nature's Sunshine's Sweet FX(TM).", 'Statement_Type': 'Brand Intellectual Property (IP) Statement Information', 'DSLD_ID': '29422'}, {'Statement': 'Product of U.S.A.', 'Statement_Type': 'Other', 'DSLD_ID': '29422'}, {'Statement': "This feel good formula contains L-Arabinose, which helps block the absorption of sugar and L-Theanine to boost your mood and calm anxiety. Featuring antioxidant-rich cinnamon, Sweet FX(TM) also helps maintain healthy blood sugar levels already in the normal range - whether you're concerned about managing your weight or encouraging normal glucose balances.", 'Statement_Type': 'Formulation', 'DSLD_ID': '29422'}, {'Statement': 'Keep out of the reach of children.', 'Statement_Type': 'Precautions', 'DSLD_ID': '29422'}, {'Statement': 'Add some positive sweetness to your day with Sweet FX(TM).*', 'Statement_Type': 'Brand Intellectual Property (IP) Statement Information', 'DSLD_ID': '29422'}, {'Statement': 'WEIGHT MANAGEMENT', 'Statement_Type': 'Other', 'DSLD_ID': '29422'}, {'Statement': '~Helps block the absorption of sugar*\n~Reduces stress and helps improve your mood*\n~Supports healthy blood sugar levels already in the normal range*', 'Statement_Type': 'Other', 'DSLD_ID': '29422'}, {'Statement': 'RECOMMENDATION\nTake three capsules with your largest meal or any time you consume food that is high in starch or sugar.', 'Statement_Type': 'Suggested/Recommended/Usage/Directions', 'DSLD_ID': '29422'}, {'Statement': '*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.', 'Statement_Type': 'FDA Disclaimer Statement', 'DSLD_ID': '29422'}, {'Statement': 'Stock No. 3068-3', 'Statement_Type': 'Other', 'DSLD_ID': '29422'}, {'Statement': 'Dietary Supplement', 'Statement_Type': 'FDA Statement of Identity', 'DSLD_ID': '29422'}], 
+
+'Brand': "Nature's Sunshine", 
+'Date_Entered_into_DSLD': 'January 24, 2014', 
+'Serving_Size': ' 3.0 Capsule(s)', 
+'NHANES_ID': '', 
+'success': True, 
+'Suggested_Use': 'RECOMMENDATION\nTake three capsules with your largest meal or any time you consume food that is high in starch or sugar.', 
+'Database': 'adsld', 
+
+'ingredients': [{'Ingredient_ID': '96442', 'DSLD_Ingredient_Categories': '', 'Amount_Serving_Unit': 'mcg', 'Ingredient_Group_GRP_ID': '41', 'DSLD_ID': '29422', "Blends'_Ancestry": None, 'Amount_Per_Serving': '125.0', 'Dietary_Ingredient_Synonym_Source': 'Chromium  (Food Bound)  ', 'Blended_Ingredient_Types': '', 'Pct_Daily_Value_per_Serving': '104.0 %', 'Serving_Size': '3.0 Capsule(s)', 'Suggested_Recommended_Usage_Directions:': 'RECOMMENDATION\nTake three capsules with your largest meal or any time you consume food that is high in starch or sugar.', 'DB_Source': 'Adults and children 4 or more years of age', 'Ancestry__Number_of_Parents_Row_IDs': '0,364895'}, {'Ingredient_ID': '59356', 'DSLD_Ingredient_Categories': '', 'Amount_Serving_Unit': 'mg', 'Ingredient_Group_GRP_ID': '', 'DSLD_ID': '29422', "Blends'_Ancestry": None, 'Amount_Per_Serving': '1425.0', 'Dietary_Ingredient_Synonym_Source': 'Proprietary Blend   ', 'Blended_Ingredient_Types': '', 'Pct_Daily_Value_per_Serving': ' Daily Value not established', 'Serving_Size': '3.0 Capsule(s)', 'Suggested_Recommended_Usage_Directions:': 'RECOMMENDATION\nTake three capsules with your largest meal or any time you consume food that is high in starch or sugar.', 'DB_Source': 'Adults and children 4 or more years of age', 'Ancestry__Number_of_Parents_Row_IDs': '0,364896'}, {'Ingredient_ID': '96444', 'DSLD_Ingredient_Categories': 'carbohydrate', 'Amount_Serving_Unit': 'NP', 'Ingredient_Group_GRP_ID': '', 'DSLD_ID': '29422', "Blends'_Ancestry": 'Proprietary Blend', 'Amount_Per_Serving': '0.0', 'Dietary_Ingredient_Synonym_Source': 'L-Arabinose   ', 'Blended_Ingredient_Types': 'c', 'Pct_Daily_Value_per_Serving': '', 'Serving_Size': '3.0 Capsule(s)', 'Suggested_Recommended_Usage_Directions:': 'RECOMMENDATION\nTake three capsules with your largest meal or any time you consume food that is high in starch or sugar.', 'DB_Source': '', 'Ancestry__Number_of_Parents_Row_IDs': '1:364896,364900'}, {'Ingredient_ID': '16894', 'DSLD_Ingredient_Categories': 'chemical', 'Amount_Serving_Unit': 'NP', 'Ingredient_Group_GRP_ID': '607', 'DSLD_ID': '29422', "Blends'_Ancestry": 'Proprietary Blend', 'Amount_Per_Serving': '0.0', 'Dietary_Ingredient_Synonym_Source': 'L-Theanine   ', 'Blended_Ingredient_Types': 'c', 'Pct_Daily_Value_per_Serving': '', 'Serving_Size': '3.0 Capsule(s)', 'Suggested_Recommended_Usage_Directions:': 'RECOMMENDATION\nTake three capsules with your largest meal or any time you consume food that is high in starch or sugar.', 'DB_Source': '', 'Ancestry__Number_of_Parents_Row_IDs': '1:364896,364902'}, {'Ingredient_ID': '77599', 'DSLD_Ingredient_Categories': 'botanical', 'Amount_Serving_Unit': 'NP', 'Ingredient_Group_GRP_ID': '1578', 'DSLD_ID': '29422', "Blends'_Ancestry": 'Proprietary Blend', 'Amount_Per_Serving': '0.0', 'Dietary_Ingredient_Synonym_Source': 'Cinnamon bark extract  (Cinnamomum cassia) (bark)  ', 'Blended_Ingredient_Types': 'c', 'Pct_Daily_Value_per_Serving': '', 'Serving_Size': '3.0 Capsule(s)', 'Suggested_Recommended_Usage_Directions:': 'RECOMMENDATION\nTake three capsules with your largest meal or any time you consume food that is high in starch or sugar.', 'DB_Source': '', 'Ancestry__Number_of_Parents_Row_IDs': '1:364896,364905'}], 
+
+'Net_Contents_Quantity': '90.0 Capsule(s)', 
+'LanguaL_Supplement_Form': 'Capsule [E0159]', 
+'Product_Trademark_Copyright_Symbol': '', 
+'SKU': '0 99904 03068 8', 
+'DB_Source': 'Version 7.0.6 - February 2019, Rev 2565 (b2fdb55f316d)', 
+'LanguaL_Intended_Target_Groups': 'Four years and above [P0250]', 
+'contacts': [{'ZIP': '84660', 'IS_MANUFACTURER': 'Yes', 'Type': None, 'IS_PACKAGER': 'No', 'Address': None, 'State': 'Utah', 'IS_DISTRIBUTOR': 'No', 'DSLD_ID': '29422', 'City': 'Spanish Fork', 'IS_RESELLER': 'No', 'IS_OTHER': 'No', 'Name': "Nature's Sunshine Products, Inc"}], 
+'Tracking_History': 'Date - Entered into DSLD: January 24, 2014'}
