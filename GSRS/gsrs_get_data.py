@@ -192,7 +192,7 @@ def get_mixture_np(uuid, parent_uuid, conn):
 	inner join np_component on np_component.approval_id = igss.approval_id
 	inner join ix_ginas_strucdiv ixs on ixs.uuid = igss.structurally_diverse_uuid
 	inner join ix_ginas_name as ign on ign.owner_uuid = igss.uuid
-	"""
+	""".format(uuid)
 		
 	flag = 0
 	try:
