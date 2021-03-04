@@ -94,6 +94,10 @@ def get_structurally_diverse_np(uuid, parent_uuid, conn):
 			where igr.owner_uuid = '{}' or igr.owner_uuid in (select parent_id from np_parent)
 			""".format(parent_uuid, uuid)
 
+		'''query_constituents = """
+
+		"""'''
+
 	flag = 0
 	try:
 		cur = conn.cursor()
@@ -171,6 +175,24 @@ def get_mixture_np(uuid, parent_uuid, conn):
 			from ix_ginas_relationship igr
 			where igr.owner_uuid = '{}' or igr.owner_uuid in (select parent_id from np_parent)
 			""".format(parent_uuid, uuid)
+	query_components = """
+	with np_mixture as (
+	select igm.uuid from ix_ginas_mixture igm
+	inner join ix_ginas_substance as igs on igm.uuid = igs.mixture_uuid
+	where igs.uuid = '{}'),
+	np_comp_id as (
+	select igsmc.ix_ginas_component_uuid as comp_uuid from ix_ginas_substance_mix_comp igsmc
+	inner join np_mixture on np_mixture.uuid = igsmc.ix_ginas_mixture_uuid),
+	np_component as (
+	select * from ix_ginas_component igc
+	inner join ix_ginas_substanceref as iss on igc.substance_uuid = iss.uuid
+	where igc.uuid in (select comp_uuid from np_comp_id))
+	select * from ix_ginas_substance igss
+	into scratch_sanya.test_lic_comp
+	inner join np_component on np_component.approval_id = igss.approval_id
+	inner join ix_ginas_strucdiv ixs on ixs.uuid = igss.structurally_diverse_uuid
+	inner join ix_ginas_name as ign on ign.owner_uuid = igss.uuid
+	"""
 		
 	flag = 0
 	try:
