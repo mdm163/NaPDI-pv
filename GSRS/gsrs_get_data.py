@@ -10,6 +10,9 @@ np = [str(sys.argv[1])]
 
 np_result = {}
 
+#Function to query database for structurally diverse substance (kratom, goldenseal, green tea, cinnamon)
+#Gets details from tables ix_ginas_substance, ix_ginas_name, ix_ginas_strucdiv, ix_ginas_relationship, 
+#ix_ginas_code (for DSLD mapping) 
 def get_initial_details(np_item):
 	uri = "https://ginas.ncats.nih.gov/ginas/app/api/v1/substances/search?q="+np_item
 	response = requests.get(uri)
@@ -94,9 +97,10 @@ def get_structurally_diverse_np(uuid, parent_uuid, conn):
 			where igr.owner_uuid = '{}' or igr.owner_uuid in (select parent_id from np_parent)
 			""".format(parent_uuid, uuid)
 
-		'''query_constituents = """
-
-		"""'''
+		query_dsld = """
+		select * from ix_ginas_code igc
+		where igc.owner_uuid = '{}' and igc.code_system = 'DSLD'
+		""".format(uuid)
 
 	flag = 0
 	try:
@@ -115,7 +119,9 @@ def get_structurally_diverse_np(uuid, parent_uuid, conn):
 	cur.close()
 	return flag
 	
-
+#Function to query database for mixture (licorice)
+#Gets details from tables ix_ginas_substance, ix_ginas_name, ix_ginas_strucdiv, ix_ginas_relationship, 
+#DO components of mixture
 def get_mixture_np(uuid, parent_uuid, conn):
 	query_main = """
 		with np_substance as (
@@ -175,7 +181,8 @@ def get_mixture_np(uuid, parent_uuid, conn):
 			from ix_ginas_relationship igr
 			where igr.owner_uuid = '{}' or igr.owner_uuid in (select parent_id from np_parent)
 			""".format(parent_uuid, uuid)
-	query_components = """
+	
+	'''query_components = """
 	with np_mixture as (
 	select igm.uuid from ix_ginas_mixture igm
 	inner join ix_ginas_substance as igs on igm.uuid = igs.mixture_uuid
@@ -192,7 +199,7 @@ def get_mixture_np(uuid, parent_uuid, conn):
 	inner join np_component on np_component.approval_id = igss.approval_id
 	inner join ix_ginas_strucdiv ixs on ixs.uuid = igss.structurally_diverse_uuid
 	inner join ix_ginas_name as ign on ign.owner_uuid = igss.uuid
-	""".format(uuid)
+	""".format(uuid)'''
 		
 	flag = 0
 	try:
@@ -210,7 +217,7 @@ def get_mixture_np(uuid, parent_uuid, conn):
 	return flag
 
 if __name__ == '__main__':
-	
+	#connect to DB
 	try:
 		conn = psycopg2.connect("dbname='g_substance_reg' user='rw_grp' host='localhost' password='rw_grp'")
 	except Exception as error:
@@ -220,12 +227,16 @@ if __name__ == '__main__':
 	if not conn:
 		sys.exit(1)
 
+#for all items either in NP list or as input, call API to get result as JSON object and get its substance class (structurally diverse, mixture...)
 	np_class = {}
 	for item in np:
 		np_class[item] = get_initial_details(item)
 	print(np_result)
 
+#based on substance class from above, call function to query the database using the substance ID and parent ID
 	for item in np:
+
+		#get substance ID
 		uuid = np_result[item]["content"][0]["uuid"]
 		if 'structurallyDiverse' in np_result[item]["content"][0]:
 			if 'parentSubstance' in np_result[item]["content"][0]['structurallyDiverse']:
@@ -237,6 +248,7 @@ if __name__ == '__main__':
 				parent_uuid = np_result[item]["content"][0]["mixture"]["parentSubstance"]["uuid"]
 			else:
 				parent_uuid = ''
+		#if botanical/structurally diverse substance, call function for queries
 		if np_class[item] == "structurallyDiverse":
 			flag = get_structurally_diverse_np(uuid, parent_uuid, conn)
 		elif np_class[item] == "mixture":
