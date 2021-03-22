@@ -1,4 +1,9 @@
+-- PART I - specific NPs
+
 --match to compound string name and then get all parents and synonyms for parent+compound
+
+-- drop table scratch_rich.np_of_interest;
+
 --cinnamon
 with np_ign as (
 select * from ix_ginas_name ign1 where ign1."name" = 'CINNAMON'
@@ -21,7 +26,8 @@ ign.uuid as name_uuid, ign.internal_references, ign.owner_uuid, ign."name",
 ign."type", ign.preferred, ign.display_name, 
 ixs.uuid as structdiv_uuid, ixs.source_material_class, ixs.source_material_state, ixs.source_material_type,
 ixs.organism_family, ixs.organism_author, ixs.organism_genus, ixs.organism_species, ixs.part_location,
-ixs.part, ixs.parent_substance_uuid 
+ixs.part, ixs.parent_substance_uuid, 'CINNAMON' napdi_name 
+into scratch_rich.np_of_interest
 from ix_ginas_substance igs 
 inner join ix_ginas_name as ign on ign.owner_uuid = igs.uuid 
 inner join ix_ginas_strucdiv as ixs on ixs.uuid = igs.structurally_diverse_uuid 
@@ -29,7 +35,7 @@ where igs.uuid in
 (select substance_uuid from np_substance) or 
 igs.uuid in
 (select parent_uuid from np_parent)
-
+;
 --kratom
 with np_ign as (
 select * from ix_ginas_name ign1 where ign1."name" like '%KRATOM%'
@@ -46,13 +52,14 @@ np_parent as (
 select igs3.refuuid as parent_uuid from ix_ginas_substanceref igs3 
 inner join np_strucdiv on np_strucdiv.parent_substance_uuid = igs3.uuid 
 )
+insert into scratch_rich.np_of_interest 
 select igs.dtype, igs.uuid as substance_uuid, igs.created, igs.class, igs.status, igs.modifications_uuid,
 igs.approval_id, igs.structure_id, igs.structurally_diverse_uuid, 
 ign.uuid as name_uuid, ign.internal_references, ign.owner_uuid, ign."name",
 ign."type", ign.preferred, ign.display_name, 
 ixs.uuid as structdiv_uuid, ixs.source_material_class, ixs.source_material_state, ixs.source_material_type,
 ixs.organism_family, ixs.organism_author, ixs.organism_genus, ixs.organism_species, ixs.part_location,
-ixs.part, ixs.parent_substance_uuid 
+ixs.part, ixs.parent_substance_uuid, 'KRATOM' napdi_name 
 from ix_ginas_substance igs 
 inner join ix_ginas_name as ign on ign.owner_uuid = igs.uuid 
 inner join ix_ginas_strucdiv as ixs on ixs.uuid = igs.structurally_diverse_uuid 
@@ -60,7 +67,7 @@ where igs.uuid in
 (select substance_uuid from np_substance) or 
 igs.uuid in
 (select parent_uuid from np_parent)
-
+;
 --goldenseal
 with np_ign as (
 select * from ix_ginas_name ign1 where ign1."name" like '%GOLDENSEAL%'
@@ -77,13 +84,14 @@ np_parent as (
 select igs3.refuuid as parent_uuid from ix_ginas_substanceref igs3 
 inner join np_strucdiv on np_strucdiv.parent_substance_uuid = igs3.uuid 
 )
+insert into scratch_rich.np_of_interest 
 select igs.dtype, igs.uuid as substance_uuid, igs.created, igs.class, igs.status, igs.modifications_uuid,
 igs.approval_id, igs.structure_id, igs.structurally_diverse_uuid, 
 ign.uuid as name_uuid, ign.internal_references, ign.owner_uuid, ign."name",
 ign."type", ign.preferred, ign.display_name, 
 ixs.uuid as structdiv_uuid, ixs.source_material_class, ixs.source_material_state, ixs.source_material_type,
 ixs.organism_family, ixs.organism_author, ixs.organism_genus, ixs.organism_species, ixs.part_location,
-ixs.part, ixs.parent_substance_uuid 
+ixs.part, ixs.parent_substance_uuid, 'GOLDENSEAL' napdi_name 
 from ix_ginas_substance igs 
 inner join ix_ginas_name as ign on ign.owner_uuid = igs.uuid 
 inner join ix_ginas_strucdiv as ixs on ixs.uuid = igs.structurally_diverse_uuid 
@@ -91,7 +99,7 @@ where igs.uuid in
 (select substance_uuid from np_substance) or 
 igs.uuid in
 (select parent_uuid from np_parent)
-
+;
 --green tea
 with np_ign as (
 select * from ix_ginas_name ign1 where ign1."name" = 'GREEN TEA'
@@ -108,13 +116,14 @@ np_parent as (
 select igs3.refuuid as parent_uuid from ix_ginas_substanceref igs3 
 inner join np_strucdiv on np_strucdiv.parent_substance_uuid = igs3.uuid 
 )
+insert into scratch_rich.np_of_interest 
 select igs.dtype, igs.uuid as substance_uuid, igs.created, igs.class, igs.status, igs.modifications_uuid,
 igs.approval_id, igs.structure_id, igs.structurally_diverse_uuid, 
 ign.uuid as name_uuid, ign.internal_references, ign.owner_uuid, ign."name",
 ign."type", ign.preferred, ign.display_name, 
 ixs.uuid as structdiv_uuid, ixs.source_material_class, ixs.source_material_state, ixs.source_material_type,
 ixs.organism_family, ixs.organism_author, ixs.organism_genus, ixs.organism_species, ixs.part_location,
-ixs.part, ixs.parent_substance_uuid 
+ixs.part, ixs.parent_substance_uuid, 'GREEN TEA' napdi_name 
 from ix_ginas_substance igs 
 inner join ix_ginas_name as ign on ign.owner_uuid = igs.uuid 
 inner join ix_ginas_strucdiv as ixs on ixs.uuid = igs.structurally_diverse_uuid 
@@ -122,7 +131,7 @@ where igs.uuid in
 (select substance_uuid from np_substance) or 
 igs.uuid in
 (select parent_uuid from np_parent)
-
+;
 --cannabis
 with np_ign as (
 select * from ix_ginas_name ign1 where ign1."name" like '%CANNABIS%'
@@ -139,13 +148,14 @@ np_parent as (
 select igs3.refuuid as parent_uuid from ix_ginas_substanceref igs3 
 inner join np_strucdiv on np_strucdiv.parent_substance_uuid = igs3.uuid 
 )
+insert into scratch_rich.np_of_interest 
 select igs.dtype, igs.uuid as substance_uuid, igs.created, igs.class, igs.status, igs.modifications_uuid,
 igs.approval_id, igs.structure_id, igs.structurally_diverse_uuid, 
 ign.uuid as name_uuid, ign.internal_references, ign.owner_uuid, ign."name",
 ign."type", ign.preferred, ign.display_name, 
 ixs.uuid as structdiv_uuid, ixs.source_material_class, ixs.source_material_state, ixs.source_material_type,
 ixs.organism_family, ixs.organism_author, ixs.organism_genus, ixs.organism_species, ixs.part_location,
-ixs.part, ixs.parent_substance_uuid 
+ixs.part, ixs.parent_substance_uuid, 'CANNABIS' napdi_name
 from ix_ginas_substance igs 
 inner join ix_ginas_name as ign on ign.owner_uuid = igs.uuid 
 inner join ix_ginas_strucdiv as ixs on ixs.uuid = igs.structurally_diverse_uuid 
@@ -153,3 +163,12 @@ where igs.uuid in
 (select substance_uuid from np_substance) or 
 igs.uuid in
 (select parent_uuid from np_parent)
+;
+
+------
+
+-- PART II - data in a format that our OMOP Vocap script can load
+select distinct substance_uuid uri, name term, left(concat(organism_genus, ' ', organism_species), 20) definition, napdi_name "alernative term"
+from scratch_rich.np_of_interest 
+order by definition
+;

@@ -3,10 +3,10 @@ import requests, os
 import psycopg2, sys
 
 #add np to list 
-#np = ['KRATOM', 'GREEN TEA', 'GOLDENSEAL', 'CINNAMON', 'CANNABIS', 'LICORICE']
+np = ['KRATOM', 'GREEN TEA', 'GOLDENSEAL', 'CINNAMON', 'CANNABIS', 'LICORICE']
 
 #or specify as argument
-np = [str(sys.argv[1])]
+#np = [str(sys.argv[1])]
 
 np_result = {}
 
