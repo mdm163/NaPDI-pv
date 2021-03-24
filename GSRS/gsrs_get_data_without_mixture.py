@@ -31,9 +31,11 @@ def get_initial_details(np_item):
         return substance_class
 
 def clean_tables(conn):
-        query_clean = ('DROP TABLE IF EXISTS scratch_u54.' + NP_DB_TABLE_PREFIX,
-                       'DROP TABLE IF EXISTS scratch_u54.' + NP_DB_TABLE_PREFIX + '_parent',
-                       'DROP TABLE IF EXISTS scratch_u54.' + NP_DB_TABLE_PREFIX + '_rel')
+        query_clean = ('DROP TABLE IF EXISTS' + NP_DB_SCHEMA + NP_DB_TABLE_PREFIX,
+                       'DROP TABLE IF EXISTS' + NP_DB_SCHEMA + NP_DB_TABLE_PREFIX + '_parent',
+                       'DROP TABLE IF EXISTS' + NP_DB_SCHEMA + NP_DB_TABLE_PREFIX + '_rel',
+                       'DROP TABLE IF EXISTS' + NP_DB_SCHEMA + NP_DB_TABLE_PREFIX + '_part',
+                       'DROP TABLE IF EXISTS' + NP_DB_SCHEMA + NP_DB_TABLE_PREFIX + '_part_rel')
         try:
                 cur = conn.cursor()
                 for query in query_clean:
@@ -49,7 +51,7 @@ def clean_tables(conn):
 
 def create_tables(conn):
         query_create = ("""
-CREATE TABLE scratch_u54.{} (
+CREATE TABLE {}.{} (
 	dtype varchar(10) NULL,
 	substance_uuid varchar(40) NULL,
 	created timestamp NULL,
@@ -78,8 +80,8 @@ CREATE TABLE scratch_u54.{} (
 	part text NULL,
 	parent_substance_uuid varchar(40) NULL
 )
-""".format(NP_DB_TABLE_PREFIX), """
-CREATE TABLE scratch_u54.{} (
+""".format(NP_DB_SCHEMA, NP_DB_TABLE_PREFIX), """
+CREATE TABLE {}.{}_parent (
 	dtype varchar(10) NULL,
 	substance_uuid varchar(40) NULL,
 	created timestamp NULL,
@@ -108,7 +110,7 @@ CREATE TABLE scratch_u54.{} (
 	part text NULL,
 	parent_substance_uuid varchar(40) NULL
 )
-""".format(NP_DB_TABLE_PREFIX + "_parent"), """
+""".format(NP_DB_SCHEMA ,NP_DB_TABLE_PREFIX), """
 CREATE TABLE {}.{}_rel (
 	uuid varchar(40) NULL,
 	current_version int4 NULL,
@@ -269,12 +271,12 @@ from ix_ginas_relationship igr
 where igr.owner_uuid = '{}' or igr.owner_uuid in (select parent_id from np_parent)
 """.format(parent_uuid, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX, uuid)
 
-                query_dsld = """
+        query_dsld = """
 select * from ix_ginas_code igc
 where igc.owner_uuid = '{}' and igc.code_system = 'DSLD'
 """.format(uuid)
                 
-                query_part = """
+        query_part = """
 with np_substance_part as (
 select igss.uuid as part_uuid from ix_ginas_substanceref igss
 where igss.refuuid = '{}'
@@ -296,11 +298,11 @@ and igs.dtype = 'DIV'
 
 #check if parts of the substance are 'structurally diverse' or 'mixture' and extract details accordingly
 
-                query_part_rel = """
+        query_part_rel = """
 with np_substance_part as (
 select igss.uuid as part_uuid from ix_ginas_substanceref igss
-where igss.uuid = '{}'
-)
+where igss.refuuid = '{}'
+),
 np_substance as (
 select igs.uuid as substance_uuid, igs.dtype from ix_ginas_substance igs
 inner join ix_ginas_strucdiv as ixs on ixs.uuid = igs.structurally_diverse_uuid
