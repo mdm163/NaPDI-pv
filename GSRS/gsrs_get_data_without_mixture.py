@@ -130,6 +130,58 @@ CREATE TABLE {}.{}_rel (
 	"type" varchar(255) NULL,
 	internal_version int8 NULL
 )
+""".format(NP_DB_SCHEMA,NP_DB_TABLE_PREFIX), """
+CREATE TABLE {}.{}_part (
+	dtype varchar(10) NULL,
+	substance_uuid varchar(40) NULL,
+	created timestamp NULL,
+	"class" int4 NULL,
+	status varchar(255) NULL,
+	modifications_uuid varchar(40) NULL,
+	approval_id varchar(20) NULL,
+	structure_id varchar(40) NULL,
+	structurally_diverse_uuid varchar(40) NULL,
+	name_uuid varchar(40) NULL,
+	internal_references text NULL,
+	owner_uuid varchar(40) NULL,
+	"name" varchar(255) NULL,
+	"type" varchar(32) NULL,
+	preferred bool NULL,
+	display_name bool NULL,
+	structdiv_uuid varchar(40) NULL,
+	source_material_class varchar(255) NULL,
+	source_material_state varchar(255) NULL,
+	source_material_type varchar(255) NULL,
+	organism_family varchar(255) NULL,
+	organism_author varchar(255) NULL,
+	organism_genus varchar(255) NULL,
+	organism_species varchar(255) NULL,
+	part_location varchar(255) NULL,
+	part text NULL,
+	parent_substance_uuid varchar(40) NULL
+)
+""".format(NP_DB_SCHEMA, NP_DB_TABLE_PREFIX), """
+CREATE TABLE {}.{}_part_rel (
+	uuid varchar(40) NULL,
+	current_version int4 NULL,
+	created timestamp NULL,
+	created_by_id int8 NULL,
+	last_edited timestamp NULL,
+	last_edited_by_id int8 NULL,
+	deprecated bool NULL,
+	record_access bytea NULL,
+	internal_references text NULL,
+	owner_uuid varchar(40) NULL,
+	amount_uuid varchar(40) NULL,
+	"comments" text NULL,
+	interaction_type varchar(255) NULL,
+	qualification varchar(255) NULL,
+	related_substance_uuid varchar(40) NULL,
+	mediator_substance_uuid varchar(40) NULL,
+	originator_uuid varchar(255) NULL,
+	"type" varchar(255) NULL,
+	internal_version int8 NULL
+)
 """.format(NP_DB_SCHEMA,NP_DB_TABLE_PREFIX))
                         
         try:
@@ -221,118 +273,52 @@ where igr.owner_uuid = '{}' or igr.owner_uuid in (select parent_id from np_paren
 select * from ix_ginas_code igc
 where igc.owner_uuid = '{}' and igc.code_system = 'DSLD'
 """.format(uuid)
-
-        flag = 0
-        try:
-                cur = conn.cursor()
-                if DEBUG:
-                        print(query_main)
-                cur.execute(query_main)
-                if query_parent is not None:
-                        if DEBUG:
-                                print(query_parent)
-                        cur.execute(query_parent)
-                if DEBUG:
-                        print(query_relations)
-                cur.execute(query_relations)
-                cur.close()
-                conn.commit()
-                flag = 1
-        except (Exception, psycopg2.DatabaseError) as error:
-                print(error)
-        cur.close()
-        return flag
-
-#Function to query database for mixture (licorice)
-#Gets details from tables ix_ginas_substance, ix_ginas_name, ix_ginas_strucdiv, ix_ginas_relationship, 
-#DO components of mixture
-def get_mixture_np(uuid, parent_uuid, conn):
-        query_main = """
-with np_substance as (
-select igs1.uuid as substance_uuid, igs1.* from ix_ginas_substance igs1
-where igs1.uuid = '{}'
-),
-np_mixture as (
-select * from ix_ginas_mixture igm1
-inner join np_substance on np_substance.mixture_uuid = igm1.uuid 
-),
-np_parent as (
-select igs3.refuuid as parent_uuid from ix_ginas_substanceref igs3 
-inner join np_mixture on np_mixture.parent_substance_uuid = igs3.uuid 
-)
-insert into {}.{}_mixture
-select igs.dtype, igs.uuid as substance_uuid, igs.created, igs.class, igs.status, igs.modifications_uuid,
-igs.approval_id, igs.structure_id, igs.structurally_diverse_uuid, 
-ign.uuid as name_uuid, ign.internal_references, ign.owner_uuid, ign."name",
-ign."type", ign.preferred, ign.display_name, 
-igm.uuid as mixture_uuid, igm.parent_substance_uuid 
-from ix_ginas_substance igs 
-inner join ix_ginas_name as ign on ign.owner_uuid = igs.uuid 
-inner join ix_ginas_mixture as igm on igm.uuid = igs.mixture_uuid 
-where igs.uuid in 
-(select substance_uuid from np_substance) or 
-igs.uuid in
-(select parent_uuid from np_parent)
-""".format(uuid, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX)
-        if parent_uuid == '':
-                query_parent = None
-                query_relations = """
-insert into {}.{}_mixture
-select *
-from ix_ginas_relationship igr
-where igr.owner_uuid = '{}'
-""".format(NP_DB_SCHEMA, NP_DB_TABLE_PREFIX,uuid)
-        else:
-                query_parent = """
-with np_parent as (
-select refuuid as parent_id from ix_ginas_substanceref igs2
-where igs2.uuid = '{}')
-insert into {}.{}_parent
-select igs.dtype, igs.uuid as substance_uuid, igs.created, igs.class, igs.status, igs.modifications_uuid,
-igs.approval_id, igs.structure_id, igs.structurally_diverse_uuid, 
-ign.uuid as name_uuid, ign.internal_references, ign.owner_uuid, ign."name",
-ign."type", ign.preferred, ign.display_name, 
-igm.uuid as mixture_uuid, igm.parent_substance_uuid 
-from ix_ginas_substance igs 
-inner join ix_ginas_name as ign on ign.owner_uuid = igs.uuid 
-inner join ix_ginas_mixture as igm on igm.uuid = igs.mixture_uuid 
-where igs.uuid in (select parent_id from np_parent)
-""".format(parent_uuid, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX)
-                query_relations = """
-with np_parent as (
-select refuuid as parent_id from ix_ginas_substanceref igs2
-where igs2.uuid = '{}')
-insert into {}.{}_rel
-select * 
-from ix_ginas_relationship igr
-where igr.owner_uuid = '{}' or igr.owner_uuid in (select parent_id from np_parent)
-""".format(parent_uuid, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX, uuid)
                 
-        '''query_components = """
-with np_mixture as (
-select igm.uuid from ix_ginas_mixture igm
-inner join ix_ginas_substance as igs on igm.uuid = igs.mixture_uuid
-where igs.uuid = '{}'),
-np_comp_id as (
-select igsmc.ix_ginas_component_uuid as comp_uuid from ix_ginas_substance_mix_comp igsmc
-inner join np_mixture on np_mixture.uuid = igsmc.ix_ginas_mixture_uuid),
-np_component as (
-select * from ix_ginas_component igc
-inner join ix_ginas_substanceref as iss on igc.substance_uuid = iss.uuid
-where igc.uuid in (select comp_uuid from np_comp_id))
-insert into {}.{}_mixture_comp
-select * from ix_ginas_substance igss
-inner join np_component on np_component.approval_id = igss.approval_id
-inner join ix_ginas_strucdiv ixs on ixs.uuid = igss.structurally_diverse_uuid
-inner join ix_ginas_name as ign on ign.owner_uuid = igss.uuid
-""".format(uuid, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX)'''
-        
+                query_part = """
+with np_substance_part as (
+select igss.uuid as part_uuid from ix_ginas_substanceref igss
+where igss.refuuid = '{}'
+) 
+insert into {}.{}_part
+select igs.dtype, igs.uuid as substance_uuid, igs.created, igs.class, igs.status, igs.modifications_uuid,
+igs.approval_id, igs.structure_id, igs.structurally_diverse_uuid, 
+ign.uuid as name_uuid, ign.internal_references, ign.owner_uuid, ign."name",
+ign."type", ign.preferred, ign.display_name, 
+ixs.uuid as structdiv_uuid, ixs.source_material_class, ixs.source_material_state, ixs.source_material_type,
+ixs.organism_family, ixs.organism_author, ixs.organism_genus, ixs.organism_species, ixs.part_location,
+ixs.part, ixs.parent_substance_uuid 
+from ix_ginas_substance igs 
+inner join ix_ginas_name as ign on ign.owner_uuid = igs.uuid 
+inner join ix_ginas_strucdiv as ixs on ixs.uuid = igs.structurally_diverse_uuid 
+where ixs.parent_substance_uuid in (select part_uuid from np_substance_part)
+and igs.dtype = 'DIV'
+""".format(uuid, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX)
+
+#check if parts of the substance are 'structurally diverse' or 'mixture' and extract details accordingly
+
+                query_part_rel = """
+with np_substance_part as (
+select igss.uuid as part_uuid from ix_ginas_substanceref igss
+where igss.uuid = '{}'
+)
+np_substance as (
+select igs.uuid as substance_uuid, igs.dtype from ix_ginas_substance igs
+inner join ix_ginas_strucdiv as ixs on ixs.uuid = igs.structurally_diverse_uuid
+where ixs.parent_substance_uuid in (select part_uuid from np_substance_part)
+and igs.dtype = 'DIV'
+)
+insert into {}.{}_part_rel
+select *  
+from ix_ginas_relationship igr
+where igr.owner_uuid in (select substance_uuid from np_substance)
+""".format(uuid, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX)
+
         flag = 0
         try:
                 cur = conn.cursor()
-                cur.execute(query_main)
                 if DEBUG:
                         print(query_main)
+                cur.execute(query_main)
                 if query_parent is not None:
                         if DEBUG:
                                 print(query_parent)
@@ -340,6 +326,11 @@ inner join ix_ginas_name as ign on ign.owner_uuid = igss.uuid
                 if DEBUG:
                         print(query_relations)
                 cur.execute(query_relations)
+                if DEBUG:
+                        print(query_part)  
+                        print(query_part_rel)  
+                cur.execute(query_part)
+                cur.execute(query_part_rel)
                 cur.close()
                 conn.commit()
                 flag = 1
@@ -403,7 +394,9 @@ if __name__ == '__main__':
                 if np_class[item] == "structurallyDiverse":
                         flag = get_structurally_diverse_np(uuid, parent_uuid, conn)
                 elif np_class[item] == "mixture":
-                        flag = get_mixture_np(uuid, parent_uuid, conn)
+                        #flag = get_mixture_np(uuid, parent_uuid, conn)
+                        print('Substance ', item, 'is mixture. Cannot insert into created tables.')
+                        continue
         if flag:
                 print('Success')
 
