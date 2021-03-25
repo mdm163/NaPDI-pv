@@ -231,5 +231,55 @@ where tsn.owner_uuid  = '4495dd37-943e-434d-bf30-ea9172d543c8'
  
 */
 
+-- looking for green tea
+select *
+from ix_ginas_strucdiv igm 
+where igm.uuid = '338b5cbd-e659-4a41-a8b4-4c4e512445a5'
+;
 
+select *
+from ix_ginas_strucdiv igm 
+where igm.organism_genus = 'Camellia'
+  and igm.organism_species = 'sinensis'
+;
+
+
+-- af94397b-1888-4333-bdea-f0a868cb5a3e
+select *
+from ix_ginas_strucdiv igm 
+where igm.organism_genus ilike '%Camellia%'
+  and igm.organism_species ilike '%sinensis%'
+; 
+
+-- c31862da-077c-4e8a-acb1-ffecc1542307
+select *
+from ix_ginas_strucdiv igm 
+where igm.organism_genus ilike '%Mitragyna%'
+  and igm.organism_species ilike '%speciosa%'
+;
+
+
+
+select *
+from ix_ginas_strucdiv igm 
+where igm.uuid = '529b61d1-62e8-4d2b-8144-6d63bfe329f1'
+;
+
+
+
+select *
+from ix_ginas_substance igm 
+where igm.specified_substance_uuid = '87ad1ea0-7659-410a-94de-aafc970daf5'
+;
+
+
+select t.table_schema,
+       t.table_name
+from information_schema.tables t
+inner join information_schema.columns c on c.table_name = t.table_name 
+                                and c.table_schema = t.table_schema
+where c.column_name like '%organism%'
+      and t.table_schema not in ('information_schema', 'pg_catalog')
+      and t.table_type = 'BASE TABLE'
+order by t.table_schema;
 
