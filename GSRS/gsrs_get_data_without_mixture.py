@@ -6,7 +6,7 @@ import pickle
 
 DEBUG = True
 
-RERUN_SRS_API_CALLS = True
+RERUN_SRS_API_CALLS = False
 SRS_API_CALL_RESULTS_FILE = 'np-data-from-srs.pickle'
 
 NP_DB_SCHEMA = 'scratch_sanya'
@@ -459,6 +459,7 @@ if __name__ == '__main__':
                 for content_item in np_result[item]['content']:
                         if content_item['substanceClass'] == 'structurallyDiverse':
                                 result_substance = content_item
+                                break
 
                 if result_substance is None:
                         print('Substance ', item, ' is not structurallyDiverse.')
