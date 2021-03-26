@@ -6,10 +6,10 @@ import pickle
 
 DEBUG = True
 
-RERUN_SRS_API_CALLS = False
+RERUN_SRS_API_CALLS = True
 SRS_API_CALL_RESULTS_FILE = 'np-data-from-srs.pickle'
 
-NP_DB_SCHEMA = 'scratch_u54'
+NP_DB_SCHEMA = 'scratch_sanya'
 NP_DB_TABLE_PREFIX = 'test_srs_np'
 
 np_to_binomial = {
@@ -68,11 +68,9 @@ def get_initial_details(np_item):
         result = response.json()
         if not result["content"]:
                 return None
-        uuid = result["content"][0]["uuid"]
-        substance_class = result["content"][0]["substanceClass"]
-        np_result[np_item] = result
 
-        return substance_class
+        np_result[np_item] = result
+        return np_item
 
 def clean_tables(conn):
         query_clean = ('DROP TABLE IF EXISTS ' + NP_DB_SCHEMA + '.' + NP_DB_TABLE_PREFIX,
@@ -406,9 +404,6 @@ if __name__ == '__main__':
         if not conn:
                 sys.exit(1)
 
-        #for all items either in NP list or as input, call API to get result as JSON object and get its substance class (structurally diverse, mixture...)
-        np_class = {}
-
         clean_tables(conn)
         create_tables(conn)
 
@@ -423,11 +418,8 @@ if __name__ == '__main__':
                                 if t == None:
                                         print('Trying to URL encode did not work')
                                         continue
-                                else:
-                                        np_class[item] = t
                         else:
-                                np_class[item] = t
-                                #print(np_result)
+                                print("Substance found: ", item)
 
                 f = open(SRS_API_CALL_RESULTS_FILE,'wb')
                 pickle.dump(np_result,f)
@@ -446,13 +438,12 @@ if __name__ == '__main__':
                 except Exception as error:
                         print('ERROR: an error occurred while loading ' + SRS_API_CALL_RESULTS_FILE + '.\n\t' + error)
                         sys.exit(1)
-
-                for r,v in np_result.items():
-                        np_class[r] = v["content"][0]["substanceClass"]
+                        
                         
         #based on substance class from above, call function to query the database using the substance ID and parent ID
         flag = False
         for item in np:
+                result_substance = None
                 common_name = ''
                 if np_to_binomial.get(item):
                         common_name = np_to_binomial[item]
@@ -464,26 +455,24 @@ if __name__ == '__main__':
                 else:
                         print('INFO: processing NP: ' + item)
 
-                uuid = np_result[item]['content'][0]["uuid"]
-                if np_result[item]['content'][0].get('structurallyDiverse'):
-                        if np_result[item]['content'][0]['structurallyDiverse'].get('parentSubstance'):
-                                parent_uuid = np_result[item]['content'][0]["structurallyDiverse"]["parentSubstance"]["uuid"]
-                        else:
-                                parent_uuid = ''
-                elif np_result[item]['content'][0].get('mixture'):
-                        if np_result[item]['content'][0]['mixture'].get('parentSubstance'):
-                                parent_uuid = np_result[item]['content'][0]["mixture"]["parentSubstance"]["uuid"]
-                        else:
-                                parent_uuid = ''
+                #extracting details of 1st structurallyDiverse substance from the result (this avoids trying to add 'concepts' to tables)
+                for content_item in np_result[item]['content']:
+                        if content_item['substanceClass'] == 'structurallyDiverse':
+                                result_substance = content_item
 
-                #if botanical/structurally diverse substance, call function for queries
-                if np_class.get(item) and np_class[item] == "structurallyDiverse":
-                        print('INFO: NP is structurallyDiverse: ' + item)
-                        flag = get_structurally_diverse_np(uuid, parent_uuid, conn, item, common_name, )
-                elif np_class.get(item) and np_class[item] == "mixture":
-                        #flag = get_mixture_np(uuid, parent_uuid, conn, item, common_name,)
-                        print('Substance ', item, 'is mixture. Cannot insert into created tables.')
+                if result_substance is None:
+                        print('Substance ', item, ' is not structurallyDiverse.')
                         continue
+                
+                uuid = result_substance["uuid"]
+                
+                if result_substance['structurallyDiverse'].get('parentSubstance'):
+                        parent_uuid = result_substance["structurallyDiverse"]["parentSubstance"]["uuid"]
+                else:
+                        parent_uuid = ''
+                print('INFO: NP is structurallyDiverse: ' + item)
+                flag = get_structurally_diverse_np(uuid, parent_uuid, conn, item, common_name)
+
         if flag:
                 print('Success')
 
