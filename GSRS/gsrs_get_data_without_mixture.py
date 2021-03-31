@@ -4,7 +4,7 @@ import requests, os
 import psycopg2, sys
 import pickle
 
-DEBUG = True
+DEBUG = False
 
 RERUN_SRS_API_CALLS = False
 SRS_API_CALL_RESULTS_FILE = 'np-data-from-srs.pickle'
@@ -71,6 +71,30 @@ def get_initial_details(np_item):
 
         np_result[np_item] = result
         return np_item
+
+def get_whole_substance(np, np_result):
+        search_name = np.upper()
+        search_name_whole = search_name + ' WHOLE'
+        result_substance = None
+        result_substance_similar = None
+        for content_item in np_result['content']:
+                if content_item['substanceClass'] == 'structurallyDiverse':
+                        if content_item['_name'] == search_name_whole:
+                                result_substance = content_item
+                                break
+                        elif 'WHOLE' in content_item['_name']:
+                                result_substance_similar = content_item
+        
+        if result_substance is None:
+                if result_substance_similar is None:
+                        for content_item in np_result['content']:
+                                if content_item['substanceClass'] == 'structurallyDiverse':
+                                        result_substance = content_item
+                                        break
+                else:
+                        result_substance = result_substance_similar
+                
+        return result_substance
 
 def clean_tables(conn):
         query_clean = ('DROP TABLE IF EXISTS ' + NP_DB_SCHEMA + '.' + NP_DB_TABLE_PREFIX,
@@ -443,7 +467,6 @@ if __name__ == '__main__':
         #based on substance class from above, call function to query the database using the substance ID and parent ID
         flag = False
         for item in np:
-                result_substance = None
                 common_name = ''
                 if np_to_binomial.get(item):
                         common_name = np_to_binomial[item]
@@ -456,11 +479,8 @@ if __name__ == '__main__':
                         print('INFO: processing NP: ' + item)
 
                 #extracting details of 1st structurallyDiverse substance from the result (this avoids trying to add 'concepts' to tables)
-                for content_item in np_result[item]['content']:
-                        if content_item['substanceClass'] == 'structurallyDiverse':
-                                result_substance = content_item
-                                break
-
+                result_substance = get_whole_substance(item, np_result[item])
+                print(item, ': ', result_substance['_name'])
                 if result_substance is None:
                         print('Substance ', item, ' is not structurallyDiverse.')
                         continue
