@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:ns1="http://www.geneontology.org/formats/oboInOwl#"
+   xmlns:ns2="http://purl.obolibrary.org/obo/chebi#"
+   xmlns:obo="http://purl.obolibrary.org/obo/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="N0a2499e671244120add8dc8bd86991ef">
+    <obo:RO_0002180 rdf:nodeID="N77ca62493dce4a59bda0c0a80221512a"/>
+    <obo:BFO_0000050 rdf:nodeID="Nc5a269b9e3ce4a719e06879f4c2d2f1b"/>
+    <obo:RO_0002162 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_170351"/>
+    <obo:RO_0002180 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_6956"/>
+    <ns1:DbXref rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/dac1ac7a-f1bb-42d7-ab9c-0bf06d0d9825"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0009892">
+    <obo:RO_0000057 rdf:resource="http://purl.obolibrary.org/obo/PR_P08684"/>
+    <obo:RO_0000057 rdf:resource="http://purl.obolibrary.org/obo/PR_P11712"/>
+    <obo:RO_0000057 rdf:resource="http://purl.obolibrary.org/obo/PR_P10635"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_6956">
+    <obo:RO_0000056 rdf:resource="http://purl.obolibrary.org/obo/GO_0032410"/>
+    <obo:RO_0000056 rdf:resource="http://purl.obolibrary.org/obo/GO_0009892"/>
+    <obo:RO_0000056 rdf:resource="http://purl.obolibrary.org/obo/GO_008152"/>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N77ca62493dce4a59bda0c0a80221512a">
+    <ns2:has_functional_parent rdf:resource="http://purl.obolibrary.org/obo/CHEBI_6956"/>
+    <obo:RO_0000056 rdf:resource="http://purl.obolibrary.org/obo/GO_0032410"/>
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/c50748a1-8231-42ad-a263-6abc6bc49005"/>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    <obo:RO_0000056 rdf:resource="http://purl.obolibrary.org/obo/GO_008152"/>
+    <obo:RO_0000087 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25212"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_008152">
+    <obo:RO_0000057 rdf:resource="http://purl.obolibrary.org/obo/PR_P08684"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0032410">
+    <obo:RO_0000057 rdf:resource="http://purl.obolibrary.org/obo/PR_P000001891"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc5a269b9e3ce4a719e06879f4c2d2f1b">
+    <ns1:DbXref rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/d469b67d-e9a6-459f-b209-c59451936336"/>
+  </rdf:Description>
+</rdf:RDF>
