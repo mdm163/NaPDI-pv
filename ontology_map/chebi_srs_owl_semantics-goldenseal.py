@@ -13,9 +13,9 @@ import json
 #not needed in python3
 #sys.setdefaultencoding('UTF8')
 DIR_OUT = "graphs/"
-OUT_GRAPH = DIR_OUT + "chebi-srs-goldenseal_20210406.xml"
-OUT_CSV = DIR_OUT + "processed-chebi-srs-goldenseal_20210406.tsv"
-OUTFILE = DIR_OUT + "URN_napdi_imported_entities_20210406.json"
+OUT_GRAPH = DIR_OUT + "chebi-srs-20210408.xml"
+OUT_CSV = DIR_OUT + "processed-chebi-srs-20210408.tsv"
+OUTFILE = DIR_OUT + "URN_napdi_imported_entities_20210408.json"
 
 urn_dict = {
 	'7-hydroxy-mitragynine': 'urn:Ne4ee879d723f488db5de2634e498bc71',
@@ -104,6 +104,7 @@ if __name__ == "__main__":
 	graph.add((b, RDF_NS.type, OWL_NS.Restriction))
 	graph.add((b, OWL_NS.onProperty, OBO_NS.RO_0000056))
 	graph.add((b, OWL_NS.someValuesFrom, OBO_NS.GO_0009892))
+	graph.add((OBO_NS.GO_0009892, RDFS_NS.type, OWL_NS.Class))
 	graph.add((OBO_NS.GO_0009892, OBO_NS.RO_0000057, OBO_NS.PR_P10635))
 	graph.add((OBO_NS.GO_0009892, OBO_NS.RO_0000057, OBO_NS.PR_P08684))
 
@@ -113,7 +114,8 @@ if __name__ == "__main__":
 	graph.add((c, RDF_NS.type, OWL_NS.Restriction))
 	graph.add((c, OWL_NS.onProperty, OBO_NS.RO_0002180))
 	graph.add((c, OWL_NS.someValuesFrom, OBO_NS.CHEBI_16118))
-	#metabolism and inhibition entities added as individuals??
+	#metabolism and inhibition entities as classes
+	graph.add((OBO_NS.CHEBI_16118, RDFS_NS.type, OWL_NS.Class))
 	graph.add((OBO_NS.CHEBI_16118, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
 	graph.add((OBO_NS.CHEBI_16118, OBO_NS.RO_0000056, OBO_NS.GO_0009892))
 	graph.add((OBO_NS.GO_0009892, OBO_NS.RO_0000057, OBO_NS.PR_P11712))
@@ -128,6 +130,7 @@ if __name__ == "__main__":
 	graph.add((d, OWL_NS.onProperty, OBO_NS.RO_0002180))
 	graph.add((d, OWL_NS.someValuesFrom, OBO_NS.CHEBI_69919))
 
+	graph.add((OBO_NS.CHEBI_69919, RDFS_NS.type, OWL_NS.Class))
 	graph.add((OBO_NS.CHEBI_69919, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
 	graph.add((OBO_NS.CHEBI_69919, OBO_NS.RO_0000056, OBO_NS.GO_0009892))
 
@@ -170,9 +173,11 @@ if __name__ == "__main__":
 	graph.add((d, RDF_NS.type, OWL_NS.Restriction))
 	graph.add((d, OWL_NS.onProperty, OBO_NS.RO_0002180))
 	graph.add((d, OWL_NS.someValuesFrom, OBO_NS.CHEBI_6956))
-	#metabolism and inhibition entities added as individuals??
+	#metabolism and inhibition entities added as classes
+	graph.add((OBO_NS.CHEBI_6956, RDFS_NS.type, OWL_NS.Class))
 	graph.add((OBO_NS.CHEBI_6956, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
 	graph.add((OBO_NS.CHEBI_6956, OBO_NS.RO_0000056, OBO_NS.GO_008152))
+	graph.add((OBO_NS.GO_008152, RDFS_NS.type, OWL_NS.Class))
 	graph.add((OBO_NS.GO_008152, OBO_NS.RO_0000057, OBO_NS.PR_P08684))
 	
 	graph.add((OBO_NS.CHEBI_6956, OBO_NS.RO_0000056, OBO_NS.GO_0009892))
@@ -181,6 +186,7 @@ if __name__ == "__main__":
 	graph.add((OBO_NS.GO_0009892, OBO_NS.RO_0000057, OBO_NS.PR_P11712))
 
 	graph.add((OBO_NS.CHEBI_6956, OBO_NS.RO_0000056, OBO_NS.GO_0032410))
+	graph.add((OBO_NS.GO_0032410, RDFS_NS.type, OWL_NS.Class))
 	graph.add((OBO_NS.GO_0032410, OBO_NS.RO_0000057, OBO_NS.PR_P000001891))
 	
 	#NP has_component NP_constituent (not in CHEBI, cross-ref in SRS) [role, subclass, cross-ref already defined above]
