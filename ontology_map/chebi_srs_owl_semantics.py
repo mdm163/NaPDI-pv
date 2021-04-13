@@ -13,7 +13,7 @@ from rdflib import Graph, BNode, Namespace, URIRef, Literal
 #not needed in python3
 #sys.setdefaultencoding('UTF8')
 DIR_OUT = "graphs/"
-OUT_GRAPH = DIR_OUT + "chebi-srs-kratom_20210405.xml"
+OUT_GRAPH = DIR_OUT + "chebi-srs-kratom_20210413_sbt.xml"
 OUT_CSV = DIR_OUT + "processed-chebi-srs-kratom_20210405.tsv"
 
 urn_dict = {
@@ -40,9 +40,11 @@ OWL_NS = Namespace('http://www.w3.org/2002/07/owl#')
 RDFS_NS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
 #RO, BFO, GO CHEBI, NCBITaxon, PRO use the OBO namespace
 SRS_NS = Namespace('http://gsrs.ncats.nih.gov/ginas/app/substance/')
+LOCAL_NS = Namespace('http://napdi.org/napdi_srs_imports:')
 
 def initialGraph(graph):
 	graph.namespace_manager.reset()
+	graph.namespace_manager.bind('local_ns', LOCAL_NS)
 	graph.namespace_manager.bind('dc', DC_NS)
 	graph.namespace_manager.bind('obo', OBO_NS)
 	graph.namespace_manager.bind('rdf', RDF_NS)
@@ -75,86 +77,86 @@ if __name__ == "__main__":
 	#Metabolite with cross-ref in SRS is subclass of 'Chemical Entity'
 	#Generate UUID/URN for each blank node in diagram
 	#Create blank nodes for each restriction placed on the UUID
-	graph.add((URIRef('urn:Ne4ee879d723f488db5de2634e498bc71'), RDF_NS.type, OWL_NS.Class))
-	graph.add((URIRef('urn:Ne4ee879d723f488db5de2634e498bc71'), RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
-	graph.add((URIRef('urn:Ne4ee879d723f488db5de2634e498bc71'), OBO_NS.database_cross_reference, SRS_NS['c50748a1-8231-42ad-a263-6abc6bc49005']))
-	graph.add((URIRef('urn:Ne4ee879d723f488db5de2634e498bc71'), RDFS_NS.label, Literal('7-hydroxy-mitragynine', lang='en')))
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], RDF_NS.type, OWL_NS.Class))
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], OBO_NS.database_cross_reference, SRS_NS['c50748a1-8231-42ad-a263-6abc6bc49005']))
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], RDFS_NS.label, Literal('7-hydroxy-mitragynine', lang='en')))
 
 	#NP_metabolite has_role 'Metabolite'
-	a = BNode()
-	graph.add((URIRef('urn:Ne4ee879d723f488db5de2634e498bc71'), RDFS_NS.subClassOf, a))
-	graph.add((a, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((a, OWL_NS.onProperty, OBO_NS.RO_0000087))
-	graph.add((a, OWL_NS.someValuesFrom, OBO_NS.CHEBI_25212))
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], RDF_NS.type, OWL_NS.Restriction))
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], OWL_NS.onProperty, OBO_NS.RO_0000087))
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], OWL_NS.someValuesFrom, OBO_NS.CHEBI_25212))
 
 	#NP_metabolite has_functional_parent NP_constituent
-	b = BNode()
-	graph.add((URIRef('urn:Ne4ee879d723f488db5de2634e498bc71'), RDFS_NS.subClassOf, b))
-	graph.add((b, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((b, OWL_NS.onProperty, OBO_NS['chebi#has_functional_parent']))
-	graph.add((b, OWL_NS.someValuesFrom, OBO_NS.CHEBI_6956))
+	
+
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], RDF_NS.type, OWL_NS.Restriction))
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], OWL_NS.onProperty, OBO_NS['chebi#has_functional_parent']))
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], OWL_NS.someValuesFrom, OBO_NS.CHEBI_6956))
 	
 	#NP with cross-ref in SRS
-	graph.add((URIRef('urn:N96829292877548cb887804ff54db08ab'), RDFS_NS.type, OWL_NS.Class))
-	graph.add((URIRef('urn:N96829292877548cb887804ff54db08ab'), OBO_NS.database_cross_reference, SRS_NS['dac1ac7a-f1bb-42d7-ab9c-0bf06d0d9825']))
-	graph.add((URIRef('urn:N96829292877548cb887804ff54db08ab'), RDFS_NS.label, Literal('Mitragyna speciosa', lang='en')))
+	b = BNode()
+	graph.add((LOCAL_NS['mitragyna_speciosa'], RDFS_NS.type, OWL_NS.Class))
+	graph.add((LOCAL_NS['mitragyna_speciosa'], OBO_NS.database_cross_reference, SRS_NS['dac1ac7a-f1bb-42d7-ab9c-0bf06d0d9825']))
+	graph.add((LOCAL_NS['mitragyna_speciosa'], RDFS_NS.label, Literal('Mitragyna speciosa', lang='en')))
 	
-	c = BNode()
-	graph.add((URIRef('urn:N96829292877548cb887804ff54db08ab'), RDFS_NS.subClassOf, c))
-	graph.add((c, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((c, OWL_NS.onProperty, OBO_NS.RO_0002162))
-	graph.add((c, OWL_NS.someValuesFrom, OBO_NS.NCBITaxon_170351))
+	#c = BNode()
+	graph.add((LOCAL_NS['mitragyna_speciosa'], RDF_NS.type, OWL_NS.Restriction))
+	graph.add((LOCAL_NS['mitragyna_speciosa'], OWL_NS.onProperty, OBO_NS.RO_0002162))
+	graph.add((LOCAL_NS['mitragyna_speciosa'], OWL_NS.someValuesFrom, OBO_NS.NCBITaxon_170351))
 
 	#NP has_component NP_constituent (in CHEBI)
-	d = BNode()
-	graph.add((URIRef('urn:N96829292877548cb887804ff54db08ab'), RDFS_NS.subClassOf, d))
-	graph.add((d, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((d, OWL_NS.onProperty, OBO_NS.RO_0002180))
-	graph.add((d, OWL_NS.someValuesFrom, OBO_NS.CHEBI_6956))
+	#d = BNode()
+	graph.add((LOCAL_NS['mitragyna_speciosa'], RDF_NS.type, OWL_NS.Restriction))
+	graph.add((LOCAL_NS['mitragyna_speciosa'], OWL_NS.onProperty, OBO_NS.RO_0002180))
+	graph.add((LOCAL_NS['mitragyna_speciosa'], OWL_NS.someValuesFrom, OBO_NS.CHEBI_6956))
 	#metabolism and inhibition entities added as individuals??
+	graph.add((OBO_NS.CHEBI_6956, RDFS_NS.type, OWL_NS.Class))
 	graph.add((OBO_NS.CHEBI_6956, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
 	graph.add((OBO_NS.CHEBI_6956, OBO_NS.RO_0000056, OBO_NS.GO_008152))
+	graph.add((OBO_NS.GO_008152, RDFS_NS.type, OWL_NS.Class))
 	graph.add((OBO_NS.GO_008152, OBO_NS.RO_0000057, OBO_NS.PR_P08684))
 	
 	graph.add((OBO_NS.CHEBI_6956, OBO_NS.RO_0000056, OBO_NS.GO_0009892))
+	graph.add((OBO_NS.GO_0009892, RDFS_NS.type, OWL_NS.Class))
 	graph.add((OBO_NS.GO_0009892, OBO_NS.RO_0000057, OBO_NS.PR_P08684))
 	graph.add((OBO_NS.GO_0009892, OBO_NS.RO_0000057, OBO_NS.PR_P10635))
 	graph.add((OBO_NS.GO_0009892, OBO_NS.RO_0000057, OBO_NS.PR_P11712))
 
 	graph.add((OBO_NS.CHEBI_6956, OBO_NS.RO_0000056, OBO_NS.GO_0032410))
+	graph.add((OBO_NS.GO_0032410, RDFS_NS.type, OWL_NS.Class))
 	graph.add((OBO_NS.GO_0032410, OBO_NS.RO_0000057, OBO_NS.PR_P000001891))
 	
 	#NP has_component NP_constituent (not in CHEBI, cross-ref in SRS) [role, subclass, cross-ref already defined above]
-	f = BNode()
-	graph.add((URIRef('urn:N96829292877548cb887804ff54db08ab'), RDFS_NS.subClassOf, f))
-	graph.add((f, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((f, OWL_NS.onProperty, OBO_NS.RO_0002180))
-	graph.add((f, OWL_NS.someValuesFrom, URIRef('urn:Ne4ee879d723f488db5de2634e498bc71')))
+	#f = BNode()
 
-	g = BNode()
-	graph.add((URIRef('urn:Ne4ee879d723f488db5de2634e498bc71'), RDFS_NS.subClassOf, g))
-	graph.add((g, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((g, OWL_NS.onProperty, OBO_NS.RO_0000056))
-	graph.add((g, OWL_NS.someValuesFrom, OBO_NS.GO_008152))
+	graph.add((LOCAL_NS['mitragyna_speciosa'], RDF_NS.type, OWL_NS.Restriction))
+	graph.add((LOCAL_NS['mitragyna_speciosa'], OWL_NS.onProperty, OBO_NS.RO_0002180))
+	graph.add((LOCAL_NS['mitragyna_speciosa'], OWL_NS.someValuesFrom, LOCAL_NS['7_hydroxy_mitragynine']))
 
-	h = BNode()
-	graph.add((URIRef('urn:Ne4ee879d723f488db5de2634e498bc71'), RDFS_NS.subClassOf, g))
-	graph.add((h, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((h, OWL_NS.onProperty, OBO_NS.RO_0000056))
-	graph.add((h, OWL_NS.someValuesFrom, OBO_NS.GO_0032410))
+	#g = BNode()
 
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], RDF_NS.type, OWL_NS.Restriction))
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], OWL_NS.onProperty, OBO_NS.RO_0000056))
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], OWL_NS.someValuesFrom, OBO_NS.GO_008152))
+
+	#h = BNode()
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], RDF_NS.type, OWL_NS.Restriction))
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], OWL_NS.onProperty, OBO_NS.RO_0000056))
+	graph.add((LOCAL_NS['7_hydroxy_mitragynine'], OWL_NS.someValuesFrom, OBO_NS.GO_0032410))
 	#NP part_of NP_parent
-	e = BNode()
-	graph.add((URIRef('urn:N96829292877548cb887804ff54db08ab'), RDFS_NS.subClassOf, e))
-	graph.add((e, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((e, OWL_NS.onProperty, OBO_NS.BFO_0000050))
-	graph.add((e, OWL_NS.someValuesFrom, URIRef('urn:Nb8704e8f75e24d05bcd48fb4e861fb04')))
+	#e = BNode()
+	c = BNode()
+
+	graph.add((LOCAL_NS['mitragyna_speciosa'], RDF_NS.type, OWL_NS.Restriction))
+	graph.add((LOCAL_NS['mitragyna_speciosa'], OWL_NS.onProperty, OBO_NS.BFO_0000050))
+	graph.add((LOCAL_NS['mitragyna_speciosa'], OWL_NS.someValuesFrom, LOCAL_NS['mitragyna_speciosa_whole']))
 
 	#NP_Parent with cross-ref in SRS 
-	graph.add((URIRef('urn:Nb8704e8f75e24d05bcd48fb4e861fb04'), RDFS_NS.type, OWL_NS.Class))
-	graph.add((URIRef('urn:Nb8704e8f75e24d05bcd48fb4e861fb04'), RDFS_NS.subClassOf, OWL_NS.Thing))
-	graph.add((URIRef('urn:Nb8704e8f75e24d05bcd48fb4e861fb04'), OBO_NS.database_cross_reference, SRS_NS['d469b67d-e9a6-459f-b209-c59451936336']))
-	graph.add((URIRef('urn:Nb8704e8f75e24d05bcd48fb4e861fb04'), RDFS_NS.label, Literal('Mitragyna speciosa whole', lang='en')))
+	graph.add((LOCAL_NS['mitragyna_speciosa_whole'], RDFS_NS.type, OWL_NS.Class))
+	graph.add((LOCAL_NS['mitragyna_speciosa_whole'], RDFS_NS.subClassOf, OWL_NS.Thing))
+	graph.add((LOCAL_NS['mitragyna_speciosa_whole'], OBO_NS.database_cross_reference, SRS_NS['d469b67d-e9a6-459f-b209-c59451936336']))
+	graph.add((LOCAL_NS['mitragyna_speciosa_whole'], RDFS_NS.label, Literal('Mitragyna speciosa whole', lang='en')))
 	
 
 	f = open(OUT_GRAPH,"w")
