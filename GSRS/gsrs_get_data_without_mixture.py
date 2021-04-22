@@ -432,16 +432,16 @@ where igr.owner_uuid in (select substance_uuid from np_substance)
 def run_dsld_query(conn):
         query_dsld = """
 insert into {}.{}_dsld
-select distinct '{}' related_latin_binomial, '{}' related_common_name, tsn.substance_uuid, tsn.organism_family, tsn.organism_genus, tsn.organism_species, 
+select distinct tsn.related_latin_binomial, tsn.related_common_name, tsn.substance_uuid, tsn.organism_family, tsn.organism_genus, tsn.organism_species, 
 igc.code as dsld_code, regexp_replace(igc.comments, '^.*\|','') as dsld_text
 from ix_ginas_code igc inner join {}.{} tsn on igc.owner_uuid = tsn.substance_uuid 
 where igc.code_system = 'DSLD' 
 union 
-select distinct '{}' related_latin_binomial, '{}' related_common_name, tsnp.substance_uuid, tsnp.organism_family, tsnp.organism_genus, tsnp.organism_species, 
+select distinct tsnp.related_latin_binomial, tsnp.related_common_name, tsnp.substance_uuid, tsnp.organism_family, tsnp.organism_genus, tsnp.organism_species, 
 igc.code as dsld_code, regexp_replace(igc.comments, '^.*\|','') as dsld_text
 from ix_ginas_code igc inner join {}.{}_part tsnp on igc.owner_uuid = tsnp.substance_uuid 
 where igc.code_system = 'DSLD'
-""".format(NP_DB_SCHEMA, NP_DB_TABLE_PREFIX, latin_binomial, common_name, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX, latin_binomial, common_name, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX)
+""".format(NP_DB_SCHEMA, NP_DB_TABLE_PREFIX, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX)
 
         cur = conn.cursor()
         try:       
@@ -517,7 +517,6 @@ if __name__ == '__main__':
 
                 #extracting details of 1st structurallyDiverse substance from the result (this avoids trying to add 'concepts' to tables)
                 result_substance = get_whole_substance(item, np_result[item])
-                print(item, ': ', result_substance['_name'])
                 if result_substance is None:
                         print('Substance ', item, ' is not structurallyDiverse.')
                         continue
