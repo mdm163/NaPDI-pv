@@ -38,3 +38,10 @@ alter table staging_vocabulary.concept_class enable trigger all;
 3) python2.7 generateConceptsInsertSQL.py
 
 4) Use the output SQL to insert the new custom concepts
+
+
+--
+
+Use this to create the mapping from common name to latin binomial to SRS:
+
+cut -f1,3,4 np-custom-terms.tsv | sort | uniq > common-name-to-LB-to-SRS-map.tsv
