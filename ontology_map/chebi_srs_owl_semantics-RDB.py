@@ -13,14 +13,15 @@ import json
 #not needed in python3
 #sys.setdefaultencoding('UTF8')
 DIR_OUT = "graphs/"
-OUT_GRAPH = DIR_OUT + "chebi-srs-20210408-test-1.xml"
+OUT_GRAPH = DIR_OUT + "chebi-srs-20210413.xml"
 OUT_CSV = DIR_OUT + "processed-chebi-srs-20210408.tsv"
-OUTFILE = DIR_OUT + "URN_napdi_imported_entities_20210408.json"
 
 urn_dict = {
-	'7-hydroxy-mitragynine': 'urn:Ne4ee879d723f488db5de2634e498bc71',
-	'Mitragyna_speciosa': 'urn:N96829292877548cb887804ff54db08ab',
-	'Mitragyna_speciosa_whole' :'urn:Nb8704e8f75e24d05bcd48fb4e861fb04'
+	'7-hydroxy-mitragynine': 'http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine',  # could we use hyphens?
+	'Mitragyna_speciosa': 'http://napdi.org/napdi_srs_imports:mitragyna_speciosa',
+	'Mitragyna_speciosa_whole' :'http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole',
+	'Goldenseal': 'http://napdi.org/napdi_srs_imports:goldenseal',
+	'Hydrastis_canadensis_whole': 'http://napdi.org/napdi_srs_imports:hydrastis_canadensis_whole'
 }
 
 relations = {
@@ -80,25 +81,18 @@ if __name__ == "__main__":
 	graph.add((URIRef('http://purl.obolibrary.org/obo/napdi-srs-imports'), DC_NS.contributor, Literal('Richard D. Boyce', lang='en')))
 	graph.add((URIRef('http://purl.obolibrary.org/obo/napdi-srs-imports'), RDFS_NS.label, Literal('NaPDI SRS imported entities', lang='en'))) # need to find how to specify XSD type lang=en
 
-	# create_urn('Goldenseal')
-	urn_dict['Goldenseal'] = 'http://napdi.org/napdi_srs_imports:goldenseal'
-	# create_urn('Hydrastis_canadensis_whole')
-	urn_dict['Hydrastis_canadensis_whole'] = 'http://napdi.org/napdi_srs_imports:hydrastis_canadensis_whole'
-	urn_dict['7-hydroxy-mitragynine'] = 'http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine' # could we use hyphens?
-	urn_dict['Mitragyna_speciosa'] = 'http://napdi.org/napdi_srs_imports:mitragyna_speciosa'
-	urn_dict['Mitragyna_speciosa_whole'] = 'http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole'
-
 	#NP with cross-ref in SRS
 	# graph.add((URIRef(urn_dict['Goldenseal']), RDFS_NS.subClassOf, OWL_NS.Class))
+	##GOLDENSEAL
 	graph.add((URIRef(urn_dict['Goldenseal']), OBO_NS.database_cross_reference, SRS_NS['acd31728-eac3-4005-a80f-aae4689f9eab']))
 	graph.add((URIRef(urn_dict['Goldenseal']), RDFS_NS.label, Literal('Goldenseal', lang='en')))
 
 	#NP part_of NP_parent
-	a = BNode()
-	graph.add((URIRef(urn_dict['Goldenseal']), RDFS_NS.subClassOf, a))
-	graph.add((a, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((a, OWL_NS.onProperty, OBO_NS.BFO_0000050))
-	graph.add((a, OWL_NS.someValuesFrom, URIRef(urn_dict['Hydrastis_canadensis_whole'])))
+	gs_a = BNode()
+	graph.add((URIRef(urn_dict['Goldenseal']), RDFS_NS.subClassOf, gs_a))
+	graph.add((gs_a, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((gs_a, OWL_NS.onProperty, OBO_NS.BFO_0000050))
+	graph.add((gs_a, OWL_NS.someValuesFrom, URIRef(urn_dict['Hydrastis_canadensis_whole'])))
 
 	#NP_Parent with cross-ref in SRS 
 	#graph.add((URIRef(urn_dict['Hydrastis_canadensis_whole']), RDFS_NS.subClassOf, OWL_NS.Class))
@@ -107,21 +101,21 @@ if __name__ == "__main__":
 	graph.add((URIRef(urn_dict['Hydrastis_canadensis_whole']), RDFS_NS.label, Literal('Hydrastis canadensis whole', lang='en')))
 
 	#NP (extract) participate in inhibition
-	b = BNode()
-	graph.add((URIRef(urn_dict['Goldenseal']), RDFS_NS.subClassOf, b))
-	graph.add((b, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((b, OWL_NS.onProperty, OBO_NS.RO_0000056))
-	graph.add((b, OWL_NS.someValuesFrom, OBO_NS.GO_0009892))
-	graph.add((OBO_NS.GO_0009892, RDFS_NS.type, OWL_NS.Class))
+	gs_b = BNode()
+	graph.add((URIRef(urn_dict['Goldenseal']), RDFS_NS.subClassOf, gs_b))
+	graph.add((gs_b, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((gs_b, OWL_NS.onProperty, OBO_NS.RO_0000056))
+	graph.add((gs_b, OWL_NS.someValuesFrom, OBO_NS.GO_0009892))
+	#graph.add((OBO_NS.GO_0009892, RDFS_NS.subClassOf, OWL_NS.Class))
 	graph.add((OBO_NS.GO_0009892, OBO_NS.RO_0000057, OBO_NS.PR_P10635))
 	graph.add((OBO_NS.GO_0009892, OBO_NS.RO_0000057, OBO_NS.PR_P08684))
 
 	##NP has_component NP_constituent (in CHEBI)
-	c = BNode()
-	graph.add((URIRef(urn_dict['Goldenseal']), RDFS_NS.subClassOf, c))
-	graph.add((c, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((c, OWL_NS.onProperty, OBO_NS.RO_0002180))
-	graph.add((c, OWL_NS.someValuesFrom, OBO_NS.CHEBI_16118))
+	gs_c = BNode()
+	graph.add((URIRef(urn_dict['Goldenseal']), RDFS_NS.subClassOf, gs_c))
+	graph.add((gs_c, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((gs_c, OWL_NS.onProperty, OBO_NS.RO_0002180))
+	graph.add((gs_c, OWL_NS.someValuesFrom, OBO_NS.CHEBI_16118))
 
 	#metabolism and inhibition entities as classes
 	#graph.add((OBO_NS.CHEBI_16118, RDFS_NS.subClassOf, OWL_NS.Class))
@@ -133,19 +127,17 @@ if __name__ == "__main__":
 	#OCT2 (SLC22A2), BCRP (ABCG2), ABCB1
 	#graph.add((OBO_NS.GO_0032410, OBO_NS.RO_0000057, OBO_NS.))
 
-	d = BNode()
-	graph.add((URIRef(urn_dict['Goldenseal']), RDFS_NS.subClassOf, d))
-	graph.add((d, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((d, OWL_NS.onProperty, OBO_NS.RO_0002180))
-	graph.add((d, OWL_NS.someValuesFrom, OBO_NS.CHEBI_69919))
+	gs_d = BNode()
+	graph.add((URIRef(urn_dict['Goldenseal']), RDFS_NS.subClassOf, gs_d))
+	graph.add((gs_d, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((gs_d, OWL_NS.onProperty, OBO_NS.RO_0002180))
+	graph.add((gs_d, OWL_NS.someValuesFrom, OBO_NS.CHEBI_69919))
 
 	#graph.add((OBO_NS.CHEBI_69919, RDFS_NS.subClassOf, OWL_NS.Class))
 	graph.add((OBO_NS.CHEBI_69919, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
 	graph.add((OBO_NS.CHEBI_69919, OBO_NS.RO_0000056, OBO_NS.GO_0009892))
 
 	#Metabolite with cross-ref in SRS is subclass of 'Chemical Entity'
-	#Generate UUID/URN for each blank node in diagram
-	#Create blank nodes for each restriction placed on the UUID
 	# graph.add((URIRef(urn_dict['7-hydroxy-mitragynine']), RDFS_NS.subClassOf, OWL_NS.Class))
 	graph.add((URIRef(urn_dict['7-hydroxy-mitragynine']), RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
 	graph.add((URIRef(urn_dict['7-hydroxy-mitragynine']), OBO_NS.database_cross_reference, SRS_NS['c50748a1-8231-42ad-a263-6abc6bc49005']))
@@ -186,7 +178,7 @@ if __name__ == "__main__":
 	#graph.add((OBO_NS.CHEBI_6956, RDFS_NS.type, OWL_NS.Class))
 	graph.add((OBO_NS.CHEBI_6956, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
 	graph.add((OBO_NS.CHEBI_6956, OBO_NS.RO_0000056, OBO_NS.GO_008152))
-	graph.add((OBO_NS.GO_008152, RDFS_NS.subClassOf, OWL_NS.Class))
+	#graph.add((OBO_NS.GO_008152, RDFS_NS.subClassOf, OWL_NS.Class))
 	graph.add((OBO_NS.GO_008152, OBO_NS.RO_0000057, OBO_NS.PR_P08684))
 	
 	graph.add((OBO_NS.CHEBI_6956, OBO_NS.RO_0000056, OBO_NS.GO_0009892))
@@ -195,7 +187,7 @@ if __name__ == "__main__":
 	graph.add((OBO_NS.GO_0009892, OBO_NS.RO_0000057, OBO_NS.PR_P11712))
 
 	graph.add((OBO_NS.CHEBI_6956, OBO_NS.RO_0000056, OBO_NS.GO_0032410))
-	graph.add((OBO_NS.GO_0032410, RDFS_NS.subClassOf, OWL_NS.Class))
+	#graph.add((OBO_NS.GO_0032410, RDFS_NS.subClassOf, OWL_NS.Class))
 	graph.add((OBO_NS.GO_0032410, OBO_NS.RO_0000057, OBO_NS.PR_P000001891))
 	
 	#NP has_component NP_constituent (not in CHEBI, cross-ref in SRS) [role, subclass, cross-ref already defined above]
@@ -235,9 +227,5 @@ if __name__ == "__main__":
 	graph_str = graph.serialize(format='xml').decode('utf-8')
 	f.write(graph_str)
 	f.close()
-
-	#save the URN dictionary
-	with open(OUTFILE, 'w') as file_o:
-		json.dump(urn_dict, file_o)
 
 	graph.close()

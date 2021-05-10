@@ -5,7 +5,7 @@ import psycopg2, sys
 import pickle
 
 DEBUG = False
-
+GET_DSLD = True
 RERUN_SRS_API_CALLS = False
 SRS_API_CALL_RESULTS_FILE = 'np-data-from-srs.pickle'
 
@@ -101,7 +101,8 @@ def clean_tables(conn):
                        'DROP TABLE IF EXISTS ' + NP_DB_SCHEMA + '.' + NP_DB_TABLE_PREFIX + '_parent',
                        'DROP TABLE IF EXISTS ' + NP_DB_SCHEMA + '.' + NP_DB_TABLE_PREFIX + '_rel',
                        'DROP TABLE IF EXISTS ' + NP_DB_SCHEMA + '.' + NP_DB_TABLE_PREFIX + '_part',
-                       'DROP TABLE IF EXISTS ' + NP_DB_SCHEMA + '.' + NP_DB_TABLE_PREFIX + '_part_rel')
+                       'DROP TABLE IF EXISTS ' + NP_DB_SCHEMA + '.' + NP_DB_TABLE_PREFIX + '_part_rel',
+                       'DROP TABLE IF EXISTS ' + NP_DB_SCHEMA + '.' + NP_DB_TABLE_PREFIX + '_dsld')
         try:
                 cur = conn.cursor()
                 for query in query_clean:
@@ -119,148 +120,159 @@ def create_tables(conn):
         query_create = ("""
 CREATE TABLE {}.{} (
         related_latin_binomial varchar(255) NOT NULL,
-	related_common_name varchar(40) NULL,
-	dtype varchar(10) NULL,
-	substance_uuid varchar(40) NULL,
-	created timestamp NULL,
-	"class" int4 NULL,
-	status varchar(255) NULL,
-	modifications_uuid varchar(40) NULL,
-	approval_id varchar(20) NULL,
-	structure_id varchar(40) NULL,
-	structurally_diverse_uuid varchar(40) NULL,
-	name_uuid varchar(40) NULL,
-	internal_references text NULL,
-	owner_uuid varchar(40) NULL,
-	"name" varchar(255) NULL,
-	"type" varchar(32) NULL,
-	preferred bool NULL,
-	display_name bool NULL,
-	structdiv_uuid varchar(40) NULL,
-	source_material_class varchar(255) NULL,
-	source_material_state varchar(255) NULL,
-	source_material_type varchar(255) NULL,
-	organism_family varchar(255) NULL,
-	organism_author varchar(255) NULL,
-	organism_genus varchar(255) NULL,
-	organism_species varchar(255) NULL,
-	part_location varchar(255) NULL,
-	part text NULL,
-	parent_substance_uuid varchar(40) NULL
+        related_common_name varchar(40) NULL,
+        dtype varchar(10) NULL,
+        substance_uuid varchar(40) NULL,
+        created timestamp NULL,
+        "class" int4 NULL,
+        status varchar(255) NULL,
+        modifications_uuid varchar(40) NULL,
+        approval_id varchar(20) NULL,
+        structure_id varchar(40) NULL,
+        structurally_diverse_uuid varchar(40) NULL,
+        name_uuid varchar(40) NULL,
+        internal_references text NULL,
+        owner_uuid varchar(40) NULL,
+        "name" varchar(255) NULL,
+        "type" varchar(32) NULL,
+        preferred bool NULL,
+        display_name bool NULL,
+        structdiv_uuid varchar(40) NULL,
+        source_material_class varchar(255) NULL,
+        source_material_state varchar(255) NULL,
+        source_material_type varchar(255) NULL,
+        organism_family varchar(255) NULL,
+        organism_author varchar(255) NULL,
+        organism_genus varchar(255) NULL,
+        organism_species varchar(255) NULL,
+        part_location varchar(255) NULL,
+        part text NULL,
+        parent_substance_uuid varchar(40) NULL
 )
 """.format(NP_DB_SCHEMA, NP_DB_TABLE_PREFIX), """
 CREATE TABLE {}.{}_parent (
         related_latin_binomial varchar(255) NOT NULL,
         related_common_name varchar(40) NULL,
-	dtype varchar(10) NULL,
-	substance_uuid varchar(40) NULL,
-	created timestamp NULL,
-	"class" int4 NULL,
-	status varchar(255) NULL,
-	modifications_uuid varchar(40) NULL,
-	approval_id varchar(20) NULL,
-	structure_id varchar(40) NULL,
-	structurally_diverse_uuid varchar(40) NULL,
-	name_uuid varchar(40) NULL,
-	internal_references text NULL,
-	owner_uuid varchar(40) NULL,
-	"name" varchar(255) NULL,
-	"type" varchar(32) NULL,
-	preferred bool NULL,
-	display_name bool NULL,
-	structdiv_uuid varchar(40) NULL,
-	source_material_class varchar(255) NULL,
-	source_material_state varchar(255) NULL,
-	source_material_type varchar(255) NULL,
-	organism_family varchar(255) NULL,
-	organism_author varchar(255) NULL,
-	organism_genus varchar(255) NULL,
-	organism_species varchar(255) NULL,
-	part_location varchar(255) NULL,
-	part text NULL,
-	parent_substance_uuid varchar(40) NULL
+        dtype varchar(10) NULL,
+        substance_uuid varchar(40) NULL,
+        created timestamp NULL,
+        "class" int4 NULL,
+        status varchar(255) NULL,
+        modifications_uuid varchar(40) NULL,
+        approval_id varchar(20) NULL,
+        structure_id varchar(40) NULL,
+        structurally_diverse_uuid varchar(40) NULL,
+        name_uuid varchar(40) NULL,
+        internal_references text NULL,
+        owner_uuid varchar(40) NULL,
+        "name" varchar(255) NULL,
+        "type" varchar(32) NULL,
+        preferred bool NULL,
+        display_name bool NULL,
+        structdiv_uuid varchar(40) NULL,
+        source_material_class varchar(255) NULL,
+        source_material_state varchar(255) NULL,
+        source_material_type varchar(255) NULL,
+        organism_family varchar(255) NULL,
+        organism_author varchar(255) NULL,
+        organism_genus varchar(255) NULL,
+        organism_species varchar(255) NULL,
+        part_location varchar(255) NULL,
+        part text NULL,
+        parent_substance_uuid varchar(40) NULL
 )
 """.format(NP_DB_SCHEMA ,NP_DB_TABLE_PREFIX), """
 CREATE TABLE {}.{}_rel (
         related_latin_binomial varchar(255) NOT NULL,
-	related_common_name varchar(40) NULL,	
-	uuid varchar(40) NULL,
-	current_version int4 NULL,
-	created timestamp NULL,
-	created_by_id int8 NULL,
-	last_edited timestamp NULL,
-	last_edited_by_id int8 NULL,
-	deprecated bool NULL,
-	record_access bytea NULL,
-	internal_references text NULL,
-	owner_uuid varchar(40) NULL,
-	amount_uuid varchar(40) NULL,
-	"comments" text NULL,
-	interaction_type varchar(255) NULL,
-	qualification varchar(255) NULL,
-	related_substance_uuid varchar(40) NULL,
-	mediator_substance_uuid varchar(40) NULL,
-	originator_uuid varchar(255) NULL,
-	"type" varchar(255) NULL,
-	internal_version int8 NULL
+        related_common_name varchar(40) NULL,   
+        uuid varchar(40) NULL,
+        current_version int4 NULL,
+        created timestamp NULL,
+        created_by_id int8 NULL,
+        last_edited timestamp NULL,
+        last_edited_by_id int8 NULL,
+        deprecated bool NULL,
+        record_access bytea NULL,
+        internal_references text NULL,
+        owner_uuid varchar(40) NULL,
+        amount_uuid varchar(40) NULL,
+        "comments" text NULL,
+        interaction_type varchar(255) NULL,
+        qualification varchar(255) NULL,
+        related_substance_uuid varchar(40) NULL,
+        mediator_substance_uuid varchar(40) NULL,
+        originator_uuid varchar(255) NULL,
+        "type" varchar(255) NULL,
+        internal_version int8 NULL
 )
 """.format(NP_DB_SCHEMA,NP_DB_TABLE_PREFIX), """
 CREATE TABLE {}.{}_part (
         related_latin_binomial varchar(255) NOT NULL,
-	related_common_name varchar(40) NULL,
-	dtype varchar(10) NULL,
-	substance_uuid varchar(40) NULL,
-	created timestamp NULL,
-	"class" int4 NULL,
-	status varchar(255) NULL,
-	modifications_uuid varchar(40) NULL,
-	approval_id varchar(20) NULL,
-	structure_id varchar(40) NULL,
-	structurally_diverse_uuid varchar(40) NULL,
-	name_uuid varchar(40) NULL,
-	internal_references text NULL,
-	owner_uuid varchar(40) NULL,
-	"name" varchar(255) NULL,
-	"type" varchar(32) NULL,
-	preferred bool NULL,
-	display_name bool NULL,
-	structdiv_uuid varchar(40) NULL,
-	source_material_class varchar(255) NULL,
-	source_material_state varchar(255) NULL,
-	source_material_type varchar(255) NULL,
-	organism_family varchar(255) NULL,
-	organism_author varchar(255) NULL,
-	organism_genus varchar(255) NULL,
-	organism_species varchar(255) NULL,
-	part_location varchar(255) NULL,
-	part text NULL,
-	parent_substance_uuid varchar(40) NULL
+        related_common_name varchar(40) NULL,
+        dtype varchar(10) NULL,
+        substance_uuid varchar(40) NULL,
+        created timestamp NULL,
+        "class" int4 NULL,
+        status varchar(255) NULL,
+        modifications_uuid varchar(40) NULL,
+        approval_id varchar(20) NULL,
+        structure_id varchar(40) NULL,
+        structurally_diverse_uuid varchar(40) NULL,
+        name_uuid varchar(40) NULL,
+        internal_references text NULL,
+        owner_uuid varchar(40) NULL,
+        "name" varchar(255) NULL,
+        "type" varchar(32) NULL,
+        preferred bool NULL,
+        display_name bool NULL,
+        structdiv_uuid varchar(40) NULL,
+        source_material_class varchar(255) NULL,
+        source_material_state varchar(255) NULL,
+        source_material_type varchar(255) NULL,
+        organism_family varchar(255) NULL,
+        organism_author varchar(255) NULL,
+        organism_genus varchar(255) NULL,
+        organism_species varchar(255) NULL,
+        part_location varchar(255) NULL,
+        part text NULL,
+        parent_substance_uuid varchar(40) NULL
 )
 """.format(NP_DB_SCHEMA, NP_DB_TABLE_PREFIX), """
 CREATE TABLE {}.{}_part_rel (
         related_latin_binomial varchar(255) NOT NULL,
-	related_common_name varchar(40) NULL,
-	uuid varchar(40) NULL,
-	current_version int4 NULL,
-	created timestamp NULL,
-	created_by_id int8 NULL,
-	last_edited timestamp NULL,
-	last_edited_by_id int8 NULL,
-	deprecated bool NULL,
-	record_access bytea NULL,
-	internal_references text NULL,
-	owner_uuid varchar(40) NULL,
-	amount_uuid varchar(40) NULL,
-	"comments" text NULL,
-	interaction_type varchar(255) NULL,
-	qualification varchar(255) NULL,
-	related_substance_uuid varchar(40) NULL,
-	mediator_substance_uuid varchar(40) NULL,
-	originator_uuid varchar(255) NULL,
-	"type" varchar(255) NULL,
-	internal_version int8 NULL
+        related_common_name varchar(40) NULL,
+        uuid varchar(40) NULL,
+        current_version int4 NULL,
+        created timestamp NULL,
+        created_by_id int8 NULL,
+        last_edited timestamp NULL,
+        last_edited_by_id int8 NULL,
+        deprecated bool NULL,
+        record_access bytea NULL,
+        internal_references text NULL,
+        owner_uuid varchar(40) NULL,
+        amount_uuid varchar(40) NULL,
+        "comments" text NULL,
+        interaction_type varchar(255) NULL,
+        qualification varchar(255) NULL,
+        related_substance_uuid varchar(40) NULL,
+        mediator_substance_uuid varchar(40) NULL,
+        originator_uuid varchar(255) NULL,
+        "type" varchar(255) NULL,
+        internal_version int8 NULL
 )
-""".format(NP_DB_SCHEMA,NP_DB_TABLE_PREFIX))
+""".format(NP_DB_SCHEMA,NP_DB_TABLE_PREFIX), """
+CREATE TABLE {}.{}_dsld (
+        related_latin_binomial varchar(255) NOT NULL,
+        related_common_name varchar(40) NULL,
+        uuid varchar(40) NULL,
+        organism_family varchar(255) NULL,
+        organism_genus varchar(255) NULL,
+        organism_species varchar(255) NULL,
+        dsld_code varchar(50) NOT NULL,
+        dsld_text varchar(255) NULL
+)
+""".format(NP_DB_SCHEMA, NP_DB_TABLE_PREFIX))
                         
         try:
                 cur = conn.cursor()
@@ -390,7 +402,7 @@ select '{}' related_latin_binomial, '{}' related_common_name, igr.*
 from ix_ginas_relationship igr
 where igr.owner_uuid in (select substance_uuid from np_substance)
 """.format(uuid, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX, latin_binomial, common_name)
-
+        
         flag = 0
         cur = conn.cursor()
         try:       
@@ -416,6 +428,31 @@ where igr.owner_uuid in (select substance_uuid from np_substance)
                 print(error)
         cur.close()
         return flag
+
+def run_dsld_query(conn):
+        query_dsld = """
+insert into {}.{}_dsld
+select distinct tsn.related_latin_binomial, tsn.related_common_name, tsn.substance_uuid, tsn.organism_family, tsn.organism_genus, tsn.organism_species, 
+igc.code as dsld_code, regexp_replace(igc.comments, '^.*\|','') as dsld_text
+from ix_ginas_code igc inner join {}.{} tsn on igc.owner_uuid = tsn.substance_uuid 
+where igc.code_system = 'DSLD' 
+union 
+select distinct tsnp.related_latin_binomial, tsnp.related_common_name, tsnp.substance_uuid, tsnp.organism_family, tsnp.organism_genus, tsnp.organism_species, 
+igc.code as dsld_code, regexp_replace(igc.comments, '^.*\|','') as dsld_text
+from ix_ginas_code igc inner join {}.{}_part tsnp on igc.owner_uuid = tsnp.substance_uuid 
+where igc.code_system = 'DSLD'
+""".format(NP_DB_SCHEMA, NP_DB_TABLE_PREFIX, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX, NP_DB_SCHEMA, NP_DB_TABLE_PREFIX)
+
+        cur = conn.cursor()
+        try:       
+                if DEBUG:
+                        print(query_dsld)
+                cur.execute(query_dsld)
+                cur.close()
+                conn.commit()
+        except (Exception, psycopg2.DatabaseError) as error:
+                print(error)
+        cur.close()
 
 if __name__ == '__main__':
         #connect to DB
@@ -480,7 +517,6 @@ if __name__ == '__main__':
 
                 #extracting details of 1st structurallyDiverse substance from the result (this avoids trying to add 'concepts' to tables)
                 result_substance = get_whole_substance(item, np_result[item])
-                print(item, ': ', result_substance['_name'])
                 if result_substance is None:
                         print('Substance ', item, ' is not structurallyDiverse.')
                         continue
@@ -496,6 +532,8 @@ if __name__ == '__main__':
 
         if flag:
                 print('Success')
+        if flag and GET_DSLD:
+                run_dsld_query(conn)
 
         conn.close()
 

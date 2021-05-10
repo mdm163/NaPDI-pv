@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.obolibrary.org/obo/napdi-srs-imports"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://purl.obolibrary.org/obo/napdi-srs-imports">
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="obo" IRI="http://purl.obolibrary.org/obo/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.obolibrary.org/obo/bfo/2014-05-03/classes-only.owl</Import>
+    <Import>http://purl.obolibrary.org/obo/iao/2017-03-24/iao.owl</Import>
+    <Import>http://purl.obolibrary.org/obo/ro/core.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <Literal xml:lang="en">Richard D. Boyce</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal xml:lang="en">Sanya B. Taneja</Literal>
+    </Annotation>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="obo:CHEBI_6956"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://napdi.org/napdi_srs_imports:goldenseal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="obo:PR_P000001891"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="obo:GO_0032410"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:NCBITaxon_170351"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/mbox"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="obo:GO_0009892"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_69919"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:Class"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/chebi#has_functional_parent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="obo:GO_008152"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://napdi.org/napdi_srs_imports:hydrastis_canadensis_whole"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_16118"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="obo:RO_0002180"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="obo:RO_0002162"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="obo:database_cross_reference"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:GO_0009892"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:GO_0032410"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_25212"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="obo:CHEBI_69919"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_6956"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="obo:PR_P11712"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:GO_008152"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:license"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_24431"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="obo:CHEBI_16118"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="obo:PR_P10635"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="obo:PR_P08684"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:goldenseal"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:BFO_0000050"/>
+            <Class IRI="http://napdi.org/napdi_srs_imports:hydrastis_canadensis_whole"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:goldenseal"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0000056"/>
+            <Class abbreviatedIRI="obo:GO_0009892"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:goldenseal"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002180"/>
+            <Class abbreviatedIRI="obo:CHEBI_16118"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:goldenseal"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002180"/>
+            <Class abbreviatedIRI="obo:CHEBI_69919"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:BFO_0000050"/>
+            <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002162"/>
+            <Class abbreviatedIRI="obo:NCBITaxon_170351"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002180"/>
+            <Class IRI="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002180"/>
+            <Class abbreviatedIRI="obo:CHEBI_6956"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+        <Class abbreviatedIRI="obo:CHEBI_24431"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0000056"/>
+            <Class abbreviatedIRI="obo:GO_008152"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0000087"/>
+            <Class abbreviatedIRI="obo:CHEBI_25212"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/chebi#has_functional_parent"/>
+            <Class abbreviatedIRI="obo:CHEBI_6956"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:CHEBI_16118"/>
+        <Class abbreviatedIRI="obo:CHEBI_24431"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:CHEBI_6956"/>
+        <Class abbreviatedIRI="obo:CHEBI_24431"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:CHEBI_69919"/>
+        <Class abbreviatedIRI="obo:CHEBI_24431"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:GO_0032410"/>
+        <Class abbreviatedIRI="owl:Class"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:GO_008152"/>
+        <Class abbreviatedIRI="owl:Class"/>
+    </SubClassOf>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:RO_0000056"/>
+        <NamedIndividual abbreviatedIRI="obo:CHEBI_16118"/>
+        <NamedIndividual abbreviatedIRI="obo:GO_0009892"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:RO_0000056"/>
+        <NamedIndividual abbreviatedIRI="obo:CHEBI_16118"/>
+        <NamedIndividual abbreviatedIRI="obo:GO_0032410"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:RO_0000056"/>
+        <NamedIndividual abbreviatedIRI="obo:CHEBI_6956"/>
+        <NamedIndividual abbreviatedIRI="obo:GO_0009892"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:RO_0000056"/>
+        <NamedIndividual abbreviatedIRI="obo:CHEBI_6956"/>
+        <NamedIndividual abbreviatedIRI="obo:GO_0032410"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:RO_0000056"/>
+        <NamedIndividual abbreviatedIRI="obo:CHEBI_6956"/>
+        <NamedIndividual abbreviatedIRI="obo:GO_008152"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:RO_0000056"/>
+        <NamedIndividual abbreviatedIRI="obo:CHEBI_69919"/>
+        <NamedIndividual abbreviatedIRI="obo:GO_0009892"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:RO_0000057"/>
+        <NamedIndividual abbreviatedIRI="obo:GO_0009892"/>
+        <NamedIndividual abbreviatedIRI="obo:PR_P08684"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:RO_0000057"/>
+        <NamedIndividual abbreviatedIRI="obo:GO_0009892"/>
+        <NamedIndividual abbreviatedIRI="obo:PR_P10635"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:RO_0000057"/>
+        <NamedIndividual abbreviatedIRI="obo:GO_0009892"/>
+        <NamedIndividual abbreviatedIRI="obo:PR_P11712"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:RO_0000057"/>
+        <NamedIndividual abbreviatedIRI="obo:GO_0032410"/>
+        <NamedIndividual abbreviatedIRI="obo:PR_P000001891"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:RO_0000057"/>
+        <NamedIndividual abbreviatedIRI="obo:GO_008152"/>
+        <NamedIndividual abbreviatedIRI="obo:PR_P08684"/>
+    </ObjectPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:database_cross_reference"/>
+        <IRI>http://napdi.org/napdi_srs_imports:goldenseal</IRI>
+        <IRI>http://gsrs.ncats.nih.gov/ginas/app/substance/acd31728-eac3-4005-a80f-aae4689f9eab</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://napdi.org/napdi_srs_imports:goldenseal</IRI>
+        <Literal xml:lang="en">Goldenseal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:database_cross_reference"/>
+        <IRI>http://napdi.org/napdi_srs_imports:hydrastis_canadensis_whole</IRI>
+        <IRI>http://gsrs.ncats.nih.gov/ginas/app/substance/66690655-f406-4d67-96e3-2066aafee8d5</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://napdi.org/napdi_srs_imports:hydrastis_canadensis_whole</IRI>
+        <Literal xml:lang="en">Hydrastis canadensis whole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:database_cross_reference"/>
+        <IRI>http://napdi.org/napdi_srs_imports:mitragyna_speciosa</IRI>
+        <IRI>http://gsrs.ncats.nih.gov/ginas/app/substance/dac1ac7a-f1bb-42d7-ab9c-0bf06d0d9825</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://napdi.org/napdi_srs_imports:mitragyna_speciosa</IRI>
+        <Literal xml:lang="en">Mitragyna speciosa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:database_cross_reference"/>
+        <IRI>http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole</IRI>
+        <IRI>http://gsrs.ncats.nih.gov/ginas/app/substance/d469b67d-e9a6-459f-b209-c59451936336</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole</IRI>
+        <Literal xml:lang="en">Mitragyna speciosa whole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:database_cross_reference"/>
+        <IRI>http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine</IRI>
+        <IRI>http://gsrs.ncats.nih.gov/ginas/app/substance/c50748a1-8231-42ad-a263-6abc6bc49005</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine</IRI>
+        <Literal xml:lang="en">7-hydroxy-mitragynine</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
