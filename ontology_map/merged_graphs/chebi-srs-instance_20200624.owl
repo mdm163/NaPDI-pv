@@ -1,0 +1,497 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.obolibrary.org/obo/napdi-srs-imports"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://purl.obolibrary.org/obo/napdi-srs-imports">
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="ns1" IRI="http://purl.obolibrary.org/obo/chebi#"/>
+    <Prefix name="obo" IRI="http://purl.obolibrary.org/obo/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.obolibrary.org/obo/bfo/2014-05-03/classes-only.owl</Import>
+    <Import>http://purl.obolibrary.org/obo/iao/2017-03-24/iao.owl</Import>
+    <Import>http://purl.obolibrary.org/obo/ro/core.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <Literal xml:lang="en">Richard D. Boyce</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal xml:lang="en">Sanya B. Taneja</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_whole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://napdi.org/napdi_srs_imports:epigallocatechin_gallate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:NCBITaxon_4442"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_42255"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:NCBITaxon_170351"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/mbox"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:PR_P08684"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:PR_P10635"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:PR_P11712"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_70255"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:PR_P000001891"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_70253"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:PR_P22309"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="obo:RO_0002162"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="obo:database_cross_reference"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_23052"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_25212"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_6956"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002449"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:PR_Q9HAW8"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:PR_Q9HAW9"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_24431"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_68330"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:CHEBI_90"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf"/>
+        <Class abbreviatedIRI="obo:CHEBI_24431"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:BFO_0000050"/>
+            <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_whole"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002162"/>
+            <Class abbreviatedIRI="obo:NCBITaxon_4442"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002180"/>
+            <Class IRI="http://napdi.org/napdi_srs_imports:epigallocatechin_gallate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002180"/>
+            <Class abbreviatedIRI="obo:CHEBI_23052"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002180"/>
+            <Class abbreviatedIRI="obo:CHEBI_42255"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002180"/>
+            <Class abbreviatedIRI="obo:CHEBI_68330"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002180"/>
+            <Class abbreviatedIRI="obo:CHEBI_70255"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002180"/>
+            <Class abbreviatedIRI="obo:CHEBI_90"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_whole"/>
+        <Class abbreviatedIRI="obo:CHEBI_24431"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:epigallocatechin_gallate"/>
+        <Class abbreviatedIRI="obo:CHEBI_24431"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa"/>
+        <Class abbreviatedIRI="obo:CHEBI_24431"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:BFO_0000050"/>
+            <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002162"/>
+            <Class abbreviatedIRI="obo:NCBITaxon_170351"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002180"/>
+            <Class IRI="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0002180"/>
+            <Class abbreviatedIRI="obo:CHEBI_6956"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole"/>
+        <Class abbreviatedIRI="obo:CHEBI_24431"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+        <Class abbreviatedIRI="obo:CHEBI_24431"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:RO_0000087"/>
+            <Class abbreviatedIRI="obo:CHEBI_25212"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ns1:has_functional_parent"/>
+            <Class abbreviatedIRI="obo:CHEBI_6956"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:CHEBI_70253"/>
+        <AnonymousIndividual nodeID="_:genid2147483648"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:PR_Q9HAW9"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:CHEBI_6956"/>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:PR_P22309"/>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf"/>
+        <AnonymousIndividual nodeID="_:genid2147483652"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:PR_P10635"/>
+        <AnonymousIndividual nodeID="_:genid2147483653"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:CHEBI_90"/>
+        <AnonymousIndividual nodeID="_:genid2147484157"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:CHEBI_23052"/>
+        <AnonymousIndividual nodeID="_:genid2147484158"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa"/>
+        <AnonymousIndividual nodeID="_:genid2147484159"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://napdi.org/napdi_srs_imports:epigallocatechin_gallate"/>
+        <AnonymousIndividual nodeID="_:genid2147484160"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole"/>
+        <AnonymousIndividual nodeID="_:genid2147484161"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:PR_P08684"/>
+        <AnonymousIndividual nodeID="_:genid2147484162"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+        <AnonymousIndividual nodeID="_:genid2147484163"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:PR_P08684"/>
+        <AnonymousIndividual nodeID="_:genid2147484164"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:PR_P000001891"/>
+        <AnonymousIndividual nodeID="_:genid2147484165"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:CHEBI_68330"/>
+        <AnonymousIndividual nodeID="_:genid2147484166"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:PR_Q9HAW8"/>
+        <AnonymousIndividual nodeID="_:genid2147484167"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:CHEBI_70255"/>
+        <AnonymousIndividual nodeID="_:genid2147484168"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:PR_P11712"/>
+        <AnonymousIndividual nodeID="_:genid2147484169"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+        <AnonymousIndividual nodeID="_:genid2147484170"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://napdi.org/napdi_srs_imports:camellia_sinensis_whole"/>
+        <AnonymousIndividual nodeID="_:genid2147484171"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="obo:CHEBI_42255"/>
+        <AnonymousIndividual nodeID="_:genid2147484172"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:BFO_0000050"/>
+        <AnonymousIndividual nodeID="_:genid2147483652"/>
+        <AnonymousIndividual nodeID="_:genid2147484171"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="obo:BFO_0000050"/>
+        <AnonymousIndividual nodeID="_:genid2147484159"/>
+        <AnonymousIndividual nodeID="_:genid2147484161"/>
+    </ObjectPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:database_cross_reference"/>
+        <IRI>http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf</IRI>
+        <IRI>http://gsrs.ncats.nih.gov/ginas/app/substance/44cfdb9d-f504-42d8-ab9d-ab6eb8eebe03</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf</IRI>
+        <Literal xml:lang="en">Camellia sinensis leaf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:database_cross_reference"/>
+        <IRI>http://napdi.org/napdi_srs_imports:camellia_sinensis_whole</IRI>
+        <IRI>http://gsrs.ncats.nih.gov/ginas/app/substance/e9698137-24da-46f8-a70e-43e27691491f</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://napdi.org/napdi_srs_imports:camellia_sinensis_whole</IRI>
+        <Literal xml:lang="en">Camellia sinensis whole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:database_cross_reference"/>
+        <IRI>http://napdi.org/napdi_srs_imports:epigallocatechin_gallate</IRI>
+        <IRI>http://gsrs.ncats.nih.gov/ginas/app/substance/60a66f64-7eca-4725-87b6-71bf41829f90</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://napdi.org/napdi_srs_imports:epigallocatechin_gallate</IRI>
+        <Literal xml:lang="en">(-)-epigallocatechin gallate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:database_cross_reference"/>
+        <IRI>http://napdi.org/napdi_srs_imports:mitragyna_speciosa</IRI>
+        <IRI>http://gsrs.ncats.nih.gov/ginas/app/substance/dac1ac7a-f1bb-42d7-ab9c-0bf06d0d9825</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://napdi.org/napdi_srs_imports:mitragyna_speciosa</IRI>
+        <Literal xml:lang="en">Mitragyna_speciosa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:database_cross_reference"/>
+        <IRI>http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole</IRI>
+        <IRI>http://gsrs.ncats.nih.gov/ginas/app/substance/d469b67d-e9a6-459f-b209-c59451936336</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole</IRI>
+        <Literal xml:lang="en">Mitragyna_speciosa_whole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:database_cross_reference"/>
+        <IRI>http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine</IRI>
+        <IRI>http://gsrs.ncats.nih.gov/ginas/app/substance/c50748a1-8231-42ad-a263-6abc6bc49005</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine</IRI>
+        <Literal xml:lang="en">7-hydroxy-mitragynine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:has_functional_parent"/>
+        <AnonymousIndividual nodeID="_:genid2147483648"/>
+        <AnonymousIndividual nodeID="_:genid2147484172"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002449"/>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
+        <AnonymousIndividual nodeID="_:genid2147483653"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002449"/>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
+        <AnonymousIndividual nodeID="_:genid2147484162"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002449"/>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
+        <AnonymousIndividual nodeID="_:genid2147484165"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002449"/>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
+        <AnonymousIndividual nodeID="_:genid2147484169"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002180"/>
+        <AnonymousIndividual nodeID="_:genid2147483652"/>
+        <AnonymousIndividual nodeID="_:genid2147484157"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002180"/>
+        <AnonymousIndividual nodeID="_:genid2147483652"/>
+        <AnonymousIndividual nodeID="_:genid2147484158"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002180"/>
+        <AnonymousIndividual nodeID="_:genid2147483652"/>
+        <AnonymousIndividual nodeID="_:genid2147484166"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002180"/>
+        <AnonymousIndividual nodeID="_:genid2147483652"/>
+        <AnonymousIndividual nodeID="_:genid2147484168"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002180"/>
+        <AnonymousIndividual nodeID="_:genid2147483652"/>
+        <AnonymousIndividual nodeID="_:genid2147484172"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002449"/>
+        <AnonymousIndividual nodeID="_:genid2147484157"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002449"/>
+        <AnonymousIndividual nodeID="_:genid2147484157"/>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002449"/>
+        <AnonymousIndividual nodeID="_:genid2147484157"/>
+        <AnonymousIndividual nodeID="_:genid2147484167"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002449"/>
+        <AnonymousIndividual nodeID="_:genid2147484158"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002449"/>
+        <AnonymousIndividual nodeID="_:genid2147484158"/>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002449"/>
+        <AnonymousIndividual nodeID="_:genid2147484158"/>
+        <AnonymousIndividual nodeID="_:genid2147484167"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002180"/>
+        <AnonymousIndividual nodeID="_:genid2147484159"/>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002180"/>
+        <AnonymousIndividual nodeID="_:genid2147484159"/>
+        <AnonymousIndividual nodeID="_:genid2147484170"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:has_functional_parent"/>
+        <AnonymousIndividual nodeID="_:genid2147484163"/>
+        <AnonymousIndividual nodeID="_:genid2147484159"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:RO_0002449"/>
+        <AnonymousIndividual nodeID="_:genid2147484170"/>
+        <AnonymousIndividual nodeID="_:genid2147484164"/>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
