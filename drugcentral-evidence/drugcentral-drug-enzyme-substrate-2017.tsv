@@ -1,0 +1,414 @@
+"struct_id"	"chemical_substance"	"chebi_id"	"target_name"	"target_class"	"activity_type"	"act_value"	"act_unit"	"act_source"	"act_source_url"	"action_type"
+1527	ketoconazole	CHEBI:47519	Cytochrome P450 11A1	Enzyme	IC50	5.91		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL295698	
+1109	etomidate	CHEBI:4910	Cytochrome P450 11B1, mitochondrial	Enzyme	IC50	9.3		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL681	
+1527	ketoconazole	CHEBI:47519	Cytochrome P450 11B1, mitochondrial	Enzyme	IC50	6.896196365356445		SCIENTIFIC LITERATURE	http://www.ncbi.nlm.nih.gov/pubmed/18672868	INHIBITOR
+1556	letrozole	CHEBI:6413	Cytochrome P450 11B1, mitochondrial	Enzyme	IC50	5.58		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1444	
+1791	metyrapone	CHEBI:44241	Cytochrome P450 11B1, mitochondrial	Enzyme	IC50	7.84		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL934	INHIBITOR
+4176	abiraterone	CHEBI:68639	Cytochrome P450 11B1, mitochondrial	Enzyme	IC50	5.79		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL254328	
+1109	etomidate	CHEBI:4910	Cytochrome P450 11B2, mitochondrial	Enzyme	IC50	10.0		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL681	
+1527	ketoconazole	CHEBI:47519	Cytochrome P450 11B2, mitochondrial	Enzyme	IC50	7.173925399780273		SCIENTIFIC LITERATURE	http://www.ncbi.nlm.nih.gov/pubmed/18672868	INHIBITOR
+1556	letrozole	CHEBI:6413	Cytochrome P450 11B2, mitochondrial	Enzyme	IC50	5.85		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1444	
+1791	metyrapone	CHEBI:44241	Cytochrome P450 11B2, mitochondrial	Enzyme	IC50	7.38		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL934	
+4176	abiraterone	CHEBI:68639	Cytochrome P450 11B2, mitochondrial	Enzyme	IC50	5.76		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL254328	
+1527	ketoconazole	CHEBI:47519	Cytochrome P450 17A1	Enzyme	IC50	6.69		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL295698	
+4176	abiraterone	CHEBI:68639	Cytochrome P450 17A1	Enzyme	IC50	7.9		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL254328	
+30	methoxsalen	CHEBI:18358	Cytochrome P450 1A2	Enzyme	IC50	7.397940009		DRUG MATRIX		
+129	alosetron	CHEBI:253342	Cytochrome P450 1A2	Enzyme	IC50	6.218460031		DRUG MATRIX		
+141	altretamine	CHEBI:24564	Cytochrome P450 1A2	Enzyme	IC50	5.397940009		DRUG MATRIX		
+254	atazanavir	CHEBI:37924	Cytochrome P450 1A2	Enzyme	Ki	4.9208		WOMBAT-PK		
+254	atazanavir and cobicistat	CHEBI:37924	Cytochrome P450 1A2	Enzyme	Ki	4.9208		WOMBAT-PK		
+928	disulfiram	CHEBI:4659	Cytochrome P450 1A2	Enzyme	IC50	5.397940009		DRUG MATRIX		
+928	disulfiram, combinations	CHEBI:4659	Cytochrome P450 1A2	Enzyme	IC50	5.397940009		DRUG MATRIX		
+983	econazole	CHEBI:4754	Cytochrome P450 1A2	Enzyme	IC50	6.522878745		DRUG MATRIX		
+1223	flutamide	CHEBI:5132	Cytochrome P450 1A2	Enzyme	Ki	5.3565		WOMBAT-PK		
+1230	fluvoxamine	CHEBI:5138	Cytochrome P450 1A2	Enzyme	Ki	5.07		WOMBAT-PK		
+1364	hexachlorophene	CHEBI:5693	Cytochrome P450 1A2	Enzyme	IC50	5.881636056		DRUG MATRIX		
+1552	leflunomide	CHEBI:6402	Cytochrome P450 1A2	Enzyme	IC50	6.301029996		DRUG MATRIX		
+1826	modafinil	CHEBI:31859	Cytochrome P450 1A2	Enzyme	Ki	4.3958		WOMBAT-PK		
+1863	nabumetone	CHEBI:7443	Cytochrome P450 1A2	Enzyme	IC50	5.301029996		DRUG MATRIX		
+1922	nifedipine	CHEBI:7565	Cytochrome P450 1A2	Enzyme	IC50	6.522878745		DRUG MATRIX		
+1922	nifedipine and diuretics	CHEBI:7565	Cytochrome P450 1A2	Enzyme	IC50	6.522878745		DRUG MATRIX		
+1922	nifedipine, combinations	CHEBI:7565	Cytochrome P450 1A2	Enzyme	IC50	6.522878745		DRUG MATRIX		
+1942	nisoldipine	CHEBI:7577	Cytochrome P450 1A2	Enzyme	IC50	6.0		DRUG MATRIX		
+1990	omeprazole	CHEBI:7772	Cytochrome P450 1A2	Enzyme	IC50	4.74		WOMBAT-PK		
+1990	omeprazole, amoxicillin and clarithromycin	CHEBI:7772	Cytochrome P450 1A2	Enzyme	IC50	4.74		WOMBAT-PK		
+1990	omeprazole, amoxicillin and metronidazole	CHEBI:7772	Cytochrome P450 1A2	Enzyme	IC50	4.74		WOMBAT-PK		
+2068	paroxetine	CHEBI:7936	Cytochrome P450 1A2	Enzyme	IC50	4.96		WOMBAT-PK		
+2071	pefloxacin	CHEBI:50199	Cytochrome P450 1A2	Enzyme	Ki	4.0969		WOMBAT-PK		
+2266	primaquine	CHEBI:8405	Cytochrome P450 1A2	Enzyme	IC50	6.738975166		DRUG MATRIX		
+2274	prochlorperazine	CHEBI:8435	Cytochrome P450 1A2	Enzyme	IC50	5.698970004		DRUG MATRIX		
+2291	propafenone	CHEBI:63619	Cytochrome P450 1A2	Enzyme	IC50	5.482540173		DRUG MATRIX		
+2303	propranolol	CHEBI:8499	Cytochrome P450 1A2	Enzyme	IC50	5.397940009		DRUG MATRIX		
+2303	propranolol and other antihypertensives	CHEBI:8499	Cytochrome P450 1A2	Enzyme	IC50	5.397940009		DRUG MATRIX		
+2303	propranolol and thiazides	CHEBI:8499	Cytochrome P450 1A2	Enzyme	IC50	5.397940009		DRUG MATRIX		
+2495	sulconazole	CHEBI:9325	Cytochrome P450 1A2	Enzyme	IC50	6.22184875		DRUG MATRIX		
+2621	tiabendazole	CHEBI:45979	Cytochrome P450 1A2	Enzyme	IC50	6.096910013		DRUG MATRIX		
+2637	thioridazine	CHEBI:9566	Cytochrome P450 1A2	Enzyme	IC50	5.030011309		DRUG MATRIX		
+3064	capsaicin	CHEBI:3374	Cytochrome P450 1A2	Enzyme	IC50	5.522878745		DRUG MATRIX		
+1527	ketoconazole	CHEBI:47519	Cytochrome P450 21	Enzyme	IC50	5.05		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL295698	
+1527	ketoconazole	CHEBI:47519	Cytochrome P450 24A1	Enzyme	IC50	4.7		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL295698	
+1920	nicotine	CHEBI:17688	Cytochrome P450 2A6	Enzyme	IC50	5.3565		WOMBAT-PK		
+2657	ticlopidine	CHEBI:9588	Cytochrome P450 2A6	Enzyme	Ki	6.7		WOMBAT-PK		
+2715	tranylcypromine	CHEBI:9652	Cytochrome P450 2A6	Enzyme	Ki	7.187		WOMBAT-PK		
+708	clopidogrel	CHEBI:37941	Cytochrome P450 2B6	Enzyme	Ki	6.3		WOMBAT-PK		
+2657	ticlopidine	CHEBI:9588	Cytochrome P450 2B6	Enzyme	IC50	6.699999809		IUPHAR	http://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=7307	INHIBITOR
+367	bicalutamide	CHEBI:3090	Cytochrome P450 2C19	Enzyme	IC50	6.0		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL409	
+391	bortezomib	CHEBI:52717	Cytochrome P450 2C19	Enzyme	Ki	4.7447		WOMBAT-PK		
+435	bupropion	CHEBI:3219	Cytochrome P450 2C19	Enzyme	IC50	5.699339312		DRUG MATRIX		
+435	bupropion and naltrexone	CHEBI:3219	Cytochrome P450 2C19	Enzyme	IC50	5.699339312		DRUG MATRIX		
+671	clemastine	CHEBI:3738	Cytochrome P450 2C19	Enzyme	IC50	6.22184875		DRUG MATRIX		
+671	clemastine, combinations	CHEBI:3738	Cytochrome P450 2C19	Enzyme	IC50	6.22184875		DRUG MATRIX		
+719	clotrimazole	CHEBI:3764	Cytochrome P450 2C19	Enzyme	IC50	7.795880017		DRUG MATRIX		
+983	econazole	CHEBI:4754	Cytochrome P450 2C19	Enzyme	IC50	7.397940009		DRUG MATRIX		
+1094	ethylestrenol	CHEBI:31578	Cytochrome P450 2C19	Enzyme	IC50	5.88917469		DRUG MATRIX		
+1171	alfuzosin and finasteride	CHEBI:5062	Cytochrome P450 2C19	Enzyme	IC50	6.0		DRUG MATRIX		
+1171	finasteride	CHEBI:5062	Cytochrome P450 2C19	Enzyme	IC50	6.0		DRUG MATRIX		
+1187	azithromycin, fluconazole and secnidazole	CHEBI:46081	Cytochrome P450 2C19	Enzyme	IC50	5.09		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL106	
+1187	fluconazole	CHEBI:46081	Cytochrome P450 2C19	Enzyme	IC50	5.09		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL106	
+1207	fluorescein	CHEBI:31624	Cytochrome P450 2C19	Enzyme	IC50	6.042201225		DRUG MATRIX		
+1207	fluorescein, combinations	CHEBI:31624	Cytochrome P450 2C19	Enzyme	IC50	6.042201225		DRUG MATRIX		
+1364	hexachlorophene	CHEBI:5693	Cytochrome P450 2C19	Enzyme	IC50	5.911332447		DRUG MATRIX		
+1416	idebenone	CHEBI:31687	Cytochrome P450 2C19	Enzyme	IC50	6.096910013		DRUG MATRIX		
+1532	lacidipine	CHEBI:135737	Cytochrome P450 2C19	Enzyme	IC50	5.698970004		DRUG MATRIX		
+1547	lansoprazole	CHEBI:6375	Cytochrome P450 2C19	Enzyme	IC50	6.472756884		DRUG MATRIX		
+1547	lansoprazole, amoxicillin and clarithromycin	CHEBI:6375	Cytochrome P450 2C19	Enzyme	IC50	6.472756884		DRUG MATRIX		
+1547	lansoprazole, amoxicillin and levofloxacin	CHEBI:6375	Cytochrome P450 2C19	Enzyme	IC50	6.472756884		DRUG MATRIX		
+1547	lansoprazole, amoxicillin and metronidazole	CHEBI:6375	Cytochrome P450 2C19	Enzyme	IC50	6.472756884		DRUG MATRIX		
+1547	lansoprazole, clarithromycin and tinidazole	CHEBI:6375	Cytochrome P450 2C19	Enzyme	IC50	6.472756884		DRUG MATRIX		
+1547	lansoprazole, combinations	CHEBI:6375	Cytochrome P450 2C19	Enzyme	IC50	6.472756884		DRUG MATRIX		
+1547	lansoprazole, tetracycline and metronidazole	CHEBI:6375	Cytochrome P450 2C19	Enzyme	IC50	6.472756884		DRUG MATRIX		
+1605	loratadine	CHEBI:6538	Cytochrome P450 2C19	Enzyme	IC50	7.795880017		DRUG MATRIX		
+1659	medroxyprogesterone	CHEBI:6715	Cytochrome P450 2C19	Enzyme	IC50	5.698970004		DRUG MATRIX		
+1659	medroxyprogesterone and estrogen	CHEBI:6715	Cytochrome P450 2C19	Enzyme	IC50	5.698970004		DRUG MATRIX		
+1659	medroxyprogesterone and ethinylestradiol	CHEBI:6715	Cytochrome P450 2C19	Enzyme	IC50	5.698970004		DRUG MATRIX		
+1800	miconazole	CHEBI:6923	Cytochrome P450 2C19	Enzyme	IC50	7.795880017		DRUG MATRIX		
+1800	miconazole, combinations	CHEBI:6923	Cytochrome P450 2C19	Enzyme	IC50	7.795880017		DRUG MATRIX		
+1937	nimodipine	CHEBI:7575	Cytochrome P450 2C19	Enzyme	IC50	5.397940009		DRUG MATRIX		
+1947	enalapril and nitrendipine	CHEBI:7582	Cytochrome P450 2C19	Enzyme	IC50	5.522878745		DRUG MATRIX		
+1947	nitrendipine	CHEBI:7582	Cytochrome P450 2C19	Enzyme	IC50	5.522878745		DRUG MATRIX		
+1971	nortriptyline	CHEBI:7640	Cytochrome P450 2C19	Enzyme	IC50	5.522878745		DRUG MATRIX		
+1990	omeprazole	CHEBI:7772	Cytochrome P450 2C19	Enzyme	Ki	5.301		WOMBAT-PK		
+1990	omeprazole, amoxicillin and clarithromycin	CHEBI:7772	Cytochrome P450 2C19	Enzyme	Ki	5.301		WOMBAT-PK		
+1990	omeprazole, amoxicillin and metronidazole	CHEBI:7772	Cytochrome P450 2C19	Enzyme	Ki	5.301		WOMBAT-PK		
+2028	oxybutynin	CHEBI:7856	Cytochrome P450 2C19	Enzyme	IC50	6.22184875		DRUG MATRIX		
+2123	phenelzine	CHEBI:8060	Cytochrome P450 2C19	Enzyme	IC50	6.096910013		DRUG MATRIX		
+2436	sertraline	CHEBI:9123	Cytochrome P450 2C19	Enzyme	IC50	6.0		DRUG MATRIX		
+2446	sirolimus	CHEBI:9168	Cytochrome P450 2C19	Enzyme	IC50	5.397940009		DRUG MATRIX		
+2475	spironolactone	CHEBI:9241	Cytochrome P450 2C19	Enzyme	IC50	5.522878745		DRUG MATRIX		
+2477	stanozolol	CHEBI:9249	Cytochrome P450 2C19	Enzyme	IC50	7.318758763		DRUG MATRIX		
+2495	sulconazole	CHEBI:9325	Cytochrome P450 2C19	Enzyme	IC50	7.795880017		DRUG MATRIX		
+2624	thiamphenicol	CHEBI:32215	Cytochrome P450 2C19	Enzyme	IC50	5.12		WOMBAT-PK		
+2624	thiamphenicol, combinations	CHEBI:32215	Cytochrome P450 2C19	Enzyme	IC50	5.12		WOMBAT-PK		
+2637	thioridazine	CHEBI:9566	Cytochrome P450 2C19	Enzyme	IC50	5.195329104		DRUG MATRIX		
+2655	tibolone	CHEBI:32223	Cytochrome P450 2C19	Enzyme	IC50	5.522878745		DRUG MATRIX		
+2657	ticlopidine	CHEBI:9588	Cytochrome P450 2C19	Enzyme	IC50	6.175353585		DRUG MATRIX		
+2774	tropicamide	CHEBI:9757	Cytochrome P450 2C19	Enzyme	IC50	6.0		DRUG MATRIX		
+2774	tropicamide, combinations	CHEBI:9757	Cytochrome P450 2C19	Enzyme	IC50	6.0		DRUG MATRIX		
+2846	voriconazole	CHEBI:10023	Cytochrome P450 2C19	Enzyme	IC50	4.82		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL638	
+3408	oxiconazole	CHEBI:7825	Cytochrome P450 2C19	Enzyme	IC50	7.397940009		DRUG MATRIX		
+3617	tolnaftate	CHEBI:9620	Cytochrome P450 2C19	Enzyme	IC50	5.522878745		DRUG MATRIX		
+1285	gemfibrozil	CHEBI:5296	Cytochrome P450 2C8	Enzyme	Ki	5.74		WOMBAT-PK		
+1795	mezlocillin	CHEBI:6919	Cytochrome P450 2C8	Enzyme	IC50	6.74		WOMBAT-PK		
+1836	montelukast	CHEBI:50730	Cytochrome P450 2C8	Enzyme	Ki	5.958		WOMBAT-PK		
+1836	montelukast, combinations	CHEBI:50730	Cytochrome P450 2C8	Enzyme	Ki	5.958		WOMBAT-PK		
+2123	phenelzine	CHEBI:8060	Cytochrome P450 2C8	Enzyme	Ki	5.139999866		IUPHAR	http://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=7266	INHIBITOR
+254	atazanavir	CHEBI:37924	Cytochrome P450 2C9	Enzyme	Ki	4.9208		WOMBAT-PK		
+254	atazanavir and cobicistat	CHEBI:37924	Cytochrome P450 2C9	Enzyme	Ki	4.9208		WOMBAT-PK		
+375	bisacodyl	CHEBI:3125	Cytochrome P450 2C9	Enzyme	IC50	5.0		DRUG MATRIX		
+375	bisacodyl, combinations	CHEBI:3125	Cytochrome P450 2C9	Enzyme	IC50	5.0		DRUG MATRIX		
+475	candesartan	CHEBI:3348	Cytochrome P450 2C9	Enzyme	IC50	5.519999980926514		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1014	
+475	candesartan and diuretics	CHEBI:3348	Cytochrome P450 2C9	Enzyme	IC50	5.519999980926514		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1014	
+644	cilostazol	CHEBI:31401	Cytochrome P450 2C9	Enzyme	IC50	5.0		DRUG MATRIX		
+719	clotrimazole	CHEBI:3764	Cytochrome P450 2C9	Enzyme	IC50	7.795880017		DRUG MATRIX		
+779	danazol	CHEBI:4315	Cytochrome P450 2C9	Enzyme	IC50	6.522878745		DRUG MATRIX		
+867	dicoumarol	CHEBI:4513	Cytochrome P450 2C9	Enzyme	Ki	5.9715		WOMBAT-PK		
+983	econazole	CHEBI:4754	Cytochrome P450 2C9	Enzyme	IC50	6.698970004		DRUG MATRIX		
+1142	felodipine	CHEBI:585948	Cytochrome P450 2C9	Enzyme	IC50	5.339181937		DRUG MATRIX		
+1142	ramipril and felodipine	CHEBI:585948	Cytochrome P450 2C9	Enzyme	IC50	5.339181937		DRUG MATRIX		
+1171	alfuzosin and finasteride	CHEBI:5062	Cytochrome P450 2C9	Enzyme	IC50	5.698970004		DRUG MATRIX		
+1171	finasteride	CHEBI:5062	Cytochrome P450 2C9	Enzyme	IC50	5.698970004		DRUG MATRIX		
+1187	azithromycin, fluconazole and secnidazole	CHEBI:46081	Cytochrome P450 2C9	Enzyme	IC50	4.54		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL106	
+1187	fluconazole	CHEBI:46081	Cytochrome P450 2C9	Enzyme	IC50	4.54		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL106	
+1229	fluvastatin	CHEBI:38561	Cytochrome P450 2C9	Enzyme	IC50	6.397940009		DRUG MATRIX		
+1285	gemfibrozil	CHEBI:5296	Cytochrome P450 2C9	Enzyme	Ki	4.5229		WOMBAT-PK		
+1314	glibenclamide	CHEBI:5441	Cytochrome P450 2C9	Enzyme	IC50	5.795337488		DRUG MATRIX		INHIBITOR
+1407	ibuprofen	CHEBI:132922	Cytochrome P450 2C9	Enzyme	Ki	4.3		WOMBAT-PK		
+1407	ibuprofen, combinations	CHEBI:132922	Cytochrome P450 2C9	Enzyme	Ki	4.3		WOMBAT-PK		
+1416	idebenone	CHEBI:31687	Cytochrome P450 2C9	Enzyme	IC50	5.301029996		DRUG MATRIX		
+1532	lacidipine	CHEBI:135737	Cytochrome P450 2C9	Enzyme	IC50	5.698970004		DRUG MATRIX		
+1610	losartan	CHEBI:6541	Cytochrome P450 2C9	Enzyme	IC50	5.540306024		DRUG MATRIX		
+1610	losartan and amlodipine	CHEBI:6541	Cytochrome P450 2C9	Enzyme	IC50	5.540306024		DRUG MATRIX		
+1610	losartan and diuretics	CHEBI:6541	Cytochrome P450 2C9	Enzyme	IC50	5.540306024		DRUG MATRIX		
+1667	megestrol	CHEBI:6723	Cytochrome P450 2C9	Enzyme	IC50	5.0		DRUG MATRIX		
+1667	megestrol and estrogen	CHEBI:6723	Cytochrome P450 2C9	Enzyme	IC50	5.0		DRUG MATRIX		
+1667	megestrol and ethinylestradiol	CHEBI:6723	Cytochrome P450 2C9	Enzyme	IC50	5.0		DRUG MATRIX		
+1795	mezlocillin	CHEBI:6919	Cytochrome P450 2C9	Enzyme	IC50	4.72		WOMBAT-PK		
+1800	miconazole	CHEBI:6923	Cytochrome P450 2C9	Enzyme	IC50	6.698970004		DRUG MATRIX		
+1800	miconazole, combinations	CHEBI:6923	Cytochrome P450 2C9	Enzyme	IC50	6.698970004		DRUG MATRIX		
+1909	nicardipine	CHEBI:7550	Cytochrome P450 2C9	Enzyme	IC50	6.5528		WOMBAT-PK		
+1937	nimodipine	CHEBI:7575	Cytochrome P450 2C9	Enzyme	IC50	6.0		DRUG MATRIX		
+1947	enalapril and nitrendipine	CHEBI:7582	Cytochrome P450 2C9	Enzyme	IC50	6.522878745		DRUG MATRIX		
+1947	nitrendipine	CHEBI:7582	Cytochrome P450 2C9	Enzyme	IC50	6.522878745		DRUG MATRIX		
+1990	omeprazole	CHEBI:7772	Cytochrome P450 2C9	Enzyme	Ki	4.3468		WOMBAT-PK		
+1990	omeprazole, amoxicillin and clarithromycin	CHEBI:7772	Cytochrome P450 2C9	Enzyme	Ki	4.3468		WOMBAT-PK		
+1990	omeprazole, amoxicillin and metronidazole	CHEBI:7772	Cytochrome P450 2C9	Enzyme	Ki	4.3468		WOMBAT-PK		
+2123	phenelzine	CHEBI:8060	Cytochrome P450 2C9	Enzyme	IC50	5.397940009		DRUG MATRIX		
+2145	phenylbutazone	CHEBI:48574	Cytochrome P450 2C9	Enzyme	Ki	4.72		WOMBAT-PK		
+2145	phenylbutazone and corticosteroids	CHEBI:48574	Cytochrome P450 2C9	Enzyme	Ki	4.72		WOMBAT-PK		
+2302	propofol	CHEBI:44915	Cytochrome P450 2C9	Enzyme	IC50	4.9101		WOMBAT-PK		
+2332	artesunate, sulphamethopyrazine and pyrimethamine	CHEBI:8673	Cytochrome P450 2C9	Enzyme	Ki	4.2882		WOMBAT-PK		
+2332	pyrimethamine	CHEBI:8673	Cytochrome P450 2C9	Enzyme	Ki	4.2882		WOMBAT-PK		
+2332	pyrimethamine, combinations	CHEBI:8673	Cytochrome P450 2C9	Enzyme	Ki	4.2882		WOMBAT-PK		
+2351	raloxifene	CHEBI:8772	Cytochrome P450 2C9	Enzyme	IC50	5.698970004		DRUG MATRIX		
+2391	dasabuvir, ombitasvir, paritaprevir and ritonavir	CHEBI:45409	Cytochrome P450 2C9	Enzyme	IC50	7.795880017		DRUG MATRIX		
+2391	lopinavir and ritonavir	CHEBI:45409	Cytochrome P450 2C9	Enzyme	IC50	7.795880017		DRUG MATRIX		
+2391	ombitasvir, paritaprevir and ritonavir	CHEBI:45409	Cytochrome P450 2C9	Enzyme	IC50	7.795880017		DRUG MATRIX		
+2391	ritonavir	CHEBI:45409	Cytochrome P450 2C9	Enzyme	IC50	7.795880017		DRUG MATRIX		
+2446	sirolimus	CHEBI:9168	Cytochrome P450 2C9	Enzyme	IC50	5.698970004		DRUG MATRIX		
+2477	stanozolol	CHEBI:9249	Cytochrome P450 2C9	Enzyme	IC50	5.947844933		DRUG MATRIX		
+2495	sulconazole	CHEBI:9325	Cytochrome P450 2C9	Enzyme	IC50	6.698970004		DRUG MATRIX		
+2523	sulfafenazol	CHEBI:77780	Cytochrome P450 2C9	Enzyme	IC50	6.698970004		DRUG MATRIX		
+2523	sulfaphenazole	CHEBI:77780	Cytochrome P450 2C9	Enzyme	IC50	6.698970004		DRUG MATRIX		
+2546	suprofen	CHEBI:9362	Cytochrome P450 2C9	Enzyme	Ki	4.3468		WOMBAT-PK		
+2767	troglitazone	CHEBI:9753	Cytochrome P450 2C9	Enzyme	IC50	5.397940009		DRUG MATRIX		
+2774	tropicamide	CHEBI:9757	Cytochrome P450 2C9	Enzyme	IC50	6.0		DRUG MATRIX		
+2774	tropicamide, combinations	CHEBI:9757	Cytochrome P450 2C9	Enzyme	IC50	6.0		DRUG MATRIX		
+2846	voriconazole	CHEBI:10023	Cytochrome P450 2C9	Enzyme	IC50	4.85		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL638	
+2847	warfarin	CHEBI:10033	Cytochrome P450 2C9	Enzyme	Ki	4.8665		WOMBAT-PK		
+2855	zafirlukast	CHEBI:10100	Cytochrome P450 2C9	Enzyme	IC50	5.646372241		DRUG MATRIX		
+3408	oxiconazole	CHEBI:7825	Cytochrome P450 2C9	Enzyme	IC50	5.522878745		DRUG MATRIX		
+4	levobupivacaine	CHEBI:6149	Cytochrome P450 2D6	Enzyme	IC50	6.706858517		DRUG MATRIX		
+100	ajmaline	CHEBI:28462	Cytochrome P450 2D6	Enzyme	IC50	6.0		DRUG MATRIX		
+147	ambroxol	CHEBI:135590	Cytochrome P450 2D6	Enzyme	IC50	6.253833036		DRUG MATRIX		
+191	amoxapine	CHEBI:2675	Cytochrome P450 2D6	Enzyme	IC50	5.0		DRUG MATRIX		
+203	amsacrine	CHEBI:2687	Cytochrome P450 2D6	Enzyme	Ki	5.12		WOMBAT-PK		
+231	aprindine	CHEBI:135370	Cytochrome P450 2D6	Enzyme	Ki	7.757		WOMBAT-PK		
+256	atomoxetine	CHEBI:127342	Cytochrome P450 2D6	Enzyme	Ki	4.7696		WOMBAT-PK		
+285	bambuterol	CHEBI:553827	Cytochrome P450 2D6	Enzyme	IC50	5.698970004		DRUG MATRIX		
+313	benproperine	CHEBI:4638	Cytochrome P450 2D6	Enzyme	IC50	6.486382926		DRUG MATRIX		
+389	bopindolol	CHEBI:31298	Cytochrome P450 2D6	Enzyme	IC50	5.261504838		DRUG MATRIX		
+389	bopindolol and other diuretics	CHEBI:31298	Cytochrome P450 2D6	Enzyme	IC50	5.261504838		DRUG MATRIX		
+402	bromhexine	CHEBI:77032	Cytochrome P450 2D6	Enzyme	IC50	6.708187313		DRUG MATRIX		
+432	bupivacaine	CHEBI:3215	Cytochrome P450 2D6	Enzyme	IC50	6.397940009		DRUG MATRIX		
+432	bupivacaine, combinations	CHEBI:3215	Cytochrome P450 2D6	Enzyme	IC50	6.397940009		DRUG MATRIX		
+444	butenafine	CHEBI:3238	Cytochrome P450 2D6	Enzyme	IC50	6.522878745		DRUG MATRIX		
+511	carmofur	CHEBI:31360	Cytochrome P450 2D6	Enzyme	IC50	5.301029996		DRUG MATRIX		
+568	celecoxib	CHEBI:41423	Cytochrome P450 2D6	Enzyme	IC50	6.0		DRUG MATRIX		
+575	cefapirin	CHEBI:3545	Cytochrome P450 2D6	Enzyme	IC50	4.84		WOMBAT-PK		
+616	chlorphenamine	CHEBI:52010	Cytochrome P450 2D6	Enzyme	Ki	4.9666		WOMBAT-PK		
+616	chlorphenamine, combinations	CHEBI:52010	Cytochrome P450 2D6	Enzyme	Ki	4.9666		WOMBAT-PK		
+621	chlorpromazine	CHEBI:3647	Cytochrome P450 2D6	Enzyme	Ki	5.1549		WOMBAT-PK		
+660	cisapride	CHEBI:3720	Cytochrome P450 2D6	Enzyme	IC50	7.15490196		DRUG MATRIX		
+671	clemastine	CHEBI:3738	Cytochrome P450 2D6	Enzyme	Ki	5.699		WOMBAT-PK		
+671	clemastine, combinations	CHEBI:3738	Cytochrome P450 2D6	Enzyme	Ki	5.699		WOMBAT-PK		
+700	clomifene	CHEBI:3753	Cytochrome P450 2D6	Enzyme	IC50	5.0		DRUG MATRIX		
+701	clomipramine	CHEBI:47780	Cytochrome P450 2D6	Enzyme	Ki	5.6576		WOMBAT-PK		
+749	cyclizine	CHEBI:3994	Cytochrome P450 2D6	Enzyme	IC50	5.206384206		DRUG MATRIX		
+749	cyclizine, combinations	CHEBI:3994	Cytochrome P450 2D6	Enzyme	IC50	5.206384206		DRUG MATRIX		
+916	diphenhydramine	CHEBI:4636	Cytochrome P450 2D6	Enzyme	Ki	4.9318		WOMBAT-PK		
+916	diphenhydramine, combinations	CHEBI:4636	Cytochrome P450 2D6	Enzyme	Ki	4.9318		WOMBAT-PK		
+945	domperidone	CHEBI:31515	Cytochrome P450 2D6	Enzyme	Ki	5.0969		WOMBAT-PK		
+953	doxapram	CHEBI:681848	Cytochrome P450 2D6	Enzyme	IC50	7.0		DRUG MATRIX		
+983	econazole	CHEBI:4754	Cytochrome P450 2D6	Enzyme	IC50	6.397940009		DRUG MATRIX		
+1022	eperisone	CHEBI:77069	Cytochrome P450 2D6	Enzyme	IC50	5.309502677		DRUG MATRIX		
+1209	fluoxetine	CHEBI:5118	Cytochrome P450 2D6	Enzyme	IC50	6.15490196		DRUG MATRIX		
+1209	fluoxetine and psycholeptics	CHEBI:5118	Cytochrome P450 2D6	Enzyme	IC50	6.15490196		DRUG MATRIX		
+1400	hydroxyzine	CHEBI:5818	Cytochrome P450 2D6	Enzyme	Ki	5.4089		WOMBAT-PK		
+1400	hydroxyzine, combinations	CHEBI:5818	Cytochrome P450 2D6	Enzyme	Ki	5.4089		WOMBAT-PK		
+1416	idebenone	CHEBI:31687	Cytochrome P450 2D6	Enzyme	IC50	5.522878745		DRUG MATRIX		
+1531	labetalol	CHEBI:6343	Cytochrome P450 2D6	Enzyme	IC50	6.096910013		DRUG MATRIX		
+1531	labetalol and other diuretics	CHEBI:6343	Cytochrome P450 2D6	Enzyme	IC50	6.096910013		DRUG MATRIX		
+1531	labetalol and thiazides	CHEBI:6343	Cytochrome P450 2D6	Enzyme	IC50	6.096910013		DRUG MATRIX		
+1547	lansoprazole	CHEBI:6375	Cytochrome P450 2D6	Enzyme	IC50	5.274513074		DRUG MATRIX		
+1547	lansoprazole, amoxicillin and clarithromycin	CHEBI:6375	Cytochrome P450 2D6	Enzyme	IC50	5.274513074		DRUG MATRIX		
+1547	lansoprazole, amoxicillin and levofloxacin	CHEBI:6375	Cytochrome P450 2D6	Enzyme	IC50	5.274513074		DRUG MATRIX		
+1547	lansoprazole, amoxicillin and metronidazole	CHEBI:6375	Cytochrome P450 2D6	Enzyme	IC50	5.274513074		DRUG MATRIX		
+1547	lansoprazole, clarithromycin and tinidazole	CHEBI:6375	Cytochrome P450 2D6	Enzyme	IC50	5.274513074		DRUG MATRIX		
+1547	lansoprazole, combinations	CHEBI:6375	Cytochrome P450 2D6	Enzyme	IC50	5.274513074		DRUG MATRIX		
+1547	lansoprazole, tetracycline and metronidazole	CHEBI:6375	Cytochrome P450 2D6	Enzyme	IC50	5.274513074		DRUG MATRIX		
+1588	lisuride	CHEBI:51164	Cytochrome P450 2D6	Enzyme	IC50	7.795880017		DRUG MATRIX		
+1599	loperamide	CHEBI:6532	Cytochrome P450 2D6	Enzyme	IC50	5.698970004		DRUG MATRIX		
+1599	loperamide, combinations	CHEBI:6532	Cytochrome P450 2D6	Enzyme	IC50	5.698970004		DRUG MATRIX		
+1738	methapyrilene	CHEBI:6820	Cytochrome P450 2D6	Enzyme	IC50	5.559657759		DRUG MATRIX		
+1764	methylergometrine	CHEBI:6874	Cytochrome P450 2D6	Enzyme	IC50	6.698970004		DRUG MATRIX		
+1764	methylergometrine and oxytocin	CHEBI:6874	Cytochrome P450 2D6	Enzyme	IC50	6.698970004		DRUG MATRIX		
+1765	bupropion and naltrexone	CHEBI:7465	Cytochrome P450 2D6	Enzyme	IC50	6.0		DRUG MATRIX		
+1765	naltrexone	CHEBI:7465	Cytochrome P450 2D6	Enzyme	IC50	6.0		DRUG MATRIX		
+1782	metoclopramide	CHEBI:107736	Cytochrome P450 2D6	Enzyme	IC50	6.096910013		DRUG MATRIX		
+1800	miconazole	CHEBI:6923	Cytochrome P450 2D6	Enzyme	IC50	6.0		DRUG MATRIX		
+1800	miconazole, combinations	CHEBI:6923	Cytochrome P450 2D6	Enzyme	IC50	6.0		DRUG MATRIX		
+1878	hydromorphone and naloxone	CHEBI:7459	Cytochrome P450 2D6	Enzyme	IC50	5.698970004		DRUG MATRIX		
+1878	naloxone	CHEBI:7459	Cytochrome P450 2D6	Enzyme	IC50	5.698970004		DRUG MATRIX		
+1999	orphenadrine (chloride)	CHEBI:7789	Cytochrome P450 2D6	Enzyme	IC50	6.397940009		DRUG MATRIX		
+1999	orphenadrine (citrate)	CHEBI:7789	Cytochrome P450 2D6	Enzyme	IC50	6.397940009		DRUG MATRIX		
+1999	orphenadrine, combinations	CHEBI:7789	Cytochrome P450 2D6	Enzyme	IC50	6.397940009		DRUG MATRIX		
+2032	oxymetazoline	CHEBI:7862	Cytochrome P450 2D6	Enzyme	IC50	6.698970004		DRUG MATRIX		
+2068	paroxetine	CHEBI:7936	Cytochrome P450 2D6	Enzyme	IC50	6.0		DRUG MATRIX		
+2105	pergolide	CHEBI:63617	Cytochrome P450 2D6	Enzyme	IC50	6.698970004		DRUG MATRIX		
+2106	perhexiline	CHEBI:35553	Cytochrome P450 2D6	Enzyme	IC50	6.026502691		DRUG MATRIX		
+2123	phenelzine	CHEBI:8060	Cytochrome P450 2D6	Enzyme	IC50	6.0		DRUG MATRIX		
+2142	phentolamine	CHEBI:8081	Cytochrome P450 2D6	Enzyme	IC50	5.0		DRUG MATRIX		
+2159	physostigmine	CHEBI:27953	Cytochrome P450 2D6	Enzyme	IC50	6.698970004		DRUG MATRIX		
+2274	prochlorperazine	CHEBI:8435	Cytochrome P450 2D6	Enzyme	IC50	6.522878745		DRUG MATRIX		
+2284	promazine	CHEBI:8459	Cytochrome P450 2D6	Enzyme	IC50	6.522878745		DRUG MATRIX		
+2286	prednisolone and promethazine	CHEBI:8461	Cytochrome P450 2D6	Enzyme	Ki	5.4202		WOMBAT-PK		
+2286	promethazine	CHEBI:8461	Cytochrome P450 2D6	Enzyme	Ki	5.4202		WOMBAT-PK		
+2286	promethazine, combinations	CHEBI:8461	Cytochrome P450 2D6	Enzyme	Ki	5.4202		WOMBAT-PK		
+2291	propafenone	CHEBI:63619	Cytochrome P450 2D6	Enzyme	IC50	5.336921287		DRUG MATRIX		
+2303	propranolol	CHEBI:8499	Cytochrome P450 2D6	Enzyme	IC50	5.698970004		DRUG MATRIX		
+2303	propranolol and other antihypertensives	CHEBI:8499	Cytochrome P450 2D6	Enzyme	IC50	5.698970004		DRUG MATRIX		
+2303	propranolol and thiazides	CHEBI:8499	Cytochrome P450 2D6	Enzyme	IC50	5.698970004		DRUG MATRIX		
+2331	mepyramine	CHEBI:6762	Cytochrome P450 2D6	Enzyme	IC50	6.522878745		DRUG MATRIX		
+2346	quinidine	CHEBI:28593	Cytochrome P450 2D6	Enzyme	Ki	7.92081880569458		SCIENTIFIC LITERATURE	http://www.ncbi.nlm.nih.gov/pubmed/24786236	INHIBITOR
+2346	quinidine, combinations excl. psycholeptics	CHEBI:28593	Cytochrome P450 2D6	Enzyme	Ki	7.92081880569458		SCIENTIFIC LITERATURE	http://www.ncbi.nlm.nih.gov/pubmed/24786236	INHIBITOR
+2346	quinidine, combinations with psycholeptics	CHEBI:28593	Cytochrome P450 2D6	Enzyme	Ki	7.92081880569458		SCIENTIFIC LITERATURE	http://www.ncbi.nlm.nih.gov/pubmed/24786236	INHIBITOR
+2389	risperidone	CHEBI:8871	Cytochrome P450 2D6	Enzyme	IC50	5.277909285		DRUG MATRIX		
+2391	dasabuvir, ombitasvir, paritaprevir and ritonavir	CHEBI:45409	Cytochrome P450 2D6	Enzyme	IC50	4.301029996		DRUG MATRIX		
+2391	lopinavir and ritonavir	CHEBI:45409	Cytochrome P450 2D6	Enzyme	IC50	4.301029996		DRUG MATRIX		
+2391	ombitasvir, paritaprevir and ritonavir	CHEBI:45409	Cytochrome P450 2D6	Enzyme	IC50	4.301029996		DRUG MATRIX		
+2391	ritonavir	CHEBI:45409	Cytochrome P450 2D6	Enzyme	IC50	4.301029996		DRUG MATRIX		
+2393	rizatriptan	CHEBI:48273	Cytochrome P450 2D6	Enzyme	Ki	4.8539		WOMBAT-PK		
+2477	stanozolol	CHEBI:9249	Cytochrome P450 2D6	Enzyme	IC50	5.032732908		DRUG MATRIX		
+2495	sulconazole	CHEBI:9325	Cytochrome P450 2D6	Enzyme	IC50	6.096910013		DRUG MATRIX		
+2551	tacrine	CHEBI:45980	Cytochrome P450 2D6	Enzyme	IC50	6.522878745		DRUG MATRIX		
+2597	terbinafine	CHEBI:9448	Cytochrome P450 2D6	Enzyme	IC50	6.698970004		DRUG MATRIX		
+2637	thioridazine	CHEBI:9566	Cytochrome P450 2D6	Enzyme	IC50	5.751389255		DRUG MATRIX		
+2657	ticlopidine	CHEBI:9588	Cytochrome P450 2D6	Enzyme	IC50	5.201156071		DRUG MATRIX		
+2728	triamterene	CHEBI:9671	Cytochrome P450 2D6	Enzyme	IC50	5.0		DRUG MATRIX		
+2745	trihexyphenidyl	CHEBI:9720	Cytochrome P450 2D6	Enzyme	IC50	5.61086937		DRUG MATRIX		
+3408	oxiconazole	CHEBI:7825	Cytochrome P450 2D6	Enzyme	IC50	6.0		DRUG MATRIX		
+3659	yohimbine	CHEBI:10093	Cytochrome P450 2D6	Enzyme	IC50	5.692140419		DRUG MATRIX		
+4616	methylnaltrexone bromide	CHEBI:136007	Cytochrome P450 2D6	Enzyme	Ki	5.1		WOMBAT-PK		
+4733	thiomersal	CHEBI:9546	Cytochrome P450 2D6	Enzyme	IC50	5.522878745		DRUG MATRIX		
+2600	terfenadine	CHEBI:9453	Cytochrome P450 2J2	Enzyme	IC50	5.09		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL17157	
+4299	atazanavir and cobicistat	CHEBI:72291	Cytochrome P450 3A	Enzyme	Ki	6.027334213256836		SCIENTIFIC LITERATURE	http://www.ncbi.nlm.nih.gov/pubmed/24900196	INHIBITOR
+4299	cobicistat	CHEBI:72291	Cytochrome P450 3A	Enzyme	Ki	6.027334213256836		SCIENTIFIC LITERATURE	http://www.ncbi.nlm.nih.gov/pubmed/24900196	INHIBITOR
+4299	darunavir and cobicistat	CHEBI:72291	Cytochrome P450 3A	Enzyme	Ki	6.027334213256836		SCIENTIFIC LITERATURE	http://www.ncbi.nlm.nih.gov/pubmed/24900196	INHIBITOR
+4299	emtricitabine, tenofovir alafenamide, elvitegravir and cobicistat	CHEBI:72291	Cytochrome P450 3A	Enzyme	Ki	6.027334213256836		SCIENTIFIC LITERATURE	http://www.ncbi.nlm.nih.gov/pubmed/24900196	INHIBITOR
+4299	emtricitabine, tenofovir disoproxil, elvitegravir and cobicistat	CHEBI:72291	Cytochrome P450 3A	Enzyme	Ki	6.027334213256836		SCIENTIFIC LITERATURE	http://www.ncbi.nlm.nih.gov/pubmed/24900196	INHIBITOR
+136	alprazolam	CHEBI:2611	Cytochrome P450 3A4	Enzyme	Ki	3.85		WOMBAT-PK		
+176	amiodarone	CHEBI:2663	Cytochrome P450 3A4	Enzyme	Ki	6.22		WOMBAT-PK		
+200	amprenavir	CHEBI:40050	Cytochrome P450 3A4	Enzyme	IC50	6.0		DRUG MATRIX		
+249	astemizole	CHEBI:2896	Cytochrome P450 3A4	Enzyme	IC50	5.4815		WOMBAT-PK		
+254	atazanavir	CHEBI:37924	Cytochrome P450 3A4	Enzyme	Ki	5.6289		WOMBAT-PK		
+254	atazanavir and cobicistat	CHEBI:37924	Cytochrome P450 3A4	Enzyme	Ki	5.6289		WOMBAT-PK		
+257	atorvastatin	CHEBI:39548	Cytochrome P450 3A4	Enzyme	IC50	5.29		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1487	
+257	atorvastatin, acetylsalicylic acid and perindopril	CHEBI:39548	Cytochrome P450 3A4	Enzyme	IC50	5.29		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1487	
+257	atorvastatin, acetylsalicylic acid and ramipril	CHEBI:39548	Cytochrome P450 3A4	Enzyme	IC50	5.29		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1487	
+257	atorvastatin, amlodipine and perindopril	CHEBI:39548	Cytochrome P450 3A4	Enzyme	IC50	5.29		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1487	
+257	atorvastatin and acetylsalicylic acid	CHEBI:39548	Cytochrome P450 3A4	Enzyme	IC50	5.29		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1487	
+257	atorvastatin and amlodipine	CHEBI:39548	Cytochrome P450 3A4	Enzyme	IC50	5.29		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1487	
+257	atorvastatin and ezetimibe	CHEBI:39548	Cytochrome P450 3A4	Enzyme	IC50	5.29		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1487	
+403	bromocriptine	CHEBI:3181	Cytochrome P450 3A4	Enzyme	IC50	5.698970004		DRUG MATRIX		
+437	buspirone	CHEBI:3223	Cytochrome P450 3A4	Enzyme	Ki	5.13		WOMBAT-PK		
+475	candesartan	CHEBI:3348	Cytochrome P450 3A4	Enzyme	IC50	5.050000190734863		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1014	
+475	candesartan and diuretics	CHEBI:3348	Cytochrome P450 3A4	Enzyme	IC50	5.050000190734863		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1014	
+575	cefapirin	CHEBI:3545	Cytochrome P450 3A4	Enzyme	IC50	5.31		WOMBAT-PK		
+589	chloramphenicol	CHEBI:17698	Cytochrome P450 3A4	Enzyme	IC50	4.25		WOMBAT-PK		
+660	cisapride	CHEBI:3720	Cytochrome P450 3A4	Enzyme	IC50	6.522878745		DRUG MATRIX		
+719	clotrimazole	CHEBI:3764	Cytochrome P450 3A4	Enzyme	IC50	7.699		WOMBAT-PK		
+726	colchicine	CHEBI:27882	Cytochrome P450 3A4	Enzyme	Ki	4.19		WOMBAT-PK		
+758	cyclophosphamide	CHEBI:4026	Cytochrome P450 3A4	Enzyme	IC50	5.68		WOMBAT-PK		
+759	cycloserine	CHEBI:40009	Cytochrome P450 3A4	Enzyme	IC50	4.31		WOMBAT-PK		
+760	ciclosporin	CHEBI:4031	Cytochrome P450 3A4	Enzyme	Ki	5.3098		WOMBAT-PK		
+782	dapsone	CHEBI:4325	Cytochrome P450 3A4	Enzyme	Ki	4.57		WOMBAT-PK		
+852	diazepam	CHEBI:49575	Cytochrome P450 3A4	Enzyme	Ki	4.42		WOMBAT-PK		
+888	dihydroergotamine	CHEBI:4562	Cytochrome P450 3A4	Enzyme	IC50	5.301029996		DRUG MATRIX		
+888	dihydroergotamine, combinations	CHEBI:4562	Cytochrome P450 3A4	Enzyme	IC50	5.301029996		DRUG MATRIX		
+897	diltiazem	CHEBI:101278	Cytochrome P450 3A4	Enzyme	IC50	5.73598542		DRUG MATRIX		
+939	docetaxel	CHEBI:4672	Cytochrome P450 3A4	Enzyme	IC50	5.698970004		DRUG MATRIX		
+983	econazole	CHEBI:4754	Cytochrome P450 3A4	Enzyme	IC50	7.301029996		DRUG MATRIX		
+1043	ergotamine	CHEBI:64318	Cytochrome P450 3A4	Enzyme	IC50	6.0		DRUG MATRIX		
+1043	ergotamine, combinations excl. psycholeptics	CHEBI:64318	Cytochrome P450 3A4	Enzyme	IC50	6.0		DRUG MATRIX		
+1043	ergotamine, combinations with psycholeptics	CHEBI:64318	Cytochrome P450 3A4	Enzyme	IC50	6.0		DRUG MATRIX		
+1073	ethambutol	CHEBI:4877	Cytochrome P450 3A4	Enzyme	IC50	6.25		WOMBAT-PK		
+1073	ethambutol and isoniazid	CHEBI:4877	Cytochrome P450 3A4	Enzyme	IC50	6.25		WOMBAT-PK		
+1073	rifampicin, pyrazinamide, ethambutol and isoniazid	CHEBI:4877	Cytochrome P450 3A4	Enzyme	IC50	6.25		WOMBAT-PK		
+1187	azithromycin, fluconazole and secnidazole	CHEBI:46081	Cytochrome P450 3A4	Enzyme	IC50	5.1		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL106	
+1187	fluconazole	CHEBI:46081	Cytochrome P450 3A4	Enzyme	IC50	5.1		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL106	
+1416	idebenone	CHEBI:31687	Cytochrome P450 3A4	Enzyme	IC50	5.15490196		DRUG MATRIX		
+1437	indinavir	CHEBI:44032	Cytochrome P450 3A4	Enzyme	IC50	6.397940009		DRUG MATRIX		
+1497	ethambutol and isoniazid	CHEBI:6030	Cytochrome P450 3A4	Enzyme	IC50	5.31		WOMBAT-PK		
+1497	isoniazid	CHEBI:6030	Cytochrome P450 3A4	Enzyme	IC50	5.31		WOMBAT-PK		
+1497	isoniazid, combinations	CHEBI:6030	Cytochrome P450 3A4	Enzyme	IC50	5.31		WOMBAT-PK		
+1497	rifampicin and isoniazid	CHEBI:6030	Cytochrome P450 3A4	Enzyme	IC50	5.31		WOMBAT-PK		
+1497	rifampicin, pyrazinamide and isoniazid	CHEBI:6030	Cytochrome P450 3A4	Enzyme	IC50	5.31		WOMBAT-PK		
+1497	rifampicin, pyrazinamide, ethambutol and isoniazid	CHEBI:6030	Cytochrome P450 3A4	Enzyme	IC50	5.31		WOMBAT-PK		
+1497	streptomycin and isoniazid	CHEBI:6030	Cytochrome P450 3A4	Enzyme	IC50	5.31		WOMBAT-PK		
+1497	thioacetazone and isoniazid	CHEBI:6030	Cytochrome P450 3A4	Enzyme	IC50	5.31		WOMBAT-PK		
+1513	itraconazole	CHEBI:6076	Cytochrome P450 3A4	Enzyme	IC50	6.045757491		DRUG MATRIX		
+1527	ketoconazole	CHEBI:47519	Cytochrome P450 3A4	Enzyme	Ki	7.0		WOMBAT-PK		
+1532	lacidipine	CHEBI:135737	Cytochrome P450 3A4	Enzyme	IC50	6.045757491		DRUG MATRIX		
+1634	maprotiline	CHEBI:6690	Cytochrome P450 3A4	Enzyme	IC50	5.364315237		DRUG MATRIX		
+1791	metyrapone	CHEBI:44241	Cytochrome P450 3A4	Enzyme	IC50	6.096910013		DRUG MATRIX		
+1795	mezlocillin	CHEBI:6919	Cytochrome P450 3A4	Enzyme	IC50	5.17		WOMBAT-PK		
+1797	mibefradil	CHEBI:6920	Cytochrome P450 3A4	Enzyme	Ki	6.22		WOMBAT-PK		
+1800	miconazole	CHEBI:6923	Cytochrome P450 3A4	Enzyme	IC50	7.0		DRUG MATRIX		
+1800	miconazole, combinations	CHEBI:6923	Cytochrome P450 3A4	Enzyme	IC50	7.0		DRUG MATRIX		
+1805	mifepristone	CHEBI:50692	Cytochrome P450 3A4	Enzyme	Ki	6.64		WOMBAT-PK		
+1805	mifepristone, combinations	CHEBI:50692	Cytochrome P450 3A4	Enzyme	Ki	6.64		WOMBAT-PK		
+1890	nefazodone	CHEBI:7494	Cytochrome P450 3A4	Enzyme	Ki	6.0		IUPHAR	http://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=7247	INHIBITOR
+1893	nelfinavir	CHEBI:7496	Cytochrome P450 3A4	Enzyme	IC50	5.698970004		DRUG MATRIX		
+1909	nicardipine	CHEBI:7550	Cytochrome P450 3A4	Enzyme	IC50	6.3768		WOMBAT-PK		
+1922	nifedipine	CHEBI:7565	Cytochrome P450 3A4	Enzyme	IC50	5.26		WOMBAT-PK		
+1922	nifedipine and diuretics	CHEBI:7565	Cytochrome P450 3A4	Enzyme	IC50	5.26		WOMBAT-PK		
+1922	nifedipine, combinations	CHEBI:7565	Cytochrome P450 3A4	Enzyme	IC50	5.26		WOMBAT-PK		
+1937	nimodipine	CHEBI:7575	Cytochrome P450 3A4	Enzyme	Ki	6.12		WOMBAT-PK		
+2123	phenelzine	CHEBI:8060	Cytochrome P450 3A4	Enzyme	IC50	5.698970004		DRUG MATRIX		
+2328	pyrazinamide	CHEBI:45285	Cytochrome P450 3A4	Enzyme	IC50	6.89		WOMBAT-PK		
+2328	rifampicin, pyrazinamide and isoniazid	CHEBI:45285	Cytochrome P450 3A4	Enzyme	IC50	6.89		WOMBAT-PK		
+2328	rifampicin, pyrazinamide, ethambutol and isoniazid	CHEBI:45285	Cytochrome P450 3A4	Enzyme	IC50	6.89		WOMBAT-PK		
+2391	dasabuvir, ombitasvir, paritaprevir and ritonavir	CHEBI:45409	Cytochrome P450 3A4	Enzyme	IC50	7.55		WOMBAT-PK		
+2391	lopinavir and ritonavir	CHEBI:45409	Cytochrome P450 3A4	Enzyme	IC50	7.55		WOMBAT-PK		
+2391	ombitasvir, paritaprevir and ritonavir	CHEBI:45409	Cytochrome P450 3A4	Enzyme	IC50	7.55		WOMBAT-PK		
+2391	ritonavir	CHEBI:45409	Cytochrome P450 3A4	Enzyme	IC50	7.55		WOMBAT-PK		
+2422	saquinavir	CHEBI:63621	Cytochrome P450 3A4	Enzyme	IC50	5.8239		WOMBAT-PK		
+2446	sirolimus	CHEBI:9168	Cytochrome P450 3A4	Enzyme	IC50	5.698970004		DRUG MATRIX		
+2495	sulconazole	CHEBI:9325	Cytochrome P450 3A4	Enzyme	IC50	7.15490196		DRUG MATRIX		
+2552	tacrolimus	CHEBI:61049	Cytochrome P450 3A4	Enzyme	IC50	6.0		DRUG MATRIX		
+2707	topotecan	CHEBI:63632	Cytochrome P450 3A4	Enzyme	IC50	5.817842234		DRUG MATRIX		
+2815	trandolapril and verapamil	CHEBI:9948	Cytochrome P450 3A4	Enzyme	Ki	6.21999979		IUPHAR	http://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=2406	INHIBITOR
+2815	verapamil	CHEBI:9948	Cytochrome P450 3A4	Enzyme	Ki	6.21999979		IUPHAR	http://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=2406	INHIBITOR
+2815	verapamil, combinations	CHEBI:9948	Cytochrome P450 3A4	Enzyme	Ki	6.21999979		IUPHAR	http://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=2406	INHIBITOR
+2827	vinorelbine	CHEBI:480999	Cytochrome P450 3A4	Enzyme	IC50	6.0		DRUG MATRIX		
+2846	voriconazole	CHEBI:10023	Cytochrome P450 3A4	Enzyme	IC50	4.89		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL638	
+2847	warfarin	CHEBI:10033	Cytochrome P450 3A4	Enzyme	Ki	3.98		WOMBAT-PK		
+2855	zafirlukast	CHEBI:10100	Cytochrome P450 3A4	Enzyme	Ki	4.8729		WOMBAT-PK		
+3408	oxiconazole	CHEBI:7825	Cytochrome P450 3A4	Enzyme	IC50	7.045757491		DRUG MATRIX		
+4176	abiraterone	CHEBI:68639	Cytochrome P450 3A4	Enzyme	IC50	5.57		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL254328	
+575	cefapirin	CHEBI:3545	Cytochrome P450 3A5	Enzyme	IC50	5.11		WOMBAT-PK		
+1073	ethambutol	CHEBI:4877	Cytochrome P450 3A5	Enzyme	IC50	4.72		WOMBAT-PK		
+1073	ethambutol and isoniazid	CHEBI:4877	Cytochrome P450 3A5	Enzyme	IC50	4.72		WOMBAT-PK		
+1073	rifampicin, pyrazinamide, ethambutol and isoniazid	CHEBI:4877	Cytochrome P450 3A5	Enzyme	IC50	4.72		WOMBAT-PK		
+1497	ethambutol and isoniazid	CHEBI:6030	Cytochrome P450 3A5	Enzyme	IC50	4.96		WOMBAT-PK		
+1497	isoniazid	CHEBI:6030	Cytochrome P450 3A5	Enzyme	IC50	4.96		WOMBAT-PK		
+1497	isoniazid, combinations	CHEBI:6030	Cytochrome P450 3A5	Enzyme	IC50	4.96		WOMBAT-PK		
+1497	rifampicin and isoniazid	CHEBI:6030	Cytochrome P450 3A5	Enzyme	IC50	4.96		WOMBAT-PK		
+1497	rifampicin, pyrazinamide and isoniazid	CHEBI:6030	Cytochrome P450 3A5	Enzyme	IC50	4.96		WOMBAT-PK		
+1497	rifampicin, pyrazinamide, ethambutol and isoniazid	CHEBI:6030	Cytochrome P450 3A5	Enzyme	IC50	4.96		WOMBAT-PK		
+1497	streptomycin and isoniazid	CHEBI:6030	Cytochrome P450 3A5	Enzyme	IC50	4.96		WOMBAT-PK		
+1497	thioacetazone and isoniazid	CHEBI:6030	Cytochrome P450 3A5	Enzyme	IC50	4.96		WOMBAT-PK		
+2328	pyrazinamide	CHEBI:45285	Cytochrome P450 3A5	Enzyme	IC50	4.89		WOMBAT-PK		
+2328	rifampicin, pyrazinamide and isoniazid	CHEBI:45285	Cytochrome P450 3A5	Enzyme	IC50	4.89		WOMBAT-PK		
+2328	rifampicin, pyrazinamide, ethambutol and isoniazid	CHEBI:45285	Cytochrome P450 3A5	Enzyme	IC50	4.89		WOMBAT-PK		
+1527	ketoconazole	CHEBI:47519	Cytochrome P450 51	Enzyme	Ki	7.19		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL295698	
+1527	ketoconazole	CHEBI:47519	Cytochrome P450 7A1	Enzyme	IC50	6.71		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL295698	
+254	atazanavir	CHEBI:37924	UDP-glucuronosyltransferase 1-1	Enzyme	Ki	5.7212		WOMBAT-PK		
+254	atazanavir and cobicistat	CHEBI:37924	UDP-glucuronosyltransferase 1-1	Enzyme	Ki	5.7212		WOMBAT-PK		
+865	diclofenac	CHEBI:47381	UDP-glucuronosyltransferase 1-1	Enzyme	Ki	4.28		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+865	diclofenac and antiinfectives	CHEBI:47381	UDP-glucuronosyltransferase 1-1	Enzyme	Ki	4.28		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+865	diclofenac, combinations	CHEBI:47381	UDP-glucuronosyltransferase 1-1	Enzyme	Ki	4.28		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+865	diclofenac	CHEBI:47381	UDP-glucuronosyltransferase 1-10	Enzyme	Ki	4.55		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+865	diclofenac and antiinfectives	CHEBI:47381	UDP-glucuronosyltransferase 1-10	Enzyme	Ki	4.55		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+865	diclofenac, combinations	CHEBI:47381	UDP-glucuronosyltransferase 1-10	Enzyme	Ki	4.55		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+865	diclofenac	CHEBI:47381	UDP-glucuronosyltransferase 1-6	Enzyme	Ki	4.64		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+865	diclofenac and antiinfectives	CHEBI:47381	UDP-glucuronosyltransferase 1-6	Enzyme	Ki	4.64		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+865	diclofenac, combinations	CHEBI:47381	UDP-glucuronosyltransferase 1-6	Enzyme	Ki	4.64		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+2767	troglitazone	CHEBI:9753	UDP-glucuronosyltransferase 1-6	Enzyme	Ki	4.7		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL408	
+865	diclofenac	CHEBI:47381	UDP-glucuronosyltransferase 1-7	Enzyme	Ki	4.72		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+865	diclofenac and antiinfectives	CHEBI:47381	UDP-glucuronosyltransferase 1-7	Enzyme	Ki	4.72		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+865	diclofenac, combinations	CHEBI:47381	UDP-glucuronosyltransferase 1-7	Enzyme	Ki	4.72		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+2268	probenecid	CHEBI:8426	UDP-glucuronosyltransferase 1-7	Enzyme	Ki	4.02		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL897	
+865	diclofenac	CHEBI:47381	UDP-glucuronosyltransferase 1-9	Enzyme	Ki	4.96		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+865	diclofenac and antiinfectives	CHEBI:47381	UDP-glucuronosyltransferase 1-9	Enzyme	Ki	4.96		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	
+865	diclofenac, combinations	CHEBI:47381	UDP-glucuronosyltransferase 1-9	Enzyme	Ki	4.96		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL139	

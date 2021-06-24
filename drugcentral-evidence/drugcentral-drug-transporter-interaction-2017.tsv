@@ -1,0 +1,8 @@
+"struct_id"	"chemical_substance"	"chebi_id"	"target_name"	"target_class"	"activity_type"	"act_value"	"act_unit"	"act_source"	"act_source_url"	"action_type"
+2815	trandolapril and verapamil	CHEBI:9948	ATP-binding cassette sub-family G member 2	Transporter	EC50	4.429999828338623		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1280	
+2815	verapamil	CHEBI:9948	ATP-binding cassette sub-family G member 2	Transporter	EC50	4.429999828338623		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1280	
+2815	verapamil, combinations	CHEBI:9948	ATP-binding cassette sub-family G member 2	Transporter	EC50	4.429999828338623		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1280	
+760	ciclosporin	CHEBI:4031	Multidrug resistance protein 1	Transporter	EC50	6.301		WOMBAT-PK		
+4304	dapagliflozin	CHEBI:85078	Sodium/glucose cotransporter 2	Transporter	EC50	8.52		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL429910	
+4304	metformin and dapagliflozin	CHEBI:85078	Sodium/glucose cotransporter 2	Transporter	EC50	8.52		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL429910	
+4304	saxagliptin and dapagliflozin	CHEBI:85078	Sodium/glucose cotransporter 2	Transporter	EC50	8.52		CHEMBL	https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL429910	
