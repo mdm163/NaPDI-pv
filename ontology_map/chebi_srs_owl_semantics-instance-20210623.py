@@ -13,7 +13,7 @@ import json
 #not needed in python3
 #sys.setdefaultencoding('UTF8')
 DIR_OUT = "graphs/"
-OUT_GRAPH = DIR_OUT + "chebi-srs-instance-20210621.xml"
+OUT_GRAPH = DIR_OUT + "chebi-srs-instance-kratom-gt-20210624.xml"
 
 urn_dict = {
 	'7-hydroxy-mitragynine': 'http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine',  # could we use hyphens?
@@ -218,13 +218,196 @@ if __name__ == "__main__":
 
 	graph.add((k_k, RDF_NS.type, NP_metabolite_k))
 	graph.add((k_k, RDF_NS.type, OWL_NS.NamedIndividual))
-	graph.add((a_k, OBO.RO_0002180, k_k))
+	graph.add((a_k, OBO_NS.RO_0002180, k_k))
 
 	l_k = BNode()
 	graph.add((l_k, RDF_NS.type, OBO_NS.PR_P08684))
 	graph.add((l_k, RDF_NS.type, OWL_NS.NamedIndividual))
 	graph.add((k_k, OBO_NS.RO_0002449, l_k))
 
+#-------------------------GREEN TEA----------------------------
+
+	NP_gt = URIRef(urn_dict['Camellia_sinensis_leaf'])
+	
+	a_gt = BNode()
+	
+	#NP with cross-ref in SRS, create instance of NP
+	graph.add((NP_gt, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
+	graph.add((NP_gt, RDF_NS.type, OWL_NS.Class))
+	graph.add((a_gt, RDF_NS.type, NP_gt))
+	graph.add((a_gt, RDF_NS.type, OWL_NS.NamedIndividual))
+
+	#NP cross ref to SRS
+	graph.add((NP_gt, OBO_NS.database_cross_reference, SRS_NS['44cfdb9d-f504-42d8-ab9d-ab6eb8eebe03']))
+	graph.add((NP_gt, RDFS_NS.label, Literal('Camellia sinensis leaf', lang='en')))
+
+	##NP part_of NP_parent, NP_Parent with cross-ref in SRS 
+	NP_parent_gt = URIRef(urn_dict['Camellia_sinensis_whole'])
+	b_gt = BNode()
+	
+	graph.add((NP_parent_gt, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
+	graph.add((NP_parent_gt, RDF_NS.type, OWL_NS.Class))
+	graph.add((b_gt, RDF_NS.type, NP_parent_gt))
+	graph.add((b_gt, RDF_NS.type, OWL_NS.NamedIndividual))
+
+	pgt1 = BNode()
+	graph.add((NP_gt, RDFS_NS.subClassOf, pgt1))
+	graph.add((pgt1, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((pgt1, OWL_NS.onProperty, OBO_NS.BFO_0000050))
+	graph.add((pgt1, OWL_NS.someValuesFrom, NP_parent_gt))
+
+	graph.add((a_gt, OBO_NS.BFO_0000050, b_gt))
+
+	#NP_Parent with cross-ref in SRS 
+	graph.add((NP_parent_gt, OBO_NS.database_cross_reference, SRS_NS['e9698137-24da-46f8-a70e-43e27691491f']))
+	graph.add((NP_parent_gt, RDFS_NS.label, Literal('Camellia sinensis whole', lang='en')))
+
+	
+	#NP in taxon organism (NCBI Taxon) - class-class relationship
+	pgt2 = BNode()
+	graph.add((NP_gt, RDFS_NS.subClassOf, pgt2))
+	graph.add((pgt2, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((pgt2, OWL_NS.onProperty, OBO_NS.RO_0002162))
+	graph.add((pgt2, OWL_NS.someValuesFrom, OBO_NS.NCBITaxon_4442))
+
+	#NP has_component NP_constituent (in ChEBI)
+	#this creates an instance of existing class - epicatechin-3-gallate, gallocatechin
+	c_gt = BNode()
+	d_gt = BNode()
+	graph.add((c_gt, RDF_NS.type, OBO_NS.CHEBI_70255))
+	graph.add((c_gt, RDF_NS.type, OWL_NS.NamedIndividual))
+	graph.add((d_gt, RDF_NS.type, OBO_NS.CHEBI_68330))
+	graph.add((d_gt, RDF_NS.type, OWL_NS.NamedIndividual))
+
+	
+	pgt3 = BNode()
+	graph.add((NP_gt, RDFS_NS.subClassOf, pgt3))
+	graph.add((pgt3, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((pgt3, OWL_NS.onProperty, OBO_NS.RO_0002180))
+	graph.add((pgt3, OWL_NS.someValuesFrom, OBO_NS.CHEBI_70255))
+	
+	graph.add((a_gt, OBO_NS.RO_0002180, c_gt))
+
+	pgt4 = BNode()
+	graph.add((NP_gt, RDFS_NS.subClassOf, pgt4))
+	graph.add((pgt4, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((pgt4, OWL_NS.onProperty, OBO_NS.RO_0002180))
+	graph.add((pgt4, OWL_NS.someValuesFrom, OBO_NS.CHEBI_68330))
+	
+	graph.add((a_gt, OBO_NS.RO_0002180, d_gt))
+	
+	e_gt = BNode()
+	pgt5 = BNode()
+	graph.add((e_gt, RDF_NS.type, OBO_NS.CHEBI_90))
+	graph.add((e_gt, RDF_NS.type, OWL_NS.NamedIndividual))
+
+	graph.add((NP_gt, RDFS_NS.subClassOf, pgt5))
+	graph.add((pgt5, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((pgt5, OWL_NS.onProperty, OBO_NS.RO_0002180))
+	graph.add((pgt5, OWL_NS.someValuesFrom, OBO_NS.CHEBI_90))
+	
+	graph.add((a_gt, OBO_NS.RO_0002180, e_gt))
+
+	ugt1 = BNode()
+	ugt18 = BNode()
+	ugt10 = BNode()
+
+	graph.add((ugt10, RDF_NS.type, OBO_NS.PR_Q9HAW8))
+	graph.add((ugt10, RDF_NS.type, OWL_NS.NamedIndividual))
+	graph.add((e_gt, OBO_NS.RO_0002449, ugt10))
+
+	graph.add((ugt1, RDF_NS.type, OBO_NS.PR_P22309))
+	graph.add((ugt1, RDF_NS.type, OWL_NS.NamedIndividual))
+	graph.add((e_gt, OBO_NS.RO_0002449, ugt1))
+
+	graph.add((ugt18, RDF_NS.type, OBO_NS.PR_Q9HAW9))
+	graph.add((ugt18, RDF_NS.type, OWL_NS.NamedIndividual))
+	graph.add((e_gt, OBO_NS.RO_0002449, ugt18))
+
+	#epigallocatechin
+	f_gt = BNode()
+	g_gt = BNode()
+	pgt6 = BNode()
+
+	graph.add((f_gt, RDF_NS.type, OBO_NS.CHEBI_42255))
+	graph.add((f_gt, RDF_NS.type, OWL_NS.NamedIndividual))
+	graph.add((g_gt, RDF_NS.type, OBO_NS.CHEBI_70253))
+	graph.add((g_gt, RDF_NS.type, OWL_NS.NamedIndividual))
+
+	graph.add((NP_gt, RDFS_NS.subClassOf, pgt6))
+	graph.add((pgt6, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((pgt6, OWL_NS.onProperty, OBO_NS.RO_0002180))
+	graph.add((pgt6, OWL_NS.someValuesFrom, OBO_NS.CHEBI_42255))
+
+	graph.add((a_gt, OBO_NS.RO_0002180, f_gt))
+
+	graph.add((g_gt, OBO_NS['chebi#has_functional_parent'], f_gt))
+	#did not add 'has_role' metabolite -- add if not in CheBI
+
+	#catechin
+	h_gt = BNode()
+	pgt7 = BNode()
+
+	graph.add((h_gt, RDF_NS.type, OBO_NS.CHEBI_23052))
+	graph.add((h_gt, RDF_NS.type, OWL_NS.NamedIndividual))
+
+	graph.add((NP_gt, RDFS_NS.subClassOf, pgt7))
+	graph.add((pgt7, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((pgt7, OWL_NS.onProperty, OBO_NS.RO_0002180))
+	graph.add((pgt7, OWL_NS.someValuesFrom, OBO_NS.CHEBI_23052))
+
+	graph.add((a_gt, OBO_NS.RO_0002180, h_gt))
+
+	graph.add((h_gt, OBO_NS.RO_0002449, ugt10))
+	graph.add((h_gt, OBO_NS.RO_0002449, ugt1))
+	graph.add((h_gt, OBO_NS.RO_0002449, ugt18))
+	#has metabolite catechin sulfate (not in any source) --- FIGURE OUT
+
+
+	#NP has_component NP_constituent (not in CHEBI, cross-ref in SRS)
+	i_gt = URIRef(urn_dict['Epigallocatechin_gallate'])
+	j_gt = BNode()
+	pgt8 = BNode()
+
+	graph.add((i_gt, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
+	graph.add((i_gt, RDF_NS.type, OWL_NS.Class))
+
+	graph.add((j_gt, RDF_NS.type, i_gt))
+	graph.add((j_gt, RDF_NS.type, OWL_NS.NamedIndividual))
+
+	graph.add((NP_gt, RDFS_NS.subClassOf, pgt8))
+	graph.add((pgt8, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((pgt8, OWL_NS.onProperty, OBO_NS.RO_0002180))
+	graph.add((pgt8, OWL_NS.someValuesFrom, i_gt))
+
+	graph.add((i_gt, OBO_NS.database_cross_reference, SRS_NS['60a66f64-7eca-4725-87b6-71bf41829f90']))
+	graph.add((i_gt, RDFS_NS.label, Literal('(-)-epigallocatechin gallate', lang='en')))
+
+	##not added yet - epigallocatechin gallate in vitro enzymes/transporters
+
+
+	'''##NP inhibition (in vivo) - enzyme and transporter
+	gt_b = BNode()
+	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), RDFS_NS.subClassOf, gt_b))
+	graph.add((gt_b, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((gt_b, OWL_NS.onProperty, OBO_NS.RO_0000056))
+	graph.add((gt_b, OWL_NS.someValuesFrom, OBO_NS.GO_0009892))
+	graph.add((OBO_NS.GO_0009892, OBO_NS.RO_0000057, OBO_NS.PR_P08684))
+
+	gt_c = BNode()
+	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), RDFS_NS.subClassOf, gt_c))
+	graph.add((gt_c, RDF_NS.type, OWL_NS.Restriction))
+	graph.add((gt_c, OWL_NS.onProperty, OBO_NS.RO_0000056))
+	graph.add((gt_c, OWL_NS.someValuesFrom, OBO_NS.GO_0032410))
+	graph.add((OBO_NS.GO_0032410, OBO_NS.RO_0000057, OBO_NS.PR_P46721))
+	##add in vitro results for (-)-epigallocatechin gallate (slides 36, 39, 40)'''
+
+	f = open(OUT_GRAPH,"w")
+	graph_str = graph.serialize(format='xml').decode('utf-8')
+	f.write(graph_str)
+	f.close()
+
+	graph.close()
 '''
 	#-------------------------GOLDENSEAL----------------------------
 ##NOT INSTANCE BASED YET
@@ -309,120 +492,4 @@ if __name__ == "__main__":
 
 	##DO SLIDE 30 - beta hydrastine!
 	####FIGURE OUT SALTS
-	'''
-	#-------------------------GREEN TEA----------------------------
-
-	#NP cross ref to SRS
-	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), OBO_NS.database_cross_reference, SRS_NS['44cfdb9d-f504-42d8-ab9d-ab6eb8eebe03']))
-	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), RDFS_NS.label, Literal('Camellia sinensis leaf', lang='en')))
-
-	#NP part_of NP_parent
-	gt_a = BNode()
-	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), RDFS_NS.subClassOf, gt_a))
-	graph.add((gt_a, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((gt_a, OWL_NS.onProperty, OBO_NS.BFO_0000050))
-	graph.add((gt_a, OWL_NS.someValuesFrom, URIRef(urn_dict['Camellia_sinensis_whole'])))
-
-	#NP_Parent with cross-ref in SRS 
-	graph.add((URIRef(urn_dict['Camellia_sinensis_whole']), OBO_NS.database_cross_reference, SRS_NS['e9698137-24da-46f8-a70e-43e27691491f']))
-	graph.add((URIRef(urn_dict['Camellia_sinensis_whole']), RDFS_NS.label, Literal('Camellia sinensis whole', lang='en')))
-
-	##NP inhibition (in vivo) - enzyme and transporter
-	gt_b = BNode()
-	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), RDFS_NS.subClassOf, gt_b))
-	graph.add((gt_b, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((gt_b, OWL_NS.onProperty, OBO_NS.RO_0000056))
-	graph.add((gt_b, OWL_NS.someValuesFrom, OBO_NS.GO_0009892))
-	graph.add((OBO_NS.GO_0009892, OBO_NS.RO_0000057, OBO_NS.PR_P08684))
-
-	gt_c = BNode()
-	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), RDFS_NS.subClassOf, gt_c))
-	graph.add((gt_c, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((gt_c, OWL_NS.onProperty, OBO_NS.RO_0000056))
-	graph.add((gt_c, OWL_NS.someValuesFrom, OBO_NS.GO_0032410))
-	graph.add((OBO_NS.GO_0032410, OBO_NS.RO_0000057, OBO_NS.PR_P46721))
-
-	#NP in taxon organism (NCBI Taxon)
-	gt_d = BNode()
-	graph.add((URIRef(urn_dict['Mitragyna_speciosa']), RDFS_NS.subClassOf, gt_d))
-	graph.add((gt_d, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((gt_d, OWL_NS.onProperty, OBO_NS.RO_0002162))
-	graph.add((gt_d, OWL_NS.someValuesFrom, OBO_NS.NCBITaxon_4442))
-
-	##NP has_component constituent (in ChEBI), constituent is subclass of chemical entity
-	gt_e = BNode()
-	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), RDFS_NS.subClassOf, gt_e))
-	graph.add((gt_e, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((gt_e, OWL_NS.onProperty, OBO_NS.RO_0002180))
-	graph.add((gt_e, OWL_NS.someValuesFrom, OBO_NS.CHEBI_70255))
-	graph.add((OBO_NS.CHEBI_70255, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
-
-	#epicatechin-3-gallate
-	gt_f = BNode()
-	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), RDFS_NS.subClassOf, gt_f))
-	graph.add((gt_f, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((gt_f, OWL_NS.onProperty, OBO_NS.RO_0002180))
-	graph.add((gt_f, OWL_NS.someValuesFrom, OBO_NS.CHEBI_70255))
-	graph.add((OBO_NS.CHEBI_70255, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
-
-	#gallocatechin
-	gt_g = BNode()
-	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), RDFS_NS.subClassOf, gt_g))
-	graph.add((gt_g, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((gt_g, OWL_NS.onProperty, OBO_NS.RO_0002180))
-	graph.add((gt_g, OWL_NS.someValuesFrom, OBO_NS.CHEBI_68330))
-	graph.add((OBO_NS.CHEBI_68330, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
-
-	#epicatechin
-	gt_h = BNode()
-	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), RDFS_NS.subClassOf, gt_h))
-	graph.add((gt_h, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((gt_h, OWL_NS.onProperty, OBO_NS.RO_0002180))
-	graph.add((gt_h, OWL_NS.someValuesFrom, OBO_NS.CHEBI_90))
-	graph.add((OBO_NS.CHEBI_90, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
-	graph.add((OBO_NS.CHEBI_90, OBO_NS.RO_0002449, OBO_NS.PR_Q9HAW8))
-	graph.add((OBO_NS.CHEBI_90, OBO_NS.RO_0002449, OBO_NS.PR_P22309))
-	graph.add((OBO_NS.CHEBI_90, OBO_NS.RO_0002449, OBO_NS.PR_Q9HAW9))
-
-	#epigallocatechin
-	gt_i = BNode()
-	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), RDFS_NS.subClassOf, gt_i))
-	graph.add((gt_i, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((gt_i, OWL_NS.onProperty, OBO_NS.RO_0002180))
-	graph.add((gt_i, OWL_NS.someValuesFrom, OBO_NS.CHEBI_42255))
-	graph.add((OBO_NS.CHEBI_42255, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
-
-	graph.add((OBO_NS.CHEBI_70253, OBO_NS['chebi#has_functional_parent'], OBO_NS.CHEBI_42255))
-	graph.add((OBO_NS.CHEBI_70253, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
-	graph.add((OBO_NS.CHEBI_70253, OBO_NS.RO_0000087, OBO_NS.CHEBI_25212))
-
-	#catechin
-	gt_j = BNode()
-	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), RDFS_NS.subClassOf, gt_j))
-	graph.add((gt_j, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((gt_j, OWL_NS.onProperty, OBO_NS.RO_0002180))
-	graph.add((gt_j, OWL_NS.someValuesFrom, OBO_NS.CHEBI_23052))
-	graph.add((OBO_NS.CHEBI_23052, RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
-	graph.add((OBO_NS.CHEBI_23052, OBO_NS.RO_0002449, OBO_NS.PR_Q9HAW8))
-	graph.add((OBO_NS.CHEBI_23052, OBO_NS.RO_0002449, OBO_NS.PR_P22309))
-	graph.add((OBO_NS.CHEBI_23052, OBO_NS.RO_0002449, OBO_NS.PR_Q9HAW9))
-	#has metabolite catechin sulfate (not in any source)
-
-	#NP has_component NP_constituent (not in CHEBI, cross-ref in SRS) [role, subclass, cross-ref already defined above]
-	gt_k = BNode()
-	graph.add((URIRef(urn_dict['Camellia_sinensis_leaf']), RDFS_NS.subClassOf, gt_k))
-	graph.add((gt_k, RDF_NS.type, OWL_NS.Restriction))
-	graph.add((gt_k, OWL_NS.onProperty, OBO_NS.RO_0002180))
-	graph.add((gt_k, OWL_NS.someValuesFrom, URIRef(urn_dict['Epigallocatechin_gallate'])))
-
-	graph.add((URIRef(urn_dict['Epigallocatechin_gallate']), RDFS_NS.subClassOf, OBO_NS.CHEBI_24431))
-	graph.add((URIRef(urn_dict['Epigallocatechin_gallate']), OBO_NS.database_cross_reference, SRS_NS['60a66f64-7eca-4725-87b6-71bf41829f90']))
-	graph.add((URIRef(urn_dict['Epigallocatechin_gallate']), RDFS_NS.label, Literal('(-)-epigallocatechin gallate', lang='en')))
-	##add in vitro results for (-)-epigallocatechin gallate (slides 36, 39, 40)
-	
-	f = open(OUT_GRAPH,"w")
-	graph_str = graph.serialize(format='xml').decode('utf-8')
-	f.write(graph_str)
-	f.close()
-
-	graph.close()
+'''
