@@ -8,6 +8,7 @@ psql -U rw_grp -h localhost -p 5432 -d drugcentral2017 <  drugcentral.dump.04252
 
 Log output (no errors except ownership - not expected to affect data):
 
+```
 SET
 SET
 SET
@@ -802,3 +803,4 @@ ALTER TABLE
 ALTER TABLE
 ALTER TABLE
 ALTER TABLE
+```
