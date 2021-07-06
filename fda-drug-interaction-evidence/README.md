@@ -1,6 +1,6 @@
 ### FDA Drug Interaction evidence
 
-- Verion 1: 2015 and prior (updated again in 2017)
+- Version 1: 2015 and prior (updated again in 2017)
 
 Data downloaded from the supplemental tables provided with:
 
@@ -8,6 +8,6 @@ Yeung CK, Yoshida K, Kusama M, Zhang H, Ragueneau-Majlessi I, Argon S, Li L, Cha
 
 Updated in 2017 and downloaded from - https://github.com/dbmi-pitt/public-PDDI-analysis/tree/master/PDDI-Datasets/FDA-Organ-impairment-drug-interaction-database
 
-- Verion 2: Latest release (03/10/2020)
+- Version 2: Latest release (03/10/2020)
 
 Download from - https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers
