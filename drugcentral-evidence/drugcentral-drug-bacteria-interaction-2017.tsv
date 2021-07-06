@@ -1,5 +1,5 @@
-"struct_id"	"chemical_substance"	"chebi_id"	"target_name"	"target_class"	"activity_type"	"act_value"	"act_unit"	"act_source"	"act_source_url"	"action_type"
-4678	oritavancin	CHEBI:83305	Enterococcus faecalis ATCC 29212	Bacteria	MIC	8.019901275634766		DRUG LABEL		MINIMUM INHIBITORY CONCENTRATION
-4678	oritavancin	CHEBI:83305	Staphylococcus aureus subsp. aureus	Bacteria	MIC	7.469350814819336		DRUG LABEL		MINIMUM INHIBITORY CONCENTRATION
-4873	tedizolid	CHEBI:83326	Staphylococcus aureus subsp. aureus	Bacteria	MIC	5.9545488357543945		SCIENTIFIC LITERATURE	http://www.ncbi.nlm.nih.gov/pubmed/21502615	MINIMUM INHIBITORY CONCENTRATION
-4678	oritavancin	CHEBI:83305	Streptococcus pneumoniae	Bacteria	MIC	8.900714874267578		DRUG LABEL		MINIMUM INHIBITORY CONCENTRATION
+struct_id	chemical_substance	chebi_id	target_name	target_class	relation_type	activity_type	act_value	act_unit	act_source	act_source_url	action_type
+4678	oritavancin	CHEBI:83305	Enterococcus faecalis ATCC 29212	Bacteria	interacts	MIC	8.019901276		DRUG LABEL		MINIMUM INHIBITORY CONCENTRATION
+4678	oritavancin	CHEBI:83305	Staphylococcus aureus subsp. aureus	Bacteria	interacts	MIC	7.469350815		DRUG LABEL		MINIMUM INHIBITORY CONCENTRATION
+4873	tedizolid	CHEBI:83326	Staphylococcus aureus subsp. aureus	Bacteria	interacts	MIC	5.954548836		SCIENTIFIC LITERATURE	http://www.ncbi.nlm.nih.gov/pubmed/21502615	MINIMUM INHIBITORY CONCENTRATION
+4678	oritavancin	CHEBI:83305	Streptococcus pneumoniae	Bacteria	interacts	MIC	8.900714874		DRUG LABEL		MINIMUM INHIBITORY CONCENTRATION
